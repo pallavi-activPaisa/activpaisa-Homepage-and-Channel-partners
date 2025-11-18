@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Card from "./Card";
+
 const AboutActivpaisa = () => {
   return (
     <div
