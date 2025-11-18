@@ -1,0 +1,1088 @@
+{
+  
+    "UI Color": {
+      "Surface": {
+        "bg-neutral-80": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.1000}"
+        },
+        "bg-neutral-70": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.800 (Main)}"
+        },
+        "bg-neutral-60": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.600}"
+        },
+        "bg-neutral-50": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.500}"
+        },
+        "bg-neutral-40": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.400}"
+        },
+        "bg-neutral-30": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "bg-neutral-20": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.200}"
+        },
+        "bg-neutral-10": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.100}"
+        },
+        "bg-neutral-00": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        }
+      },
+      "Surface-Container": {
+        "Brand": {
+          "logo-1": {
+            "$type": "color",
+            "$value": "{Color.Primary.900 (Main)}"
+          },
+          "logo-2": {
+            "$type": "color",
+            "$value": "{Color.Blue.700 (Main)}"
+          },
+          "primary-50": {
+            "$type": "color",
+            "$value": "{Color.Primary.1100}"
+          },
+          "primary-40": {
+            "$type": "color",
+            "$value": "{Color.Primary.1000}"
+          },
+          "primary-30": {
+            "$type": "color",
+            "$value": "{Color.Primary.900 (Main)}"
+          },
+          "primary-20": {
+            "$type": "color",
+            "$value": "{Color.Primary.800}"
+          },
+          "primary-10": {
+            "$type": "color",
+            "$value": "{Color.Primary.300}"
+          },
+          "primary-00": {
+            "$type": "color",
+            "$value": "{Color.Primary.50}"
+          },
+          "secondary-40": {
+            "$type": "color",
+            "$value": "{Color.Secondary.700}"
+          },
+          "secondary-30": {
+            "$type": "color",
+            "$value": "{Color.Secondary.600 (Main)}"
+          },
+          "secondary-20": {
+            "$type": "color",
+            "$value": "{Color.Secondary.500}"
+          },
+          "secondary-10": {
+            "$type": "color",
+            "$value": "{Color.Secondary.200}"
+          },
+          "secondary-00": {
+            "$type": "color",
+            "$value": "{Color.Secondary.50}"
+          }
+        },
+        "Error": {
+          "error-40": {
+            "$type": "color",
+            "$value": "{Color.Error.700}"
+          },
+          "error-30": {
+            "$type": "color",
+            "$value": "{Color.Error.600 (Main)}"
+          },
+          "error-20": {
+            "$type": "color",
+            "$value": "{Color.Error.500}"
+          },
+          "error-10": {
+            "$type": "color",
+            "$value": "{Color.Error.200}"
+          },
+          "error-00": {
+            "$type": "color",
+            "$value": "{Color.Error.50}"
+          }
+        },
+        "Success": {
+          "success-40": {
+            "$type": "color",
+            "$value": "{Color.Success.800}"
+          },
+          "success-30": {
+            "$type": "color",
+            "$value": "{Color.Success.600 (Main)}"
+          },
+          "success-20": {
+            "$type": "color",
+            "$value": "{Color.Success.500}"
+          },
+          "success-10": {
+            "$type": "color",
+            "$value": "{Color.Success.200}"
+          },
+          "success-00": {
+            "$type": "color",
+            "$value": "{Color.Success.50}"
+          }
+        },
+        "Info": {
+          "info-40": {
+            "$type": "color",
+            "$value": "{Color.Information.900}"
+          },
+          "info-30": {
+            "$type": "color",
+            "$value": "{Color.Information.700}"
+          },
+          "info-20": {
+            "$type": "color",
+            "$value": "{Color.Information.600}"
+          },
+          "info-10": {
+            "$type": "color",
+            "$value": "{Color.Information.200}"
+          },
+          "info-00": {
+            "$type": "color",
+            "$value": "{Color.Information.100}"
+          }
+        },
+        "Warning": {
+          "warning-40": {
+            "$type": "color",
+            "$value": "{Color.Secondary.700}"
+          },
+          "warning-30": {
+            "$type": "color",
+            "$value": "{Color.Secondary.600 (Main)}"
+          },
+          "warning-20": {
+            "$type": "color",
+            "$value": "{Color.Secondary.200}"
+          },
+          "warning-10": {
+            "$type": "color",
+            "$value": "{Color.Secondary.500}"
+          },
+          "warning-00": {
+            "$type": "color",
+            "$value": "{Color.Secondary.50}"
+          }
+        },
+        "Neutral": {
+          "neutral-80": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.1000}"
+          },
+          "neutral-70": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.800 (Main)}"
+          },
+          "neutral-60": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.600}"
+          },
+          "neutral-50": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.500}"
+          },
+          "neutral-40": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.400}"
+          },
+          "neutral-30": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.300}"
+          },
+          "neutral-20": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.200}"
+          },
+          "neutral-10": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.100}"
+          },
+          "neutral-00": {
+            "$type": "color",
+            "$value": "{Color.Neutrals.00}"
+          }
+        }
+      },
+      "Border": {
+        "neutral-10": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "error-30": {
+          "$type": "color",
+          "$value": "{Color.Error.600 (Main)}"
+        },
+        "hover-primary-overlay - 4": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 4}"
+        },
+        "hover-neutral - 4": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.500}"
+        },
+        "hover-neutral - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "pressed-primary-overlay - 4": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 4}"
+        },
+        "pressed-neutral - 4": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.500}"
+        },
+        "pressed-neutral - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "focused-primary-overlay - 4": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 4}"
+        },
+        "focused-primary - 50": {
+          "$type": "color",
+          "$value": "{Color.Primary.900 (Main)}"
+        },
+        "focused-primary - 10": {
+          "$type": "color",
+          "$value": "{Color.Primary.50}"
+        },
+        "focused-neutral - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "focused-neutral - 4": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.800 (Main)}"
+        },
+        "focused-neutral - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.200}"
+        },
+        "disabled-primary-overlay - 4": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 4}"
+        },
+        "disabled-primary-overlay - 8": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 8}"
+        },
+        "disabled-primary-overlay - 16": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Primary Overlay 16}"
+        },
+        "disabled-dark-overlay - 4": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 4}"
+        },
+        "disabled-dark-overlay - 8": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 8}"
+        },
+        "disabled-dark-overlay - 16": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 16}"
+        },
+        "disabled-neutral - 4": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "neutral-00": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        },
+        "neutral-20": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.500}"
+        }
+      },
+      "Gradients": {
+        "G1-100": {
+          "$type": "color",
+          "$value": "{Color.Gradients.AO1}"
+        },
+        "G1-200": {
+          "$type": "color",
+          "$value": "{Color.Gradients.AO2}"
+        },
+        "G1-300": {
+          "$type": "color",
+          "$value": "{Color.Gradients.AO3}"
+        }
+      },
+      "On Surface": {
+        "on-neutral-00 - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.800 (Main)}"
+        },
+        "on-neutral-00 - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.600}"
+        },
+        "on-gradient - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        },
+        "on-primary-00 - 4": {
+          "$type": "color",
+          "$value": "{Color.Primary.300}"
+        },
+        "on-neutral-00 - 3": {
+          "$type": "color",
+          "$value": "{Color.Primary.900 (Main)}"
+        },
+        "on-primary-00 - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        },
+        "on-primary-00 - 2": {
+          "$type": "color",
+          "$value": "{Color.Primary.900 (Main)}"
+        },
+        "on-primary-00 - 3": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.600}"
+        },
+        "on-neutral-00 - 4": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.1000}"
+        },
+        "on-neutral-00 - 5": {
+          "$type": "color",
+          "$value": "{Color.Primary.300}"
+        },
+        "on-neutral-00 - 6": {
+          "$type": "color",
+          "$value": "{Color.Success.700}"
+        },
+        "on-neutral-00 - 7": {
+          "$type": "color",
+          "$value": "{Color.Primary.50}"
+        },
+        "on-primary-30 - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        },
+        "on-neutral-00 - 8": {
+          "$type": "color",
+          "$value": "{Color.Secondary.600 (Main)}"
+        },
+        "on-primary-50 - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.200}"
+        },
+        "on-primary-50 - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.500}"
+        },
+        "on-neutral-30 - 1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.600}"
+        },
+        "on-gradient - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.200}"
+        },
+        "avatar-1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "On-Success-30-1": {
+          "$type": "color",
+          "$value": "{UI Color.Surface-Container.Neutral.neutral-00}"
+        },
+        "On-Success-30-3": {
+          "$type": "color",
+          "$value": "{UI Color.Surface-Container.Neutral.neutral-30}"
+        }
+      },
+      "States": {
+        "highlighted-primary-1": {
+          "$type": "color",
+          "$value": "{Color.Primary.900 (Main)}"
+        },
+        "on-neutral-00 - 2": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.300}"
+        },
+        "disabled-neutral-1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.200}"
+        },
+        "on-disabled-neutral-1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.400}"
+        },
+        "hover-primary-1": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 16}"
+        },
+        "on-hover-primary-2": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 32}"
+        },
+        "on-hover-primary-1": {
+          "$type": "color",
+          "$value": "{Color.Neutrals.00}"
+        },
+        "hover-logo-2": {
+          "$type": "color",
+          "$value": "{Color.Overlays.Dark Overlay 32}"
+        }
+      }
+    },
+    "Typogrraphy": {
+      "Display": {
+        "large-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-52}"
+        },
+        "large-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-56}"
+        },
+        "large-letter-spacing": {
+          "$type": "number",
+          "$value": "{Typography.Letter Spacing.letter-spacing (52 |-2%)}"
+        },
+        "inter-font-family": {
+          "$type": "fontFamily",
+          "$value": "{Typography.Font Family.heading}"
+        },
+        "small-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-44}"
+        },
+        "small-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-48}"
+        },
+        "medium-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Medium}"
+        },
+        "semi-bold-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Semi Bold}"
+        },
+        "bold-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Bold}"
+        },
+        "extra-bold-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Extra Bold}"
+        },
+        "small-letter-spacing": {
+          "$type": "number",
+          "$value": "{Typography.Letter Spacing.letter-spacing (44 |-2%)}"
+        }
+      },
+      "Heading": {
+        "H1": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-40}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-36}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-48}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-44}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (36 |-2%)}"
+          },
+          "larger-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (40 |-2%)}"
+          }
+        },
+        "H2": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-36}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-32}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-44}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-40}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "large-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (36 |-2%)}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (32 |-2%)}"
+          }
+        },
+        "H3": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-32}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-28}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-40}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-36}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (28 |-2%)}"
+          },
+          "large-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (32 |-2%)}"
+          }
+        },
+        "H4": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-28}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-24}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-36}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-32}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "large-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (28 |-2%)}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (24 |-2%)}"
+          }
+        },
+        "H5": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-24}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-20}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-32}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-28}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "large-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (24 |-2%)}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (-20 |-2%)}"
+          }
+        },
+        "H6": {
+          "inter-font-family": {
+            "$type": "fontFamily",
+            "$value": "{Typography.Font Family.body}"
+          },
+          "large-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-20}"
+          },
+          "small-size": {
+            "$type": "fontSize",
+            "$value": "{Typography.Font Size.font-size-18}"
+          },
+          "large-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-28}"
+          },
+          "small-line-height": {
+            "$type": "lineHeight",
+            "$value": "{Typography.Line Height.line-height-24}"
+          },
+          "medium-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Medium}"
+          },
+          "semi-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Semi Bold}"
+          },
+          "bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Bold}"
+          },
+          "extra-bold-weight": {
+            "$type": "string",
+            "$value": "{Typography.Font Weight.Extra Bold}"
+          },
+          "large-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (-20 |-2%)}"
+          },
+          "small-letter-spacing": {
+            "$type": "number",
+            "$value": "{Typography.Letter Spacing.letter-spacing (18 |-2%)}"
+          }
+        }
+      },
+      "Paragraph": {
+        "inter-font-family": {
+          "$type": "fontFamily",
+          "$value": "{Typography.Font Family.body}"
+        },
+        "para-1-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-18}"
+        },
+        "para-3-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-14}"
+        },
+        "para-1-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-28}"
+        },
+        "para-3-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-20}"
+        },
+        "regular-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Regular}"
+        },
+        "letter-spacing": {
+          "$type": "number",
+          "$value": "{Typography.Letter Spacing.letter-spacing (0)}"
+        },
+        "para-2-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-16}"
+        },
+        "para-4-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-12}"
+        },
+        "medium-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Medium}"
+        },
+        "semi-bold-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Semi Bold}"
+        },
+        "para-2-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-24}"
+        },
+        "para-4-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-20}"
+        }
+      },
+      "Label": {
+        "inter-font-family": {
+          "$type": "fontFamily",
+          "$value": "{Typography.Font Family.body}"
+        },
+        "L-1-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-16}"
+        },
+        "L-2-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-14}"
+        },
+        "L-3-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-12}"
+        },
+        "L-4-size": {
+          "$type": "fontSize",
+          "$value": "{Typography.Font Size.font-size-10}"
+        },
+        "L-1-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-18}"
+        },
+        "L-2-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-16}"
+        },
+        "L-3-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-14}"
+        },
+        "L-4-line-height": {
+          "$type": "lineHeight",
+          "$value": "{Typography.Line Height.line-height-14}"
+        },
+        "regular-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Regular}"
+        },
+        "medium-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Medium}"
+        },
+        "semi-bold-weight": {
+          "$type": "string",
+          "$value": "{Typography.Font Weight.Semi Bold}"
+        },
+        "letter-spacing": {
+          "$type": "number",
+          "$value": "{Typography.Letter Spacing.letter-spacing (0)}"
+        }
+      }
+    },
+    "Corner Radius": {
+      "sharp": {
+        "$type": "number",
+        "$value": "{Scale.scale-0}"
+      },
+      "3xsmall": {
+        "$type": "number",
+        "$value": "{Scale.scale-4}"
+      },
+      "small": {
+        "$type": "number",
+        "$value": "{Scale.scale-12}"
+      },
+      "medium": {
+        "$type": "number",
+        "$value": "{Scale.scale-16}"
+      },
+      "large": {
+        "$type": "number",
+        "$value": "{Scale.scale-24}"
+      },
+      "xlarge": {
+        "$type": "number",
+        "$value": "{Scale.scale-32}"
+      },
+      "round": {
+        "$type": "number",
+        "$value": "{Scale.scale-999}"
+      },
+      "2xsmall": {
+        "$type": "number",
+        "$value": "{Scale.scale-8}"
+      }
+    },
+    "Border Width": {
+      "width-1": {
+        "$type": "number",
+        "$value": "{Scale.scale-1}"
+      },
+      "width-2": {
+        "$type": "number",
+        "$value": "{Scale.scale-2}"
+      },
+      "width-4": {
+        "$type": "number",
+        "$value": "{Scale.scale-4}"
+      },
+      "width-0": {
+        "$type": "number",
+        "$value": "{Scale.scale-0}"
+      },
+      "width-8": {
+        "$type": "number",
+        "$value": "{Scale.scale-8}"
+      }
+    },
+    "Spacing": {
+      "sp-4": {
+        "$type": "number",
+        "$value": "{Scale.scale-4}"
+      },
+      "sp-2": {
+        "$type": "number",
+        "$value": "{Scale.scale-2}"
+      },
+      "sp-6": {
+        "$type": "number",
+        "$value": "{Scale.scale-6}"
+      },
+      "sp-8": {
+        "$type": "number",
+        "$value": "{Scale.scale-8}"
+      },
+      "sp-12": {
+        "$type": "number",
+        "$value": "{Scale.scale-12}"
+      },
+      "sp-16": {
+        "$type": "number",
+        "$value": "{Scale.scale-16}"
+      },
+      "sp-20": {
+        "$type": "number",
+        "$value": "{Scale.scale-20}"
+      },
+      "sp-24": {
+        "$type": "number",
+        "$value": "{Scale.scale-24}"
+      },
+      "sp-32": {
+        "$type": "number",
+        "$value": "{Scale.scale-32}"
+      },
+      "sp-36": {
+        "$type": "number",
+        "$value": "{Scale.scale-36}"
+      },
+      "sp-40": {
+        "$type": "number",
+        "$value": "{Scale.scale-40}"
+      },
+      "sp-44": {
+        "$type": "number",
+        "$value": "{Scale.scale-44}"
+      },
+      "sp-48": {
+        "$type": "number",
+        "$value": "{Scale.scale-48}"
+      },
+      "sp-52": {
+        "$type": "number",
+        "$value": "{Scale.scale-52}"
+      },
+      "sp-60": {
+        "$type": "number",
+        "$value": "{Scale.scale-60}"
+      },
+      "sp-64": {
+        "$type": "number",
+        "$value": "{Scale.scale-64}"
+      },
+      "sp-72": {
+        "$type": "number",
+        "$value": "{Scale.scale-72}"
+      },
+      "sp-80": {
+        "$type": "number",
+        "$value": "{Scale.scale-80}"
+      },
+      "sp-84": {
+        "$type": "number",
+        "$value": "{Scale.scale-84}"
+      },
+      "sp-88": {
+        "$type": "number",
+        "$value": "{Scale.scale-88}"
+      },
+      "sp-96": {
+        "$type": "number",
+        "$value": "{Scale.scale-96}"
+      },
+      "sp-100": {
+        "$type": "number",
+        "$value": "{Scale.scale-100}"
+      },
+      "sp-104": {
+        "$type": "number",
+        "$value": "{Scale.scale-104}"
+      },
+      "sp-116": {
+        "$type": "number",
+        "$value": "{Scale.scale-116}"
+      },
+      "sp-108": {
+        "$type": "number",
+        "$value": "{Scale.scale-108}"
+      },
+      "sp-56": {
+        "$type": "number",
+        "$value": "{Scale.scale-56}"
+      },
+      "sp-28": {
+        "$type": "number",
+        "$value": "{Scale.scale-28}"
+      }
+    },
+    "Effects": {
+      "shadow-4": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 4}"
+      },
+      "shadow-8": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 8}"
+      },
+      "shadow-16": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 16}"
+      },
+      "shadow-24": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 24}"
+      },
+      "shadow-32": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 32}"
+      },
+      "shadow-48": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 48}"
+      },
+      "bg-blur-16": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 16}"
+      },
+      "bg-blur 24": {
+        "$type": "color",
+        "$value": "{Color.Overlays.Dark Overlay 24}"
+      }
+    }
+  
+}

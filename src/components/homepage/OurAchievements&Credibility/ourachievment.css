@@ -1,0 +1,154 @@
+.achievements-heading {
+  color: var(--ui-color-on-surface-on-gradient---1, #fff);
+
+  /* Correct Typography Tokens */
+  font-family:
+    var(--typography-Heading-H3-inter-font-family, Inter), sans-serif;
+  font-size: var(--typography-Heading-H3-large-size, 32px);
+  font-weight: 600;
+  line-height: var(--typography-Heading-H3-large-line-height, 40px); /* 125% */
+  letter-spacing: var(--typography-Heading-H3-large-letter-spacing, -0.64px);
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------
+   Full Width Background Section
+---------------------------------------- */
+.section-hero {
+  display: flex;
+  /* width: 1440px; */
+  width: 100%;
+  padding: 97px 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  /* gap: 10px; */
+  margin-top: 72px;
+
+  background: linear-gradient(45deg, #bd8668 0%, #5d51af 50%, #3437c8 100%);
+}
+/* ---------------------------------------
+   Achievements Subtext Paragraph
+---------------------------------------- */
+.achievements-subtext {
+  color: var(--ui-color-on-surface-on-gradient---1, #fff);
+
+  /* Paragraph/Para-2/Regular */
+  font-family: var(--typography-Paragraph-inter-font-family, Inter), sans-serif;
+  font-size: var(--typography-Paragraph-para-2-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--typography-Paragraph-para-2-line-height, 24px); /* 150% */
+  letter-spacing: var(--typography-Paragraph-letter-spacing, 0);
+  margin-bottom: 24px;
+  align-self: stretch;
+}
+
+/* Container inner layout */
+.hero-inner {
+  width: 100%;
+  padding: 0 90px;
+}
+
+/* Cards Grid — final correct gaps */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  column-gap: 20px;
+  row-gap: 40px; /* gap between rows (top–bottom) */
+}
+
+/* Achievement Title - used for all card titles */
+.achievement-title {
+  /* flex: 1 0 0; */
+  color: var(--ui-color-on-surface-on-neutral-00---3, #4c2399);
+  font-family: var(--typography-heading-h5-inter-font-family, Inter);
+  font-size: var(--typography-heading-h5-large-size, 24px); /* fallback 24px */
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: var(
+    --typogrraphy-heading-h5-large-line-height,
+    32px); */
+  letter-spacing: var(--typography-heading-h5-large-letter-spacing, -0.48px);
+  margin-bottom: 8px; /* spacing below title */
+}
+/* Achievement Number (Heading H6 style) */
+.achievement-number {
+  color: var(--ui-color-on-surface-on-neutral-00---4, #111827);
+  font-family: var(--typography-heading-h6-inter-font-family, Inter);
+  font-size: var(--typography-heading-h6-large-size, 20px); /* fallback 20px */
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--typography-heading-h6-large-line-height, 28px); /* 140% */
+  letter-spacing: var(--typography-heading-h6-large-letter-spacing, -0.4px);
+}
+.achievement-desc {
+  color: var(--ui-color-on-surface-on-neutral-00---2, #6b7280);
+  font-family: var(--typography-paragraph-inter-font-family, Inter);
+  font-size: var(--typography-paragraph-para-3-size, 14px); /* fallback 14px */
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: var(--typography-paragraph-letter-spacing, 0);
+  align-self: stretch;
+}
+
+/* Achievement Heading (used for number & title) */
+.achievement-heading {
+  color: var(
+    --UI-Color-On-Surface-on-neutral-00---3,
+    #4c2399
+  ); /* same for both */
+  font-family: var(--Typogrraphy-Heading-H5-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Heading-H5-large-size, 24px); /* fallback 24px */
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(
+    --Typogrraphy-Heading-H5-large-line-height,
+    32px
+  ); /* 133.33% */
+  letter-spacing: var(--Typogrraphy-Heading-H5-large-letter-spacing, -0.48px);
+  margin-bottom: 8px;
+}
+
+/* Achievement Description */
+.achievement-desc {
+  color: var(--UI-Color-On-Surface-on-neutral-00---2, #6b7280);
+  font-family: var(--Typogrraphy-Paragraph-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Paragraph-para-3-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typogrraphy-Paragraph-para-3-line-height, 20px);
+  letter-spacing: var(--Typogrraphy-Paragraph-letter-spacing, 0);
+  align-self: stretch;
+}
+
+/* Number (for cards with separate number & title) */
+.achievement-number {
+  color: var(--UI-Color-On-Surface-on-neutral-00---4, #111827);
+  font-family: var(--Typogrraphy-Heading-H6-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Heading-H6-large-size, 20px);
+  font-weight: 500;
+  line-height: var(--Typogrraphy-Heading-H6-large-line-height, 28px);
+  letter-spacing: var(--Typogrraphy-Heading-H6-large-letter-spacing, -0.4px);
+  margin-bottom: 8px;
+}
+
+/* Heading (for titles OR numbers without title) */
+.achievement-heading {
+  color: var(--UI-Color-On-Surface-on-neutral-00---3, #4c2399);
+  font-family: var(--Typogrraphy-Heading-H5-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Heading-H5-large-size, 24px);
+  font-weight: 600;
+  line-height: var(--Typogrraphy-Heading-H5-large-line-height, 32px);
+  letter-spacing: var(--Typogrraphy-Heading-H5-large-letter-spacing, -0.48px);
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------
+   Apply gradient only between 1440px–1920px
+---------------------------------------- */
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .section-hero {
+    background: linear-gradient(45deg, #bd8668 0%, #5d51af 50%, #3437c8 100%);
+  }
+}

@@ -1,0 +1,43 @@
+/* Main Heading */
+.aps-heading {
+  color: var(--ui-color-on-surface-on-neutral-00---1, #374151);
+  font-family: var(--typogrraphy-heading-h3-inter-font-family, Inter);
+  font-size: var(--typogrraphy-heading-h3-large-size, 32px);
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: var(--typogrraphy-heading-h3-large-line-height, 40px); */
+  letter-spacing: var(--typogrraphy-heading-h3-large-letter-spacing, -0.64px);
+  margin-bottom: 8px;
+}
+
+/* Paragraph under heading */
+.aps-subtext {
+  color: var(--ui-color-on-surface-on-neutral-00---2, #6b7280);
+  font-family: var(--typogrraphy-paragraph-inter-font-family, Inter);
+  font-size: var(--typogrraphy-paragraph-para-2-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: var(--typogrraphy-paragraph-para-2-line-height, 24px); */
+  letter-spacing: var(--typogrraphy-paragraph-letter-spacing, 0);
+  align-self: flex-start;
+  margin-bottom: 32px;
+}
+
+/* How It Works Section Heading */
+.aps-how-heading {
+  color: #5c1ebf;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* How It Works Paragraph */
+.aps-how-subtext {
+  color: #374151;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 48px;
+}

@@ -1,0 +1,854 @@
+{
+  
+    "Color": {
+      "Primary": {
+        "50": {
+          "$type": "color",
+          "$value": "{Color.Purple.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Purple.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Purple.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Purple.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Purple.500}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{Color.Purple.600}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Purple.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Purple.800}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Purple.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Purple.1100}"
+        },
+        "900 (Main)": {
+          "$type": "color",
+          "$value": "{Color.Purple.900 (Main)}"
+        }
+      },
+      "Information": {
+        "100": {
+          "$type": "color",
+          "$value": "{Color.Blue.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Blue.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Blue.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Blue.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Blue.500}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{Color.Blue.600}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Blue.700 (Main)}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Blue.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Blue.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Blue.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Blue.1100}"
+        }
+      },
+      "Secondary": {
+        "50": {
+          "$type": "color",
+          "$value": "{Color.Yellow.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Yellow.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Yellow.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Yellow.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Yellow.500}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Yellow.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Yellow.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Yellow.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Yellow.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Yellow.1100}"
+        },
+        "600 (Main)": {
+          "$type": "color",
+          "$value": "{Color.Yellow.600 (Main)}"
+        }
+      },
+      "Neutrals": {
+        "100": {
+          "$type": "color",
+          "$value": "{Color.Greys.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Greys.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Greys.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Greys.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Greys.500}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{Color.Greys.600}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Greys.700}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Greys.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Greys.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Greys.1100}"
+        },
+        "800 (Main)": {
+          "$type": "color",
+          "$value": "{Color.Greys.800 (Main)}"
+        },
+        "00": {
+          "$type": "color",
+          "$value": "{Color.Generic.White}"
+        }
+      },
+      "Error": {
+        "50": {
+          "$type": "color",
+          "$value": "{Color.Red.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Red.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Red.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Red.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Red.500}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Red.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Red.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Red.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Red.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Red.1100}"
+        },
+        "600 (Main)": {
+          "$type": "color",
+          "$value": "{Color.Red.600 (Main)}"
+        }
+      },
+      "Success": {
+        "50": {
+          "$type": "color",
+          "$value": "{Color.Green.50}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Green.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Green.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Green.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Green.500}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Green.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Green.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Green.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Green.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Green.1100}"
+        },
+        "600 (Main)": {
+          "$type": "color",
+          "$value": "{Color.Green.600 (Main)}"
+        }
+      },
+      "Warning": {
+        "50": {
+          "$type": "color",
+          "$value": "{Color.Yellow.100}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{Color.Yellow.200}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{Color.Yellow.300}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{Color.Yellow.400}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{Color.Yellow.500}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{Color.Yellow.600 (Main)}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{Color.Yellow.700}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{Color.Yellow.800}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{Color.Yellow.900}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{Color.Yellow.1000}"
+        },
+        "1100": {
+          "$type": "color",
+          "$value": "{Color.Yellow.1100}"
+        }
+      },
+      "Overlays": {
+        "Primary Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-4}"
+        },
+        "Primary Overlay 16": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-16}"
+        },
+        "Primary Overlay 24": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-24}"
+        },
+        "Primary Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-32}"
+        },
+        "Primary Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-8}"
+        },
+        "Primary Overlay 48": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-48}"
+        },
+        "Dark Overlay 16": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-16}"
+        },
+        "Dark Overlay 24": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-24}"
+        },
+        "Dark Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-32}"
+        },
+        "Dark Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-8}"
+        },
+        "Dark Overlay 48": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-48}"
+        },
+        "Light Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-W-8}"
+        },
+        "Light Overlay 16": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-W-16}"
+        },
+        "Light Overlay 24": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-W-24}"
+        },
+        "Light Overlay 48": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-W-48}"
+        },
+        "Light Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-W-32}"
+        },
+        "Dark Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-4}"
+        },
+        "Dark Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-D-2}"
+        },
+        "Primary Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-P-2}"
+        },
+        "Secondary Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-2}"
+        },
+        "Secondary Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-8}"
+        },
+        "Secondary Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-4}"
+        },
+        "Error Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-R-2}"
+        },
+        "Error Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-R-8}"
+        },
+        "Error Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-R-4}"
+        },
+        "Success Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-G-2}"
+        },
+        "Success Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-G-8}"
+        },
+        "Success Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-G-4}"
+        },
+        "Info Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-B-2}"
+        },
+        "Info Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-B-4}"
+        },
+        "Info Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-B-8}"
+        },
+        "Warning Overlay 2": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-2}"
+        },
+        "Warning Overlay 4": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-4}"
+        },
+        "Warning Overlay 8": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-8}"
+        },
+        "Secondary Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-32}"
+        },
+        "Error Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-R-32}"
+        },
+        "Success Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-G-32}"
+        },
+        "Info Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-B-32}"
+        },
+        "Warning Overlay 32": {
+          "$type": "color",
+          "$value": "{Color.Opacity.opacity-Y-32}"
+        }
+      },
+      "Gradients": {
+        "AO1": {
+          "$type": "color",
+          "$value": "{Color.Add-ons.100}"
+        },
+        "AO2": {
+          "$type": "color",
+          "$value": "{Color.Add-ons.200}"
+        },
+        "AO3": {
+          "$type": "color",
+          "$value": "{Color.Add-ons.300}"
+        }
+      }
+    },
+    "Scale": {
+      "scale-0": {
+        "$type": "number",
+        "$value": "{Number.num-0}"
+      },
+      "scale-2": {
+        "$type": "number",
+        "$value": "{Number.num-2}"
+      },
+      "scale-4": {
+        "$type": "number",
+        "$value": "{Number.num-4}"
+      },
+      "scale-8": {
+        "$type": "number",
+        "$value": "{Number.num-8}"
+      },
+      "scale-12": {
+        "$type": "number",
+        "$value": "{Number.num-12}"
+      },
+      "scale-14": {
+        "$type": "number",
+        "$value": "{Number.num-14}"
+      },
+      "scale-16": {
+        "$type": "number",
+        "$value": "{Number.num-16}"
+      },
+      "scale-18": {
+        "$type": "number",
+        "$value": "{Number.num-18}"
+      },
+      "scale-20": {
+        "$type": "number",
+        "$value": "{Number.num-20}"
+      },
+      "scale-24": {
+        "$type": "number",
+        "$value": "{Number.num-24}"
+      },
+      "scale-22": {
+        "$type": "number",
+        "$value": "{Number.num-22}"
+      },
+      "scale-28": {
+        "$type": "number",
+        "$value": "{Number.num-28}"
+      },
+      "scale-32": {
+        "$type": "number",
+        "$value": "{Number.num-32}"
+      },
+      "scale-36": {
+        "$type": "number",
+        "$value": "{Number.num-36}"
+      },
+      "scale-40": {
+        "$type": "number",
+        "$value": "{Number.num-40}"
+      },
+      "scale-44": {
+        "$type": "number",
+        "$value": "{Number.num-44}"
+      },
+      "scale-48": {
+        "$type": "number",
+        "$value": "{Number.num-48}"
+      },
+      "scale-52": {
+        "$type": "number",
+        "$value": "{Number.num-52}"
+      },
+      "scale-56": {
+        "$type": "number",
+        "$value": "{Number.num-56}"
+      },
+      "scale-60": {
+        "$type": "number",
+        "$value": "{Number.num-60}"
+      },
+      "scale-64": {
+        "$type": "number",
+        "$value": "{Number.num-64}"
+      },
+      "scale-72": {
+        "$type": "number",
+        "$value": "{Number.num-72}"
+      },
+      "scale-80": {
+        "$type": "number",
+        "$value": "{Number.num-80}"
+      },
+      "scale-84": {
+        "$type": "number",
+        "$value": "{Number.num-84}"
+      },
+      "scale-88": {
+        "$type": "number",
+        "$value": "{Number.num-88}"
+      },
+      "scale-96": {
+        "$type": "number",
+        "$value": "{Number.num-96}"
+      },
+      "scale-100": {
+        "$type": "number",
+        "$value": "{Number.num-100}"
+      },
+      "scale-102": {
+        "$type": "number",
+        "$value": "{Number.num-102}"
+      },
+      "scale-104": {
+        "$type": "number",
+        "$value": "{Number.num-104}"
+      },
+      "scale-108": {
+        "$type": "number",
+        "$value": "{Number.num-108}"
+      },
+      "scale-116": {
+        "$type": "number",
+        "$value": "{Number.num-116}"
+      },
+      "scale-999": {
+        "$type": "number",
+        "$value": "{Number.num-999}"
+      },
+      "scale-1": {
+        "$type": "number",
+        "$value": "{Number.num-1}"
+      },
+      "scale-(-2%)": {
+        "$type": "number",
+        "$value": "{Number.num-(18 |-2%)}"
+      },
+      "scale-6": {
+        "$type": "number",
+        "$value": "{Number.num-6}"
+      }
+    },
+    "Typography": {
+      "Font Family": {
+        "heading": {
+          "$type": "string",
+          "$value": "{Typograhy.font-family-1}"
+        },
+        "body": {
+          "$type": "string",
+          "$value": "{Typograhy.font-family-2}"
+        }
+      },
+      "Font Size": {
+        "font-size-52": {
+          "$type": "number",
+          "$value": "{Number.num-52}"
+        },
+        "font-size-10": {
+          "$type": "number",
+          "$value": "{Number.num-10}"
+        },
+        "font-size-14": {
+          "$type": "number",
+          "$value": "{Number.num-14}"
+        },
+        "font-size-16": {
+          "$type": "number",
+          "$value": "{Number.num-16}"
+        },
+        "font-size-18": {
+          "$type": "number",
+          "$value": "{Number.num-18}"
+        },
+        "font-size-20": {
+          "$type": "number",
+          "$value": "{Number.num-20}"
+        },
+        "font-size-24": {
+          "$type": "number",
+          "$value": "{Number.num-24}"
+        },
+        "font-size-28": {
+          "$type": "number",
+          "$value": "{Number.num-28}"
+        },
+        "font-size-32": {
+          "$type": "number",
+          "$value": "{Number.num-32}"
+        },
+        "font-size-36": {
+          "$type": "number",
+          "$value": "{Number.num-36}"
+        },
+        "font-size-40": {
+          "$type": "number",
+          "$value": "{Number.num-40}"
+        },
+        "font-size-44": {
+          "$type": "number",
+          "$value": "{Number.num-44}"
+        },
+        "font-size-12": {
+          "$type": "number",
+          "$value": "{Number.num-12}"
+        },
+        "font-size-56": {
+          "$type": "number",
+          "$value": "{Number.num-56}"
+        },
+        "font-size-64": {
+          "$type": "number",
+          "$value": "{Number.num-64}"
+        }
+      },
+      "Font Weight": {
+        "Thin": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-100}"
+        },
+        "Extra Light": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-200}"
+        },
+        "Light": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-300}"
+        },
+        "Regular": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-400}"
+        },
+        "Medium": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-500}"
+        },
+        "Semi Bold": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-600}"
+        },
+        "Bold": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-700}"
+        },
+        "Extra Bold": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-800}"
+        },
+        "Black": {
+          "$type": "string",
+          "$value": "{Typograhy.Weight-900}"
+        }
+      },
+      "Line Height": {
+        "line-height-14": {
+          "$type": "number",
+          "$value": "{Number.num-14}"
+        },
+        "line-height-18": {
+          "$type": "number",
+          "$value": "{Number.num-18}"
+        },
+        "line-height-16": {
+          "$type": "number",
+          "$value": "{Number.num-16}"
+        },
+        "line-height-20": {
+          "$type": "number",
+          "$value": "{Number.num-20}"
+        },
+        "line-height-24": {
+          "$type": "number",
+          "$value": "{Number.num-24}"
+        },
+        "line-height-28": {
+          "$type": "number",
+          "$value": "{Number.num-28}"
+        },
+        "line-height-32": {
+          "$type": "number",
+          "$value": "{Number.num-32}"
+        },
+        "line-height-36": {
+          "$type": "number",
+          "$value": "{Number.num-36}"
+        },
+        "line-height-40": {
+          "$type": "number",
+          "$value": "{Number.num-40}"
+        },
+        "line-height-44": {
+          "$type": "number",
+          "$value": "{Number.num-44}"
+        },
+        "line-height-56": {
+          "$type": "number",
+          "$value": "{Number.num-56}"
+        },
+        "line-height-48": {
+          "$type": "number",
+          "$value": "{Number.num-48}"
+        }
+      },
+      "Letter Spacing": {
+        "letter-spacing (44 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(44 |-2%)}"
+        },
+        "letter-spacing (0)": {
+          "$type": "number",
+          "$value": "{Number.num-0}"
+        },
+        "letter-spacing-1": {
+          "$type": "number",
+          "$value": "{Number.num-1}"
+        },
+        "letter-spacing (52 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(52 |-2%)}"
+        },
+        "letter-spacing (40 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(40 |-2%)}"
+        },
+        "letter-spacing (18 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(18 |-2%)}"
+        },
+        "letter-spacing (36 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(36 |-2%)}"
+        },
+        "letter-spacing (32 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(32 |-2%)}"
+        },
+        "letter-spacing (-20 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(20 |-2%)}"
+        },
+        "letter-spacing (24 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(24 |-2%)}"
+        },
+        "letter-spacing (28 |-2%)": {
+          "$type": "number",
+          "$value": "{Number.num-(28 |-2%)}"
+        }
+      }
+    }
+  
+}

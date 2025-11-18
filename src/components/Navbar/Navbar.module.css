@@ -1,0 +1,101 @@
+/* 🔵 Main Navbar Layout
+.navbar {
+  height: 72px;
+  width: 1440px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+/* background: var(--ui-color-surface-container-neutral-neutral-00); */
+/* 🔵 Global Box-Sizing */
+
+/* 🔵 Main Navbar Layout */
+
+/* 🔵 Main Navbar Layout */
+.navbar {
+  height: 72px;
+  width: 100%; /* changed from 1440px to 100% for responsiveness */
+  max-width: 1440px; /* keep original max width */
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--ui-color-surface-container-neutral-neutral-00);
+  border-bottom: 1px solid var(--ui-color-border-neutral-10, #e5e7eb);
+
+  overflow: hidden; /* prevent scrollbars */
+  box-sizing: border-box; /* include padding in width */
+}
+
+/* 🔵 Left Side */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 🔵 Navigation Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navItem {
+  color: var(--ui-color-on-surface-on-neutral-00---1, #374151);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navHighlight {
+  color: var(--ui-color-states-highlighted-primary-1);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.arrowIcon {
+  margin-left: 4px;
+}
+
+/* 🔵 Right Side Buttons */
+.buttonGroup {
+  display: flex;
+  gap: 18px;
+}
+
+/* 🔵 Media Query: 1920px → 1440px */
+@media (max-width: 1920px) and (min-width: 1440px) {
+  .navbar {
+    width: 100%; /* keep responsive */
+    padding-left: 48px;
+    padding-right: 48px;
+    box-sizing: border-box;
+  }
+
+  .logoSection {
+    gap: 32px;
+  }
+
+  .navLinks span {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  .buttonGroup {
+    gap: 16px;
+  }
+}
+
+/* 🔵 Optional: Body reset to avoid vertical scrollbars */
+:global(html),
+:global(body) {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* horizontal scroll gone */
+}

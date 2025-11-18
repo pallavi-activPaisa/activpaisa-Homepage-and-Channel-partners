@@ -1,0 +1,30 @@
+export default function TeamCheckItem({ text }) {
+  return (
+    <div className="flex items-center gap-3">
+      {/* Small bullet square */}
+      <span
+        style={{
+          width: "24px",
+          height: "24px",
+          borderRadius: "2px",
+          backgroundColor: "var(--ui-color-on-surface-on-gradient---1, #FFF)",
+          display: "inline-block",
+        }}
+      ></span>
+      <p
+        style={{
+          color: "var(--ui-color-on-surface-on-gradient---1, #FFF)",
+          fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
+          fontSize: "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
+          fontStyle: "normal",
+          fontWeight: 400,
+          lineHeight:
+            "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
+          letterSpacing: "var(--typogrraphy-paragraph-letter-spacing, 0)",
+        }}
+      >
+        {text}
+      </p>
+    </div>
+  );
+}

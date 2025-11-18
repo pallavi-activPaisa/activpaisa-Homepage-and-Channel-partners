@@ -1,0 +1,39 @@
+import React from "react";
+import Heading from "./Heading";
+import SubHeading from "./Sub-heading";
+import Button from "../../ui/button/Button"; // primary button
+import BaseButton from "../../ui/BaseButton/BaseButton"; // secondary button
+
+const BorrowSmart = () => {
+  return (
+    <div className="w-full flex flex-col justify-center items-center bg-white pt-[40px] pb-[40px]">
+      {/* Heading */}
+      <Heading heading="Borrow Smarter, Not Harder" />
+
+      {/* Subheading */}
+      <SubHeading
+        subHeading="Loan Rejection don’t have to hold you back. With the right guidance and lender match, approvals can become smoother and faster"
+        className="text-center max-w-[720px] mt-4"
+      />
+
+      {/* Buttons */}
+      <div className="flex flex-wrap justify-center gap-6 mt-[40px]">
+        {/* Primary Button */}
+        <Button
+          label="Check Free Offers"
+          size="large"
+          className="px-[40px] sm:px-[40px] md:px-[200px]"
+        />
+
+        {/* Secondary Button */}
+        <BaseButton
+          label="Talk to Experts"
+          size="large"
+          className="px-[40px] sm:px-[40px] md:px-[200px]"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default BorrowSmart;

@@ -1,0 +1,93 @@
+/* ============================================
+   🎨 Design Tokens
+   ============================================ */
+:root {
+  /* Spacing Tokens */
+  --spacing-sp-6: 6px;
+  --spacing-sp-8: 8px;
+  --spacing-sp-10: 10px;
+  --spacing-sp-12: 12px;
+  --spacing-sp-16: 16px;
+  --spacing-sp-20: 20px;
+
+  /* Radius Token */
+  --corner-radius-2xsmall: 8px;
+
+  /* Color Tokens */
+  --brand-primary-30: #4c2399;
+  --brand-primary-40: #3e1d80;
+
+  /* Shadow */
+  --shadow-4: rgba(17, 24, 39, 0.04);
+}
+
+/* ============================================
+   Base Button
+   ============================================ */
+.button-base00 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+
+  border: none;
+  border-radius: var(--corner-radius-2xsmall);
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+
+  gap: var(--spacing-sp-6);
+
+  box-shadow:
+    0 1px 2px var(--shadow-4),
+    0 1px 2px var(--shadow-4);
+}
+
+.button-base00:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   Primary Variant
+   ============================================ */
+.button-primary {
+  background: var(--brand-primary-30);
+}
+
+.button-primary:hover {
+  background: var(--brand-primary-40);
+}
+
+/* ============================================
+   Sizes (💯 FINAL and VERIFIED)
+   ============================================ */
+
+/* SMALL BUTTON
+   width: 154px
+   height: 36px
+   gap: 6px
+   padding: sp-10 / sp-16
+*/
+.button-small {
+  width: 154px;
+  height: 36px;
+  padding: var(--spacing-sp-10) var(--spacing-sp-16);
+  font-size: 13px;
+  gap: var(--spacing-sp-6);
+}
+
+/* LARGE BUTTON
+   width: 171px
+   height: 44px
+   gap: 8px
+   padding: sp-10 / sp-16
+*/
+.button-large {
+  width: 171px;
+  height: 44px;
+  padding: var(--spacing-sp-10) var(--spacing-sp-16);
+  font-size: 14px;
+  gap: var(--spacing-sp-8);
+}
