@@ -8,7 +8,7 @@ const teamPoints = [
 
 export default function TeamLeftContent() {
   return (
-    <div className="text-white space-y-6">
+    <div className="text-white space-y-6 ">
       {/* Title */}
       <h2
         style={{

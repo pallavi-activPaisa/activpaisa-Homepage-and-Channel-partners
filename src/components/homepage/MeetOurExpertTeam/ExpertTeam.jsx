@@ -27,13 +27,17 @@ import TeamRightBoxes from "./TeamRightBoxes";
 
 export default function ExpertTeam() {
   return (
-    <section
+    <div className="w-full flex justify-center items-center">
+       
+       <div
       style={{
         background:
           "linear-gradient(45deg, #BD8668 0%, #5D51AF 50%, #3437C8 100%)",
+          
         borderRadius: "24px",
         padding: "74px 48px",
         marginTop: "40px",
+        width: " 1260px",
       }}
     >
       <div
@@ -50,6 +54,7 @@ export default function ExpertTeam() {
         <TeamLeftContent />
         <TeamRightBoxes />
       </div>
-    </section>
+    </div>
+    </div>
   );
 }

@@ -41,9 +41,9 @@ const OurLendingPartners = () => {
     },
   ];
   return (
-    <div className="w-full mt-[72px]">
+    <div className="w-full mt-[72px] px-[90px]">
       {/*heading  */}
-      <div className="w-full gap-[8px]">
+      <div className="w-full  gap-[8px]">
         <Heading heading="Our Lending Partners" />
         <SubHeading subHeading="We’ve partnered with India’s leading financial institutions to bring you the best loan options and competitive rates" />
       </div>

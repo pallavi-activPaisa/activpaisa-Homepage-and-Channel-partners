@@ -3,7 +3,7 @@ import OurProductList from "./OurProductList";
 
 const MainOurProduct = () => {
   return (
-    <div className="pt-[72px]  w-full  ">
+    <div className="pt-[72px]  w-full pl-[90px] overflow-x-hidden ">
       <div>
         <span
           style={{

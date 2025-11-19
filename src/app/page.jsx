@@ -14,7 +14,7 @@ import MeetOurExpertTeam from "@/components/homepage/MeetOurExpertTeam/ExpertTea
 
 function Home() {
   return (
-    <div>
+    <div >
       <Herosection />
       <BorrowSmart />
       <AboutActivpaisa />
