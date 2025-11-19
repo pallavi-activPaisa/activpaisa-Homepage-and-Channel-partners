@@ -4,8 +4,8 @@ export default function TeamCheckItem({ text }) {
       {/* Small bullet square */}
       <span
         style={{
-          width: "24px",
-          height: "24px",
+          width: "13px",
+          height: "13px",
           borderRadius: "2px",
           backgroundColor: "var(--ui-color-on-surface-on-gradient---1, #FFF)",
           display: "inline-block",

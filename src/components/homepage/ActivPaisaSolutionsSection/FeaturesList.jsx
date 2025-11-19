@@ -26,7 +26,7 @@ export default function FeaturesList() {
   ];
 
   return (
-    <div className="w-full max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6   mt-6">
+    <div className="w-full max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 mt-6">
       {features.map((item, i) => (
         <FeatureCard key={i} {...item} />
       ))}

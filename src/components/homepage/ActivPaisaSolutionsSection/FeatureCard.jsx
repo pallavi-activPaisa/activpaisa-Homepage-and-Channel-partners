@@ -47,6 +47,7 @@ export default function FeatureCard({ number, title, desc, highlight }) {
       {/* Title */}
       <h3
         style={{
+          height: "64px",
           color: "var(--ui-color-on-surface-on-neutral-00---3, #4C2399)",
           textAlign: "center",
           fontFamily: "var(--typogrraphy-heading-h5-inter-font-family, Inter)",
