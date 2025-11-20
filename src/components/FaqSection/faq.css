@@ -1,0 +1,70 @@
+:root {
+  --typography-paragraph-para-2-size: 16px;
+  --typography-paragraph-inter-font-family: Inter;
+  --typography-paragraph-para-2-line-height: 24px;
+  --typography-paragraph-letter-spacing: 0;
+}
+
+.accordion-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* --- arrow rotation with CSS --- */
+.accordion-arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-answer {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #555;
+}
+.subheading {
+  color: var(--ui-color-on-surface-on-neutral-00---2, #6b7280);
+
+  /* Paragraph/Para-2/Regular */
+  font-family: var(--typography-paragraph-inter-font-family, Inter);
+  font-size: var(--typography-paragraph-para-2-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--typography-paragraph-para-2-line-height, 24px); /* 150% */
+  letter-spacing: var(--typography-paragraph-letter-spacing, 0);
+  width: 1260px;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.faq-heading {
+  color: var(--UI-Color-On-Surface-on-neutral-00---1, #374151);
+  font-family: var(--Typogrraphy-Heading-H3-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Heading-H3-large-size, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--Typogrraphy-Heading-H3-large-line-height, 40px); /* 125% */
+  letter-spacing: var(--Typogrraphy-Heading-H3-large-letter-spacing, -0.64px);
+  width: 1260px;
+  text-align: start;
+  margin: 0 auto;
+}

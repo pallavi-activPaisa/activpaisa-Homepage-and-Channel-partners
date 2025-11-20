@@ -15,6 +15,8 @@ import WhatCustomersSays from "@/components/homepage/what-customers-says/WhatCus
 import ThousandsOfHappyCustomers from "@/components/homepage/thousands-of-happy-customers/ThousandsOfHappyCustomer";
 import GetActivpaisaApp from "@/components/homepage/get-activpaisa-app/GetActivpaisaApp";
 import StillHaveQuestion from "@/components/homepage/still-have-question/StillHaveQuestion";
+import FAQSection from "@/components/FaqSection/FAQSection";
+import Footer from "@/components/Footer/Footer";
 
 function Home() {
   return (
@@ -35,6 +37,8 @@ function Home() {
       <ThousandsOfHappyCustomers />
       <GetActivpaisaApp />
       <StillHaveQuestion />
+      <FAQSection />
+      <Footer />
     </div>
   );
 }
