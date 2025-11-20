@@ -39,7 +39,7 @@ const WhyChooseActivpaisa = () => {
   ];
   return (
     <div
-      className="w-full  flex flex-col justify-center items-center bg-white"
+      className="w-full  flex flex-col justify-center pl-[90px] "
       style={{
         marginTop: "72px",
       }}
@@ -49,7 +49,7 @@ const WhyChooseActivpaisa = () => {
 
       {/* cards section */}
       {cardData && (
-        <div className="w-full  w-[1440px] mt-[24px] flex flex-wrap gap-x-[20px]  justify-center ">
+        <div className="w-full   mt-[24px] flex flex-wrap gap-x-[20px]  justify-start ">
           {cardData.map((card) => (
             <Card
               key={card.id}

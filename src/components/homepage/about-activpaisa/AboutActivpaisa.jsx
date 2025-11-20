@@ -6,7 +6,7 @@ import Card from "./Card";
 const AboutActivpaisa = () => {
   return (
     <div
-      className="w-full bg-white flex flex-col justify-center items-center"
+      className="w-full  flex flex-col px-[90px]"
       style={{
         marginTop: "32px",
       }}

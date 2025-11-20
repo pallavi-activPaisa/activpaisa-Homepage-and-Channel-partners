@@ -11,10 +11,14 @@ import ExpertGuidance from "@/components/homepage/expert-guidance/ExpertGuidance
 import AchievementsSection from "@/components/homepage/OurAchievements&Credibility/AchievementsSection";
 import ActivePaisaSolution from "@/components/homepage/ActivPaisaSolutionsSection/ActivePaisaSolution";
 import MeetOurExpertTeam from "@/components/homepage/MeetOurExpertTeam/ExpertTeam";
+import WhatCustomersSays from "@/components/homepage/what-customers-says/WhatCustomersSays";
+import ThousandsOfHappyCustomers from "@/components/homepage/thousands-of-happy-customers/ThousandsOfHappyCustomer";
+import GetActivpaisaApp from "@/components/homepage/get-activpaisa-app/GetActivpaisaApp";
+import StillHaveQuestion from "@/components/homepage/still-have-question/StillHaveQuestion";
 
 function Home() {
   return (
-    <div >
+    <div>
       <Herosection />
       <BorrowSmart />
       <AboutActivpaisa />
@@ -27,6 +31,10 @@ function Home() {
       <ActivePaisaSolution />
       <ExpertGuidance />
       <MeetOurExpertTeam />
+      <WhatCustomersSays />
+      <ThousandsOfHappyCustomers />
+      <GetActivpaisaApp />
+      <StillHaveQuestion />
     </div>
   );
 }
