@@ -16,7 +16,7 @@
   height: 72px;
   width: 100%; /* changed from 1440px to 100% for responsiveness */
   max-width: 1440px; /* keep original max width */
-  padding: 16px 32px;
+  padding: 16px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
