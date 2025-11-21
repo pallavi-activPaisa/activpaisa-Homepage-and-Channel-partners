@@ -5,7 +5,7 @@ import TeamRightBoxes from "./TeamRightBoxes";
 
 export default function ExpertTeam() {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center  margin:auto">
       <div
         style={{
           background:
@@ -14,6 +14,7 @@ export default function ExpertTeam() {
           padding: "74px 48px",
           marginTop: "40px",
           width: "1260px",
+          marginRight: "17px",
         }}
       >
         <div

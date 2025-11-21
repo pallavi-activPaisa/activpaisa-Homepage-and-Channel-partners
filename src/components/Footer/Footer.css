@@ -19,7 +19,7 @@
 /* SUB-TITLE FOOTER */
 /* -------------------------- */
 .sub-title-footer {
-  color: var(--ui-color-on-surface-on-primary-50---2, #9ca3af);
+  color: var(--ui-color-on-surface-on-primary-50-2, #9ca3af);
   font-family: var(--typogrraphy-label-inter-font-family, Inter);
   font-size: var(--Typogrraphy-Paragraph-para-3-size, 14px);
   font-style: normal;
@@ -100,9 +100,9 @@
 }
 
 .footer-col h4 {
-  color: var(--ui-color-on-surface-on-primary-50---1, #f3f4f6);
-  font-family: var(--typogrraphy-heading-H5-inter-font-family, Inter);
-  font-size: calc(var(--typogrraphy-heading-H5-large-size, 24px) * 1);
+  color: var(--ui-color-on-surface-on-primary-50-1, #f3f4f6);
+  font-family: var(--typogrraphy-heading-h5-inter-font-family, Inter);
+  font-size: calc(var(--typogrraphy-heading-h5-large-size, 24px) * 1px);
   font-style: normal;
   font-weight: 600;
   letter-spacing: var(--typogrraphy-heading-h5-large-letter-spacing, -0.48px);
@@ -121,7 +121,7 @@
   width: 100%;
   height: 1px;
   opacity: 0.46;
-  background: var(--UI-Color-Border-neutral-20, #9ca3af);
+  background: var(--ui-color-border-neutral-20, #9ca3af);
 }
 
 /* -------------------------- */

@@ -72,8 +72,8 @@ export default function TeamLeftContent() {
           fontStyle: "normal",
           fontWeight: 500,
           lineHeight:
-            "calc(var(--Typogrraphy-Label-L-2-line-height, 16) * 1px)",
-          letterSpacing: "var(--Typogrraphy-Label-letter-spacing, 0)",
+            "calc(var(--typogrraphy-Label-L-2-line-height, 16) * 1px)",
+          letterSpacing: "var(--typogrraphy-Label-letter-spacing, 0)",
           cursor: "pointer",
           transition: "opacity 0.2s",
         }}
