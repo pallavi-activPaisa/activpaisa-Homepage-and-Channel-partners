@@ -2,6 +2,7 @@ export default function TeamRightBoxes() {
   return (
     <div className="flex gap-6 justify-center md:justify-end">
       {/* First small box */}
+
       <div
         style={{
           display: "flex",

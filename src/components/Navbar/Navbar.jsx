@@ -29,9 +29,7 @@ const Navbar = () => {
             />
           </span>
 
-          <span className={styles.navHighlight}>
-            Check your Free CIBIL Score
-          </span>
+          <span className={styles.navHighlight}>Check Credit Score</span>
 
           <span className={styles.navItem}>About Us</span>
           <span className={styles.navItem}>Contact Us</span>
@@ -41,8 +39,8 @@ const Navbar = () => {
       <div className={styles.buttonGroup}>
         {/* <BaseButton label="Get Started" iconPosition="right" /> */}
         <BaseButton
-          label="Get Started"
-          icon="/Icons/arrow-down.svg" // <-- pass this
+          label="Log In"
+          // icon="/Icons/arrow-down.svg" // <-- pass this
           iconPosition="right"
           size="small"
         />

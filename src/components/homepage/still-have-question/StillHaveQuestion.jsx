@@ -3,7 +3,8 @@ import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Button from "@/components/ui/button/Button";
 import Image from "next/image";
-import BaseButton from "@/components/ui/BaseButton";
+// import Dynamic from "@/components/ui/Dynamic/Dynamic";
+import Dynamic from "@/components/ui/Dynamic/Dynamic";
 
 const StillHaveQuestion = () => {
   return (
@@ -26,11 +27,7 @@ const StillHaveQuestion = () => {
 
         <div className=" flex justify-center w-full">
           <Button label="Check Free Offers" size="small" />
-          <BaseButton
-            label="Schedule Call"
-            size="small"
-            className="mr-[18px]"
-          />
+          <Dynamic label="Schedule Call" size="small" />
         </div>
       </div>
     </div>
