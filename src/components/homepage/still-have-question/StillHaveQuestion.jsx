@@ -24,8 +24,9 @@ const StillHaveQuestion = () => {
           <SubHeading subHeading="Our expert team is here to help. Get personalised answers to your specific questions about loans and services" />
         </div>
 
-        <div className=" flex justify-center gap-[18px] w-full">
+        <div className=" flex justify-center w-full">
           <Button label="Check Free Offers" size="small" />
+          <BaseButton label="Schedule Call" size="small" />
         </div>
       </div>
     </div>
