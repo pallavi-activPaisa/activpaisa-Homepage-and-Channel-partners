@@ -3,6 +3,7 @@ import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Button from "@/components/ui/button/Button";
 import Image from "next/image";
+import BaseButton from "@/components/ui/BaseButton";
 
 const StillHaveQuestion = () => {
   return (
@@ -23,8 +24,9 @@ const StillHaveQuestion = () => {
           <SubHeading subHeading="Our expert team is here to help. Get personalised answers to your specific questions about loans and services" />
         </div>
 
-        <div className=" flex justify-center w-full">
+        <div className=" flex justify-center gap-[18px] w-full">
           <Button label="Check Free Offers" size="small" />
+          <BaseButton label="schedule call" size="small" />
         </div>
       </div>
     </div>

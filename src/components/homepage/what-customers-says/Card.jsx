@@ -70,7 +70,7 @@ const Card = ({ image = "", name, location, description }) => {
         <Image src="/Icons/star100.svg" alt="Stars" width={24} height={24} />
         <Image src="/Icons/star100.svg" alt="Stars" width={24} height={24} />
         <Image src="/Icons/star100.svg" alt="Stars" width={24} height={24} />
-        <Image src="/Icons/star100.svg" alt="Stars" width={24} height={24} />
+        <Image src="/Icons/star50.svg" alt="Stars" width={24} height={24} />
       </div>
 
       {/* description */}

@@ -29,7 +29,7 @@ const GetActivpaisaApp = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col justify-center items-center px-[90px]">
+    <div className="w-full mt-[72px] flex flex-col justify-center items-center px-[90px]">
       <div className="w-full ">
         <Heading heading="Get ActivPaisa Mobile App" />
         <SubHeading subHeading="Take control of your finance on the go. Apply for loans, track applications, and manage your account from anywhere, anytime" />
@@ -309,7 +309,7 @@ const GetActivpaisaApp = () => {
                 }}
               >
                 <button
-                  className="w-[66px] h-[16px] "
+                  className="w-[66px] h-[16px] cursor-pointer"
                   style={{
                     color:
                       "var(--ui-color-on-surface-on-neutral-00---1, #374151)",
