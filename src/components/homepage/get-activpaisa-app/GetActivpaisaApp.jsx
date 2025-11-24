@@ -118,14 +118,14 @@ const GetActivpaisaApp = () => {
                       color:
                         "var(--ui-color-on-surface-on-neutral-00-2, #6b7280)",
                       fontFamily:
-                        "var(--typogrraphy-label-inter-font-family, Inter)",
-                      fontSize: "calc(var(--typogrraphy-label-l-2-size)*1px)",
+                        "var(--typography-label-inter-font-family, Inter)",
+                      fontSize: "calc(var(--typography-label-l-2-size)* 1px)",
                       fontStyle: "normal",
                       fontWeight: 500,
                       lineHeight:
-                        "calc(var(--typogrraphy-label-l-2-line-height)*1px)",
+                        "calc(var(--typography-label-l-2-line-height)*1px)",
                       letterSpacing:
-                        "calc(var(--typogrraphy-label-letter-spacing)*1px)",
+                        "calc(var(--typography-label-letter-spacing)*1px)",
                     }}
                   >
                     Download on the
@@ -358,7 +358,8 @@ const GetActivpaisaApp = () => {
               textAlign: "center",
               fontFamily:
                 "var(--typography-heading-h5-inter-font-family, Inter)",
-              fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              // fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              fontSize: "var(--typography-heading-h5-large-size, 24px)",
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight:
@@ -375,6 +376,7 @@ const GetActivpaisaApp = () => {
               textAlign: "center",
               fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
               fontSize: "calc(var(--typogrraphy-label-l-1-size, 16) * 1px)",
+              // fontSize: "var(--typography-heading-h5-large-size, 24px)",
               fontStyle: "normal",
               fontWeight: 500,
               lineHeight:
@@ -400,7 +402,8 @@ const GetActivpaisaApp = () => {
               textAlign: "center",
               fontFamily:
                 "var(--typography-heading-h5-inter-font-family, Inter)",
-              fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              // fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              fontSize: "var(--typography-heading-h5-large-size, 24px)",
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight:
@@ -442,7 +445,8 @@ const GetActivpaisaApp = () => {
               textAlign: "center",
               fontFamily:
                 "var(--typography-heading-h5-inter-font-family, Inter)",
-              fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              // fontSize: "calc(var(--typography-heading-h5-large-size) * 1px)",
+              fontSize: "var(--typography-heading-h5-large-size, 24px)",
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight:

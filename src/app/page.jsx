@@ -36,8 +36,8 @@ function Home() {
       <WhatCustomersSays />
       <ThousandsOfHappyCustomers />
       <GetActivpaisaApp />
-      <StillHaveQuestion />
       <FAQSection />
+      <StillHaveQuestion />
       <Footer />
     </div>
   );

@@ -17,7 +17,7 @@ export default function ActivePaisaSolution() {
             "calc(var(--typogrraphy-heading-h3-large-line-height, 40) * 1px)",
           letterSpacing:
             "var(--typogrraphy-heading-h3-large-letter-spacing, -0.64px)",
-          marginBottom: "16px",
+          marginBottom: "8px",
         }}
       >
         The ActivPaisa Solution
