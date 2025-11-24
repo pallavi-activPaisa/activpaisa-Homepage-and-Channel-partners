@@ -27,11 +27,7 @@ const StillHaveQuestion = () => {
 
         <div className=" flex justify-center w-full">
           <Button label="Check Free Offers" size="small" />
-<<<<<<< HEAD
           <Dynamic label="Schedule Call" size="small" />
-=======
-          <BaseButton label="Schedule Call" size="small" />
->>>>>>> fd142891e1346c97171273600d788fcf3acd5453
         </div>
       </div>
     </div>
