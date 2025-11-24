@@ -6,7 +6,11 @@ import Image from "next/image";
 
 const ThousandsOfHappyCustomers = () => {
   return (
+<<<<<<< HEAD
     <div className="w-full mt-[40px] flex justify-center items-center px-[90px] mb-[72px]">
+=======
+    <div className="w-full mt-[40px]  flex  px-[90px]">
+>>>>>>> fd142891e1346c97171273600d788fcf3acd5453
       <div
         className="w-[1260px]  gap-[40px]  flex flex-col items-start"
         style={{

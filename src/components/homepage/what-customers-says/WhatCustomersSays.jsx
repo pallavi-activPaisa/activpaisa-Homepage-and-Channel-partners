@@ -17,19 +17,19 @@ const WhatCustomersSays = () => {
     {
       id: 2,
 
-      name: "Rajesh Kumar",
+      name: "Aditi Rao",
       location: "Business Owner . Mumbai",
       description:
-        "ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step",
+        "“ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step”",
     },
 
     {
       id: 3,
 
-      name: "Rajesh Kumar",
+      name: "Hardik Arora",
       location: "Business Owner . Mumbai",
       description:
-        "ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step",
+        "“ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step”",
     },
 
     {
