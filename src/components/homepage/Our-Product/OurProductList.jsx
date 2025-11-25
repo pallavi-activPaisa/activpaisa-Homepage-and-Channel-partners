@@ -13,12 +13,12 @@ const OurProductList = () => {
           description="Quick personal loans with competitive interest rates and flexible repayment terms"
         />
         <CardOurProduct
-          title="Personal Loan"
-          description="Quick personal loans with competitive interest rates and flexible repayment terms"
+          title="Home Loan"
+          description="Make your dream home a reality with flexible home loan solutions"
         />
         <CardOurProduct
-          title="Personal Loan"
-          description="Quick personal loans with competitive interest rates and flexible repayment terms"
+          title="Professional Loan"
+          description="Access tailored loan options to power your professional growth"
         />
         <div style={{ width: "95px" }}>
           <CardOurProduct

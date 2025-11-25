@@ -36,9 +36,9 @@ const WhyChooseActivpaisa = () => {
   ];
   return (
     <div
-      className="w-full  flex flex-col justify-center pl-[90px] "
+      className="w-full  flex flex-col justify-center pl-[90px]  "
       style={{
-        marginTop: "72px",
+        marginBottom: "72px",
       }}
     >
       <Heading heading="Why Borrow with ActivPaisa" />

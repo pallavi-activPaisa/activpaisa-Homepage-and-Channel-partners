@@ -19,18 +19,10 @@ const BorrowSmart = () => {
       {/* Buttons */}
       <div className="flex flex-wrap justify-center gap-6 mt-[40px]">
         {/* Primary Button */}
-        <Button
-          label="Check Free Offers"
-          size="large"
-          className="px-[40px] sm:px-[40px] md:px-[200px]"
-        />
+        <Button label="Check Free Offers" size="large" />
 
         {/* Secondary Button */}
-        <BaseButton
-          label="Talk to Experts"
-          size="large"
-          className="px-[40px] sm:px-[40px] md:px-[200px]"
-        />
+        <BaseButton label="Talk to Experts" size="large" />
       </div>
     </div>
   );

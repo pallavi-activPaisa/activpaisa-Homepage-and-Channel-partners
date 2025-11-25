@@ -47,7 +47,7 @@ const AccordionItem = ({ question, title, answer, isFirst }) => {
       >
         {question}
 
-        <span
+        {/* <span
           style={{
             transition: "0.3s",
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
@@ -55,6 +55,18 @@ const AccordionItem = ({ question, title, answer, isFirst }) => {
         >
           <Image
             src="/Icons/fi_2722987.svg"
+            alt="Toggle Icon"
+            width={24}
+            height={24}
+          />
+        </span> */}
+        <span
+          style={{
+            transition: "0.3s",
+          }}
+        >
+          <Image
+            src={open ? "/Icons/fi_2722987.svg" : "/Icons/arrow-down.svg"}
             alt="Toggle Icon"
             width={24}
             height={24}

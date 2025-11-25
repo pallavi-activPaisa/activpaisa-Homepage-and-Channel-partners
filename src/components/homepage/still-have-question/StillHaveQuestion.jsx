@@ -3,11 +3,13 @@ import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Button from "@/components/ui/button/Button";
 import Image from "next/image";
+// import Dynamic from "@/components/ui/Dynamic/Dynamic";
+import Dynamic from "@/components/ui/Dynamic/Dynamic";
 import BaseButton from "@/components/ui/BaseButton";
 
 const StillHaveQuestion = () => {
   return (
-    <div className="w-full mt-[70px] flex justify-center items-center px-[90px]">
+    <div className="w-full mt-[70px] flex justify-center items-center px-[90px] mb-[70px]">
       <div
         className="w-[1260px]  gap-[40px]  flex flex-col items-start"
         style={{

@@ -25,7 +25,6 @@ export default function TeamLeftContent() {
       >
         Meet Our Expert Team
       </h2>
-
       {/* Description */}
       <p
         style={{
@@ -41,14 +40,12 @@ export default function TeamLeftContent() {
         Our team includes certified financial advisors, ex-bankers, and risk
         specialists with decades of lending experience
       </p>
-
       {/* Bullet Points */}
       <div className="space-y-3">
         {teamPoints.map((point, i) => (
           <TeamCheckItem key={i} text={point} />
         ))}
       </div>
-
       {/* Button */}
       <button
         style={{

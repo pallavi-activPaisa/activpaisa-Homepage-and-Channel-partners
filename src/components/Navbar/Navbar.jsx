@@ -46,6 +46,7 @@ const Navbar = () => {
         />
 
         {/* <Button size="small" label="Check Free Offers" /> */}
+        <BaseButton label="Log In" iconPosition="right" size="small" />
         <Button label="Check Free Offers" size="small" />
       </div>
     </nav>
