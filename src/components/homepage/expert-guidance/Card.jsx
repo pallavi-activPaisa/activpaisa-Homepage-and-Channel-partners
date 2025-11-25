@@ -4,7 +4,7 @@ import React from "react";
 const Card = ({ title, description, points }) => {
   return (
     <div
-      className="w-[620px] h-[220px] "
+      className="w-[620px] h-[196px] "
       style={{
         padding: "calc(var(--spacing-sp-24) * 1px)",
         borderRadius: "calc(var(--corner-radius-large)*1px)",

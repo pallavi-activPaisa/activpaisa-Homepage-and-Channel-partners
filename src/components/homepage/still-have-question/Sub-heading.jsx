@@ -5,7 +5,7 @@ const SubHeading = ({ subHeading }) => {
     <div
       style={{
         width: "714px",
-        height: "48px",
+        height: "24px",
         color: "var(--ui-color-on-surface-on-primary-00---3, #6b7280)",
         textAlign: "center",
         fontFamily: "var(--typogrraphy-paragraph-inter-font-family, inter)",

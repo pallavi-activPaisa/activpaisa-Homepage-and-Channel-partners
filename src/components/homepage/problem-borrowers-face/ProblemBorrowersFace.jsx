@@ -1,68 +1,63 @@
-import React from 'react'
-import Heading from './Heading'
-import SubHeading from './Sub-heading'
-import LeftCard from './LeftCard'
-import RightCard from './RightCard'
+import React from "react";
+import Heading from "./Heading";
+import SubHeading from "./Sub-heading";
+import LeftCard from "./LeftCard";
+import RightCard from "./RightCard";
 
 const ProblemBorrowersFace = () => {
-
   const leftCardData = [
     {
       id: 1,
-      title: "Lengthy Approval Process",
-      description: "Traditional banks take weeks or months to approve loans, causing unnecessary delays"
+      title: "Slow Approvals",
+      description: "Banks take days or weeks, leaving borrowers stuck waiting",
     },
 
     {
       id: 2,
-      title: "Excessive Documentation",
-      description: "Overwhelming paperwork requirements make the loan application process complex"
+      title: "Heavy Paperwork",
+      description:
+        "Endless documents make the process exhausting and difficult",
     },
 
     {
       id: 3,
-      title: "Hidden Charges & Fees",
-      description: "Lack of transparency in fees and charges leads to unexpected costs and financial surprises"
+      title: "Hidden Charges",
+      description: "Unexpected fees and unclear terms lead to costly surprises",
     },
 
     {
       id: 4,
       title: "Limited Options ",
-      description: "Borrowers often have limited access to compare different lenders and find the best deals"
+      description:
+        "Borrowers rarely get access to the full range of lenders or offers",
     },
-  ]
+  ];
   return (
-    <div 
-    className='w-full px-[90px]'>
-
+    <div className="w-full px-[90px]">
       {/*heading  */}
-      <div className='w-full  mt-[72px] gap-[8px]'>
-      <Heading heading="Problems Borrowers Face"/>
-      <SubHeading subHeading="We understand the challenges you face when seeking financial assistance. These common problems inspired us to create a better solution"/>
+      <div className="w-full  mt-[72px] gap-[8px]">
+        <Heading heading="Problems Borrowers Face" />
+        <SubHeading subHeading="Borrowing often feels confusing, slow, and stressful. These are the issues most people run into" />
       </div>
 
       {/* parent box for cards */}
-      <div 
-      className='w-full  mt-[24px] flex gap-[40px]'
-      >
-
+      <div className="w-full  mt-[24px] flex gap-[40px]">
         {/* left card */}
-        <div 
-        className='w-[620px] h-fit flex flex-wrap  gap-[20px]'
-        >
-       
+        <div className="w-[620px] h-fit flex flex-wrap  gap-[20px]">
           {leftCardData.map((card) => (
-            <LeftCard key={card.id} title={card.title} description={card.description} />
+            <LeftCard
+              key={card.id}
+              title={card.title}
+              description={card.description}
+            />
           ))}
-        
         </div>
 
         {/* right image */}
-        <RightCard/>
-        
+        <RightCard />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProblemBorrowersFace
+export default ProblemBorrowersFace;

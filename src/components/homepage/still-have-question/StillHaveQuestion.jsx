@@ -20,13 +20,13 @@ const StillHaveQuestion = () => {
         }}
       >
         <div className="w-full  flex flex-col items-center gap-[8px]">
-          <Heading heading="Still have Questions" />
-          <SubHeading subHeading="Our expert team is here to help. Get personalised answers to your specific questions about loans and services" />
+          <Heading heading="Still have Questions?" />
+          <SubHeading subHeading="Get clear, personalized guidance from our experts for any loan or credit question" />
         </div>
 
-        <div className=" flex justify-center w-full">
-          <Button label="Check Free Offers" size="small" />
-          <BaseButton label="Schedule Call" size="small" />
+        <div className=" flex justify-center gap-[18px] w-full">
+          <Button label="Chat with Expert" size="small" />
+          <BaseButton label="Schedule a Call" size="small" />
         </div>
       </div>
     </div>

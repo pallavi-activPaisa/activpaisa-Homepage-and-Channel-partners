@@ -7,33 +7,30 @@ const WhyChooseActivpaisa = () => {
   const cardData = [
     {
       id: 1,
-      title: "Quick Approval ",
-      description:
-        "Get loan approval in as little as 24 hours with our streamlined digital process",
+      title: "Fast Approvals",
+      description: "Get loan decisions quickly with our smooth digital process",
       icon: "/Icons/arrow-down.svg",
     },
 
     {
       id: 2,
       title: "Minimal Documentation",
-      description:
-        "Simple paperwork and digital documentation process for faster processing",
+      description: "Minimal paperwork with guided support and automated checks",
       icon: "/Icons/arrow-down.svg",
     },
 
     {
       id: 3,
-      title: "Competitive Rates",
+      title: "Smart Loan Offers",
       description:
-        "Access the best interest rates from our network of trusted lending partners",
+        "Access lender offers at best interest tailored to your profile and goals",
       icon: "/Icons/arrow-down.svg",
     },
 
     {
       id: 4,
-      title: "100% Transparent",
-      description:
-        "No hidden fees, clear terms, and complete transparency throughout the process",
+      title: "Clear & Transparent",
+      description: "No hidden fees or surprises - everything explained upfront",
       icon: "/Icons/arrow-down.svg",
     },
   ];
@@ -44,8 +41,8 @@ const WhyChooseActivpaisa = () => {
         marginTop: "72px",
       }}
     >
-      <Heading heading="Why Choose Activpaisa" />
-      <SubHeading subHeading="We’ve revolutionized the lending experience with technology, transparency, and trust at the core of everything we do" />
+      <Heading heading="Why Borrow with ActivPaisa" />
+      <SubHeading subHeading="Unbiased expertise and precision-driven matching that protects your money, time, and financial future." />
 
       {/* cards section */}
       {cardData && (

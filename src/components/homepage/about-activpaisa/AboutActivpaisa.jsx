@@ -8,7 +8,7 @@ const AboutActivpaisa = () => {
     <div
       className="w-full  flex flex-col px-[90px]"
       style={{
-        marginTop: "32px",
+        marginTop: "72px",
       }}
     >
       <Heading heading="About ActivPaisa" />

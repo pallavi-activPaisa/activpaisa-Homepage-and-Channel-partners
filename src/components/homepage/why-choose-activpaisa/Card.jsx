@@ -4,7 +4,7 @@ import React from "react";
 const Card = ({ title, description, icon }) => {
   return (
     <div
-      className="w-[300px] h-[252px] flex flex-col items-start"
+      className="w-[300px] h-[232px] flex flex-col items-start"
       style={{
         borderRadius: "calc(var(--corner-radius-large)*1px)",
         border:

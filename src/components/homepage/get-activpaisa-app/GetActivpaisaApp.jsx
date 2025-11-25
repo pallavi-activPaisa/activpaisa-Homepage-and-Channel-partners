@@ -10,29 +10,29 @@ const GetActivpaisaApp = () => {
     {
       id: 1,
       icon: "",
-      title: "Lightning Fast",
+      title: "Fast & Easy",
       subTitle: "Apply for loans in under 5 minutes",
     },
 
     {
       id: 2,
       icon: "",
-      title: "Bank-Grade Security",
-      subTitle: "Your data is protected with 256-bit encryption",
+      title: "Secure by Design",
+      subTitle: "Your data stays protected at all times",
     },
 
     {
       id: 3,
       icon: "",
-      title: "User Friendly",
+      title: "Simple to Use",
       subTitle: "Intuitive design for seamless experience",
     },
   ];
   return (
     <div className="w-full mt-[72px] flex flex-col justify-center items-center px-[90px]">
       <div className="w-full ">
-        <Heading heading="Get ActivPaisa Mobile App" />
-        <SubHeading subHeading="Take control of your finance on the go. Apply for loans, track applications, and manage your account from anywhere, anytime" />
+        <Heading heading="Get the ActivPaisa App" />
+        <SubHeading subHeading="Manage your credit, track applications, and access smarter borrowing - anytime, anywhere" />
       </div>
 
       {/* parent box */}
@@ -146,7 +146,7 @@ const GetActivpaisaApp = () => {
                         "calc(var(--typogrraphy-heading-h6-small-letter-spacing)*1px)",
                     }}
                   >
-                    App Store
+                    Play Store
                   </h4>
                 </div>
               </div>
@@ -383,7 +383,7 @@ const GetActivpaisaApp = () => {
                 "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
             }}
           >
-            App Downloads Expected
+            Expected App Downloads
           </p>
         </div>
 

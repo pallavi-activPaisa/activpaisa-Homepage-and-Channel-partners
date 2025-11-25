@@ -9,27 +9,27 @@ const WhatCustomersSays = () => {
       id: 1,
 
       name: "Rajesh Kumar",
-      location: "Business Owner . Mumbai",
+      location: "Mumbai",
       description:
-        "ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step",
+        "ActivPaisa made securing my business loan surprisingly quick. What usually takes months with banks was done in just a few days. Their team supported me through every step.",
     },
 
     {
       id: 2,
 
       name: "Aditi Rao",
-      location: "Business Owner . Mumbai",
+      location: "Bengaluru",
       description:
-        "“ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step”",
+        "The process was smooth and far easier than dealing with banks directly. ActivPaisa guided me clearly, helped me compare options, and I received approval much faster than expected.",
     },
 
     {
       id: 3,
 
       name: "Hardik Arora",
-      location: "Business Owner . Mumbai",
+      location: "Delhi",
       description:
-        "“ActivPaisa made getting a business loan incredibly easy. What would have taken months with traditional banks was completed in just 3 days. Their team guided me through every step”",
+        "I was unsure about my chances, but ActivPaisa matched me with the right lender and I got approved quickly. The entire experience was transparent, simple, and stress-free.",
     },
 
     {
@@ -54,7 +54,7 @@ const WhatCustomersSays = () => {
     <div className="w-full flex flex-col justify-center pl-[90px]   mt-[72px] overflow-x-hidden">
       {/* heading */}
       <Heading heading="What Our Customers Say" />
-      <SubHeading subHeading="Don’t just take our word for it. Here’s what our satisfied customers have to say about their ActivPaisa experience" />
+      <SubHeading subHeading="Don’t just take our word for it, Real stories from borrowers who chose ActivPaisa for a smoother experience" />
 
       {/* cards: show 3 at a time, horizontal scroll for more */}
       <div className="w-full flex justify-start mt-[24px] ">

@@ -12,7 +12,7 @@
   gap: 60px; /* gap for top sections */
   background: var(--ui-color-surface-container-brand-primary-50, #1e064c);
   color: #ffffff;
-  margin: 0 auto;
+  margin-top: "72px" ;
 }
 
 /* -------------------------- */
@@ -38,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
+  
 }
 .footer-col {
   height: 116px;

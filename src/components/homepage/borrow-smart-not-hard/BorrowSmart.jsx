@@ -8,11 +8,11 @@ const BorrowSmart = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center bg-white pt-[40px] pb-[40px]">
       {/* Heading */}
-      <Heading heading="Borrow Smarter, Not Harder" />
+      <Heading heading="Smarter Matches. Higher Approvals." />
 
       {/* Subheading */}
       <SubHeading
-        subHeading="Loan Rejection don’t have to hold you back. With the right guidance and lender match, approvals can become smoother and faster"
+        subHeading="We match you with the right lenders based on your profile and needs - enabling faster approvals, better offers, and transparent guidance."
         className="text-center max-w-[720px] mt-4"
       />
 
