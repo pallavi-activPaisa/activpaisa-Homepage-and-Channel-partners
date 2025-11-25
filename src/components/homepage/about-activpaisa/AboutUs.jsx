@@ -116,16 +116,18 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
+                    fontWeight: "600",
                   }}
                 >
                   ₹500 Cr+
                 </h3>
                 <p
                   style={{
-                    color: "#e5e5e5",
+                    color: "#fff",
                     fontSize: "14px",
                     margin: 0,
                     fontFamily: "Inter",
+                    fontWeight: 400,
                   }}
                 >
                   Loans Disbursed
@@ -139,16 +141,18 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
+                    fontWeight: "600",
                   }}
                 >
                   50K+
                 </h3>
                 <p
                   style={{
-                    color: "#e5e5e5",
+                    color: "#fff",
                     fontSize: "14px",
                     margin: 0,
                     fontFamily: "Inter",
+                    fontWeight: 400,
                   }}
                 >
                   Happy Customers
@@ -162,16 +166,18 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
+                    fontWeight: "600",
                   }}
                 >
                   4.8/5
                 </h3>
                 <p
                   style={{
-                    color: "#e5e5e5",
+                    color: "#fff",
                     fontSize: "14px",
                     margin: 0,
                     fontFamily: "Inter",
+                    fontWeight: 400,
                   }}
                 >
                   Customer Rating
