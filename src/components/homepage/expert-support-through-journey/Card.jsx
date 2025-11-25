@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/Icons/Icon";
 import React from "react";
 
-const Card = ({ title, description, points }) => {
+const Card = ({ title, description, points, icon }) => {
   return (
     <div
       className="w-[620px] h-[196px] "
@@ -16,7 +16,7 @@ const Card = ({ title, description, points }) => {
       }}
     >
       <div className="w-full flex gap-[24px] ">
-        <Icon />
+        <Icon icon={icon} />
 
         <div className="w-[499px] ">
           <h4

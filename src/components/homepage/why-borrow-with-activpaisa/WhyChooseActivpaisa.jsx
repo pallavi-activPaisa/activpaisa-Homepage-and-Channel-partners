@@ -9,14 +9,14 @@ const WhyChooseActivpaisa = () => {
       id: 1,
       title: "Fast Approvals",
       description: "Get loan decisions quickly with our smooth digital process",
-      icon: "/Icons/arrow-down.svg",
+      icon: "/Icons/Workflow-Task-Management.svg",
     },
 
     {
       id: 2,
       title: "Minimal Documentation",
       description: "Minimal paperwork with guided support and automated checks",
-      icon: "/Icons/arrow-down.svg",
+      icon: "/Icons/Insurance-Document-Clipboard.svg",
     },
 
     {
@@ -24,14 +24,14 @@ const WhyChooseActivpaisa = () => {
       title: "Smart Loan Offers",
       description:
         "Access lender offers at best interest tailored to your profile and goals",
-      icon: "/Icons/arrow-down.svg",
+      icon: "/Icons/Discount-Coupon.svg",
     },
 
     {
       id: 4,
       title: "Clear & Transparent",
       description: "No hidden fees or surprises - everything explained upfront",
-      icon: "/Icons/arrow-down.svg",
+      icon: "/Icons/Transparent-1.svg",
     },
   ];
   return (

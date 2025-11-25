@@ -9,21 +9,21 @@ const GetActivpaisaApp = () => {
   const items = [
     {
       id: 1,
-      icon: "",
+      number: 1,
       title: "Fast & Easy",
       subTitle: "Apply for loans in under 5 minutes",
     },
 
     {
       id: 2,
-      icon: "",
+      number: 2,
       title: "Secure by Design",
       subTitle: "Your data stays protected at all times",
     },
 
     {
       id: 3,
-      icon: "",
+      number: 3,
       title: "Simple to Use",
       subTitle: "Intuitive design for seamless experience",
     },
@@ -53,7 +53,12 @@ const GetActivpaisaApp = () => {
         >
           {/* card */}
           {items.map((item) => (
-            <Card key={item.id} title={item.title} subTitle={item.subTitle} />
+            <Card
+              key={item.id}
+              number={item.number}
+              title={item.title}
+              subTitle={item.subTitle}
+            />
           ))}
 
           {/* just a line */}
@@ -81,36 +86,12 @@ const GetActivpaisaApp = () => {
               <div className="w-[168px] h-[52px] flex justify-center items-center gap-[24px]">
                 {/* icon code */}
 
-                <div
-                  className="flex justify-center align-middle"
-                  style={{
-                    alignItems: "center",
-                    width: "29px",
-                    height: "29px",
-                    padding: "calc(var(--spacing-sp-12)*1px)",
-                    borderRadius: "6px",
-                    background:
-                      "var(--ui-color-surface-container-brand-primary-00, #f2effc)",
-                  }}
-                >
-                  <div
-                    className=" flex justify-center items-center"
-                    style={{
-                      width: "24px",
-                      height: "24px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "12.8px",
-                        height: "12.8px",
-                        borderRadius: "2.4px",
-                        background:
-                          "var(--ui-color-on-surface-on-primary-00---4, #d0c6f6)",
-                      }}
-                    ></div>
-                  </div>
-                </div>
+                <Image
+                  src={"/Icons/playstore.png"}
+                  alt="download icons"
+                  width={48}
+                  height={48}
+                />
                 {/* icon code fined */}
                 <div className="w-[114px]">
                   <p
@@ -128,7 +109,7 @@ const GetActivpaisaApp = () => {
                         "calc(var(--typography-label-letter-spacing)*1px)",
                     }}
                   >
-                    Download on the
+                    Download
                   </p>
                   <h4
                     style={{
@@ -167,36 +148,12 @@ const GetActivpaisaApp = () => {
               <div className="w-[168px] h-[52px] flex justify-center items-center gap-[24px]">
                 {/* icon code */}
 
-                <div
-                  className="flex justify-center align-middle"
-                  style={{
-                    alignItems: "center",
-                    width: "29px",
-                    height: "29px",
-                    padding: "calc(var(--spacing-sp-12)*1px)",
-                    borderRadius: "6px",
-                    background:
-                      "var(--ui-color-surface-container-brand-primary-00, #f2effc)",
-                  }}
-                >
-                  <div
-                    className=" flex justify-center items-center"
-                    style={{
-                      width: "24px",
-                      height: "24px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "12.8px",
-                        height: "12.8px",
-                        borderRadius: "2.4px",
-                        background:
-                          "var(--ui-color-on-surface-on-primary-00---4, #d0c6f6)",
-                      }}
-                    ></div>
-                  </div>
-                </div>
+                <Image
+                  src={"/Icons/appstore.png"}
+                  alt="download icons"
+                  width={48}
+                  height={48}
+                />
                 {/* icon code fined */}
                 <div className="w-[114px]">
                   <p
@@ -214,7 +171,7 @@ const GetActivpaisaApp = () => {
                         "calc(var(--typogrraphy-label-letter-spacing)*1px)",
                     }}
                   >
-                    Download on the
+                    Download
                   </p>
                   <h4
                     style={{

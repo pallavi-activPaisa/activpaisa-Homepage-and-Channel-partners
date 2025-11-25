@@ -4,7 +4,7 @@ import BottomSubHeading from "./BottomSubHeading";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="mt-[32px]">
       {/* OUTER BOX */}
       <div
         style={{

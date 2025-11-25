@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
-const Icon = () => {
+const Icon = ({ icon }) => {
   return (
     //  <div className='w-full h-[48px] '>
     <div
-      className="flex justify-center align-middle"
+      className="flex justify-center  align-middle"
       style={{
         alignItems: "center",
         width: "48px",
@@ -15,22 +16,23 @@ const Icon = () => {
           "var(--ui-color-surface-container-brand-primary-00, #f2effc)",
       }}
     >
-      <div
+      {/* <div
         className=" flex justify-center items-center"
         style={{
           width: "24px",
           height: "24px",
         }}
-      >
-        <div
+      > */}
+      {/* <div
           style={{
             width: "12.8px",
             height: "12.8px",
             borderRadius: "2.4px",
             background: "var(--ui-color-on-surface-on-primary-00---4, #d0c6f6)",
           }}
-        ></div>
-      </div>
+        ></div> */}
+      <Image src={icon} alt="icon" width={24} height={24} />
+      {/* </div> */}
     </div>
     // </div>
   );

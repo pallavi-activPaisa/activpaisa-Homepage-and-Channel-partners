@@ -4,7 +4,7 @@ import React from "react";
 const LeftCard = ({ title = "", description = "" }) => {
   return (
     <div
-      className="w-[300px] h-[200px] "
+      className="w-[300px] h-[128px] bg-amber-300 "
       style={{
         padding: "calc(var(--spacing-sp-24)*1px)",
         borderRadius: "calc(var(--corner-radius-large, 24px)*1px)",
@@ -17,13 +17,13 @@ const LeftCard = ({ title = "", description = "" }) => {
       }}
     >
       {/* icon */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <Icon />
-      </div>
+      </div> */}
 
       {/* Heading */}
       <div
-        className="w-full h-[32px] mt-[24px]"
+        className="w-full h-[32px] "
         style={{
           color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
           fontFamily: "var(--typogrraphy-heading-h5-inter-font-family, inter)",

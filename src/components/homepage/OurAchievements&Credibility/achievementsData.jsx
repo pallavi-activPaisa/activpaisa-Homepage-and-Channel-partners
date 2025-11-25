@@ -6,28 +6,28 @@ export const achievementsData = [
     number: "1,00,000+ Customers",
     title: "Satisfied customers",
     desc: "Guiding customers across diverse financial needs",
-    icon: DefaultIcon, // now defined
+    icon: "Icons/Customer-Retention-Hands.svg", // now defined
     marginbottom: "40px",
   },
   {
     number: "₹200 Cr+",
     title: "Loans Disbursed",
     desc: "Helping borrowers secure the right credit at scale",
-    icon: DefaultIcon,
+    icon: "Icons/Currency-Sign-Rupee-Bag.svg",
     marginbottom: "40px",
   },
   {
     number: "4.5/5",
     title: "Customer Rating",
     desc: "Consistently strong feedback across platforms",
-    icon: DefaultIcon,
+    icon: "Icons/Like-1.svg",
     marginbottom: "40px",
   },
   {
     number: "50+",
     title: "Lending Partners",
     desc: "Access to India’s most reliable financial institutions",
-    icon: DefaultIcon,
+    icon: "Icons/Multiple-Neutral-2.svg",
     marginbottom: "40px",
   },
   {

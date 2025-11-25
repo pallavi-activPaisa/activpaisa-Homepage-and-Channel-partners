@@ -13,6 +13,7 @@ const ExpertGuidance = () => {
         point2: "Ongoing guidance",
         point3: "Product recommendations",
       },
+      icon: "/Icons/Headphones-Person.svg",
     },
 
     {
@@ -24,6 +25,7 @@ const ExpertGuidance = () => {
         point2: "Loan structuring",
         point3: "Repayment planning",
       },
+      icon: "/Icons/Multiple-Actions-Text.svg",
     },
 
     {
@@ -35,6 +37,7 @@ const ExpertGuidance = () => {
         point2: "Financial guides",
         point3: "Short explainer videos",
       },
+      icon: "/Icons/Book-Close-Bookmark-1.svg",
     },
 
     {
@@ -46,6 +49,7 @@ const ExpertGuidance = () => {
         point2: "Personalized improvement plan",
         point3: "Better loan eligibility",
       },
+      icon: "/Icons/Diagram-Increase-Large-Head.svg",
     },
   ];
   return (
@@ -65,6 +69,7 @@ const ExpertGuidance = () => {
             title={guidance.title}
             description={guidance.description}
             points={guidance.points}
+            icon={guidance.icon}
           />
         ))}
       </div>

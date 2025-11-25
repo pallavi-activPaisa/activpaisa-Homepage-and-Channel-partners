@@ -7,7 +7,7 @@ const WhatCustomersSays = () => {
   const userReviews = [
     {
       id: 1,
-
+      image: "/Images/AvatarBase.png",
       name: "Rajesh Kumar",
       location: "Mumbai",
       description:
@@ -16,7 +16,7 @@ const WhatCustomersSays = () => {
 
     {
       id: 2,
-
+      image: "/Icons/user.svg",
       name: "Aditi Rao",
       location: "Bengaluru",
       description:
@@ -25,7 +25,7 @@ const WhatCustomersSays = () => {
 
     {
       id: 3,
-
+      image: "/Icons/user.svg",
       name: "Hardik Arora",
       location: "Delhi",
       description:
@@ -34,7 +34,7 @@ const WhatCustomersSays = () => {
 
     {
       id: 4,
-
+      image: "/Images/AvatarBase.png",
       name: "Rajesh Kumar",
       location: "Business Owner . Mumbai",
       description:
@@ -43,7 +43,7 @@ const WhatCustomersSays = () => {
 
     {
       id: 5,
-
+      image: "/Images/AvatarBase.png",
       name: "Rajesh Kumar",
       location: "Business Owner . Mumbai",
       description:
@@ -65,6 +65,7 @@ const WhatCustomersSays = () => {
           {userReviews.map((review) => (
             <Card
               key={review.id}
+              image={review.image}
               name={review.name}
               location={review.location}
               description={review.description}
