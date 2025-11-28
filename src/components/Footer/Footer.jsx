@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="footer-main mt-[72px]">
+    <footer className="footer-main w-[1440px] mt-[72px]">
       {/* Top section: Brand + Columns + Notices */}
       <div className="footer-top">
         {/* Brand Section */}
@@ -129,7 +129,11 @@ const Footer = () => {
         <h4>Grievance Redressal Officer:</h4>
         <p>Name: Priyanka Singh</p>
         <p>Contact : +91 97739 79796</p>
-        <p>Email: Priyanka@activpaisa.com</p>
+        <p>
+          Availability: Monday to Friday, 10:00 AM to 6:00 PM (excluding
+          national holidays)
+        </p>
+        <p>Email: care@activpaisa.com</p>
 
         <p className="trust-text">
           Your trust and security are our priorities.

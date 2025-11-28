@@ -6,13 +6,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: "1440px"; */
   /* max-width: 1440px; */
   padding: 90px;
   gap: 60px; /* gap for top sections */
   background: var(--ui-color-surface-container-brand-primary-50, #1e064c);
   color: #ffffff;
-  margin-top: "72px" ;
+  /* margin-top: "72px" ; */
 }
 
 /* -------------------------- */

@@ -14,17 +14,17 @@ const RightCard = () => {
     >
       <div className="w-full h-fit flex justify-center items-center ">
         <Image
-          src="/Images/readytogetstarted.png"
+          src="/Images/laptopInDesk.png"
           alt="Description"
           width={237}
           height={182}
         />
       </div>
 
-      <div className="h-[182px]">
+      <div className="h-[182px]  flex flex-col justify-center items-center ">
         {/* title */}
         <div
-          className="w-[283px] h-[64px] flex justify-center items-center mt-[32px]"
+          className="w-[283px] h-[64px] flex justify-center items-center "
           style={{
             color: "var(--ui-color-on-surface-on-primary-00---2, #4c2399)",
             textAlign: "center",
