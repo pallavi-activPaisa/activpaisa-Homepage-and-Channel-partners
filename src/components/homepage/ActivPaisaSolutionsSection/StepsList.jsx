@@ -6,17 +6,17 @@ export default function StepsList() {
     {
       number: "1",
       title: "Apply Online",
-      desc: "Fill out our simple online form in just 5 minutes",
+      desc: "Fill a short form in just a few minutes",
     },
     {
       number: "2",
-      title: "Get Matched",
-      desc: "Our AI finds the best loan options from our Partners",
+      title: "Get Matched Instantly",
+      desc: "We find the best loan options based on your profile",
     },
     {
       number: "3",
-      title: "Get Funded",
-      desc: "Receive your loan amount directly in your bank account",
+      title: "Receive Your Funds",
+      desc: "Receive the approved amount directly in your bank account",
     },
   ];
 

@@ -42,19 +42,6 @@ const FAQContent = () => {
       />
 
       <AccordionItem
-        question="How long does it take for me to have the loan approved through ActivPaisa?"
-        answer={
-          <>
-            <p>
-              Thanks to our streamlined process, our loan approvals are much
-              quicker. In fact, most approvals come within hours and sometimes
-              days, depending on the lender and type of loan.
-            </p>
-          </>
-        }
-      />
-
-      <AccordionItem
         question="Can ActivPaisa help me determine my loan eligibility?"
         answer={
           <>
@@ -83,8 +70,23 @@ const FAQContent = () => {
 
       <AccordionItem
         question="What if I'm not sure which loan option is right for me?"
-        answer="Our financial experts offer you personalized advice based on your needs and goals. Whether it's comparing rates or understanding loan terms, we guide you to make the best decision. Currently, this service is available for free for all active members of ActivPaisa."
+        answer={
+          <>
+            <p>
+              Our financial experts offer you personalized advice based on your
+              needs and goals. Whether it's comparing rates or understanding
+              loan terms, we guide you to make the best decision. Currently,
+              this service is available for free for all active members of
+              ActivPaisa.
+            </p>
+          </>
+        }
       />
+
+      {/* <AccordionItem
+        question="What if I'm not sure which loan option is right for me?"
+        answer="Our financial experts offer you personalized advice based on your needs and goals. Whether it's comparing rates or understanding loan terms, we guide you to make the best decision. Currently, this service is available for free for all active members of ActivPaisa."
+      /> */}
     </div>
   );
 };

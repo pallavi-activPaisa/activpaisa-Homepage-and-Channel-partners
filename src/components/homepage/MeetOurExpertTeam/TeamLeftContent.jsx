@@ -2,8 +2,8 @@ import TeamCheckItem from "./TeamCheckItem";
 
 const teamPoints = [
   "Certified Financial Advisors (CFA)",
-  "Former Senior Bank Officials",
-  "Credit Risk Assessment Specialists",
+  "Former Senior Bankers",
+  "Credit Risk & Policy Specialists",
 ];
 
 export default function TeamLeftContent() {
@@ -37,9 +37,8 @@ export default function TeamLeftContent() {
           textAlign: "start", // or "center" if you want
         }}
       >
-        Our team consists of certified financial advisors, ex-bankers, and
-        industry experts with over 100+ years of combined experience in the
-        lending industry.
+        Our team includes certified financial advisors, ex-bankers, and risk
+        specialists with decades of lending experience
       </p>
       {/* Bullet Points */}
       <div className="space-y-3">
@@ -77,7 +76,7 @@ export default function TeamLeftContent() {
         onMouseOver={(e) => (e.currentTarget.style.opacity = 0.9)}
         onMouseOut={(e) => (e.currentTarget.style.opacity = 1)}
       >
-        Schedule Free Consultation
+        Schedule a Free Consultation
       </button>
     </div>
   );

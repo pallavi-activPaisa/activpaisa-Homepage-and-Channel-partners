@@ -37,6 +37,15 @@ const Navbar = () => {
       </div>
 
       <div className={styles.buttonGroup}>
+        {/* <BaseButton label="Get Started" iconPosition="right" /> */}
+        {/* <BaseButton
+          label="Log In"
+          // icon="/Icons/arrow-down.svg" // <-- pass this
+          // iconPosition="right"
+          size="small"
+        /> */}
+
+        {/* <Button size="small" label="Check Free Offers" /> */}
         <BaseButton label="Log In" iconPosition="right" size="small" />
         <Button label="Check Free Offers" size="small" />
       </div>

@@ -1,10 +1,53 @@
 import React from "react";
 import Icon from "@/components/ui/Icons/Icon";
-const Card = ({ icon = "", title, subTitle }) => {
+const Card = ({ number, title, subTitle }) => {
   return (
-    <div className="w-full h-[60px] flex gap-[24px] ">
+    <div className="w-full h-[60px]  flex items-center gap-[24px] ">
       {/* icon */}
-      <Icon />
+      {/* <div
+        className="w-[36px] h-[36px]  rounded-full flex justify-center items-center"
+        style={{
+          borderRadius: "24px",
+          padding: "10px 0px",
+          background:
+            "var(--ui-color-surface-container-brand-primary-30, #4c2399)",
+        }}
+      >
+        <div
+          className="w-[8px] h-[16px]"
+          style={{
+            color: "var(--ui-color-on-surface-on-primary-30---1, #fff)",
+            textAlign: "center",
+            fontFamily: "inter",
+            fontSize: "16px",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "16px",
+          }}
+        >
+          {number}
+        </div>
+      </div> */}
+
+      <div
+        className="rounded-full"
+        style={{
+          display: "flex",
+          width: "36px",
+          height: "36px",
+          padding: "10px 0",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: "24px",
+          background:
+            "var(--UI-Color-Surface-Container-Brand-primary-30, #4C2399)",
+          color: "white",
+          fontWeight: "bold",
+        }}
+      >
+        {number}
+      </div>
+      {/* icon code finished */}
       <div className="w-[331px] h-fit">
         <h4
           style={{

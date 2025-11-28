@@ -9,7 +9,12 @@ const Card = ({ title, desc, link }) => {
       <p className="card-desc">{desc}</p>
       <p className="card-link">
         {link}
-        <Image width={20} height={20} src="/Icons/btnproduct.svg" />
+        <Image
+          width={20}
+          height={20}
+          src="/Icons/btnproduct.svg"
+          alt="images"
+        />
       </p>
     </div>
   );

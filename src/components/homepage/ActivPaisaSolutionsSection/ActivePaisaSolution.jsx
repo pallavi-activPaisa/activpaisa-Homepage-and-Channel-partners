@@ -8,9 +8,9 @@ export default function ActivePaisaSolution() {
       {/* Heading */}
       <h2
         style={{
-          color: "var(--ui-color-on-surface-on-neutral-00---1, #374151)",
+          color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
           fontFamily: "var(--typogrraphy-heading-h3-inter-font-family, Inter)",
-          fontSize: "calc(var(--typogrraphy-heading-h3-large-size, 32) * 1px)",
+          fontSize: "calc(var(--typogrraphy-heading-h3-large-size) * 1px)",
           fontStyle: "normal",
           fontWeight: 600,
           lineHeight:
@@ -20,13 +20,13 @@ export default function ActivePaisaSolution() {
           marginBottom: "8px",
         }}
       >
-        The ActivPaisa Solution
+        How ActivPaisa Makes Borrowing Easier
       </h2>
       <p
         style={{
-          color: "var(--ui-color-on-surface-on-neutral-00---2, #6B7280)",
+          color: "var(--ui-color-on-surface-on-neutral-00-2, #6B7280)",
           fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
-          fontSize: "calc(var(--typogrraphy-paragraph-para-2-size, 16) * 1px)",
+          fontSize: "calc(var(--typogrraphy-paragraph-para-2-size) * 1px)",
           fontStyle: "normal",
           fontWeight: 400,
           lineHeight:
@@ -36,8 +36,8 @@ export default function ActivePaisaSolution() {
           marginBottom: "24px",
         }}
       >
-        We understand the challenges you face when seeking financial assistance.
-        These common problems inspired us to create a better solution.
+        We designed a borrowing experience that removes friction, saves time,
+        and improves your chances of getting the right loan
       </p>
 
       {/* Feature Cards */}
@@ -64,25 +64,25 @@ export default function ActivePaisaSolution() {
       >
         <h2
           style={{
-            color: "var(--ui-color-on-surface-on-neutral-00---1, #4C2399)",
-            fontFamily:
-              "var(--typogrraphy-heading-h3-inter-font-family, Inter)",
-            fontSize:
-              "calc(var(--typogrraphy-heading-h3-large-size, 28) * 1px)",
-            fontWeight: 700,
-            lineHeight:
-              "calc(var(--typogrraphy-heading-h3-large-line-height, 36) * 1px)",
-            letterSpacing:
-              "var(--typogrraphy-heading-h3-large-letter-spacing, -0.64px)",
-            marginBottom: "8px",
+            color: "var(--ui-color-on-surface-on-neutral-00---3, #4c2399)",
             textAlign: "center",
+            fontFamily:
+              "var(--typogrraphy-heading-h5-inter-font-family, Inter)",
+            fontSize:
+              "calc(var(--typogrraphy-heading-h5-large-size, 24) * 1px)",
+            fontStyle: "normal",
+            fontWeight: 600,
+            lineHeight:
+              "calc(var(--typogrraphy-heading-h5-large-line-height, 32) * 1px)",
+            letterSpacing:
+              "calc(var(--typogrraphy-heading-h5-large-letter-spacing, -0.48) * 1px)",
           }}
         >
           How It Works
         </h2>
         <p
           style={{
-            color: "var(--ui-color-on-surface-on-neutral-00---2, #6B7280)",
+            color: "var(--ui-color-on-surface-on-neutral-00-2, #6B7280)",
             fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
             fontSize:
               "calc(var(--typogrraphy-paragraph-para-2-size, 16) * 1px)",
@@ -95,8 +95,8 @@ export default function ActivePaisaSolution() {
             marginBottom: "40px",
           }}
         >
-          Our streamlined 3-step process gets you from application to approval
-          faster than ever before
+          From application to approval, everything is designed to be quick and
+          seamless
         </p>
         <StepsList />
       </div>

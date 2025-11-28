@@ -44,8 +44,8 @@ const OurLendingPartners = () => {
     <div className="w-full mt-[72px] px-[90px]">
       {/*heading  */}
       <div className="w-full  gap-[8px]">
-        <Heading heading="Our Lending Partners" />
-        <SubHeading subHeading="We’ve partnered with India’s leading financial institutions to bring you the best loan options and competitive rates" />
+        <Heading heading="Trusted by India’s Leading Banks & NBFCs" />
+        <SubHeading subHeading="Access loan offers from a wide network of verified, top-tier lending institutions." />
       </div>
 
       {/* lending partners logos */}
@@ -95,7 +95,7 @@ const OurLendingPartners = () => {
               }}
             >
               {" "}
-              Partner Banks & NBFCs
+              Lending Partners
             </span>
           </div>
 
@@ -124,7 +124,7 @@ const OurLendingPartners = () => {
                 "calc(var(--typogrraphy-label-letter-spacing) * 1px)",
             }}
           >
-            10,000 Cr +
+            ₹200 Cr+
             <span
               style={{
                 color: "var(--ui-color-on-surface-on-neutral-00-2, #6b7280)",
@@ -139,7 +139,7 @@ const OurLendingPartners = () => {
               }}
             >
               {" "}
-              Loan Facilitated
+              Loan Disbursed
             </span>
           </div>
 
@@ -167,7 +167,7 @@ const OurLendingPartners = () => {
                 "calc(var(--typogrraphy-label-letter-spacing) * 1px)",
             }}
           >
-            5L +
+            1 Lakh+
             <span
               style={{
                 color: "var(--ui-color-on-surface-on-neutral-00-2, #6b7280)",

@@ -3,48 +3,48 @@ import DefaultIcon from "@/components/ui/Icons/Icon"; // make sure this is a Rea
 
 export const achievementsData = [
   {
-    number: "5,00,000+",
+    number: "1,00,000+ Customers",
     title: "Satisfied customers",
-    desc: "Customers have trusted us with their financial needs",
-    icon: DefaultIcon, // now defined
+    desc: "Guiding customers across diverse financial needs",
+    icon: "Icons/Customer-Retention-Hands.svg", // now defined
     marginbottom: "40px",
   },
   {
-    number: "10,000 Cr+",
+    number: "₹200 Cr+",
     title: "Loans Disbursed",
-    desc: "Total Loan amount successfully processed",
-    icon: DefaultIcon,
+    desc: "Helping borrowers secure the right credit at scale",
+    icon: "Icons/Currency-Sign-Rupee-Bag.svg",
     marginbottom: "40px",
   },
   {
     number: "4.5/5",
     title: "Customer Rating",
-    desc: "Average rating across all platforms",
-    icon: DefaultIcon,
+    desc: "Consistently strong feedback across platforms",
+    icon: "Icons/Like-1.svg",
     marginbottom: "40px",
   },
   {
     number: "50+",
-    title: "Banking Partners",
-    desc: "Leading banks and financial institutions",
-    icon: DefaultIcon,
+    title: "Lending Partners",
+    desc: "Access to India’s most reliable financial institutions",
+    icon: "Icons/Multiple-Neutral-2.svg",
     marginbottom: "40px",
   },
   {
     number: "Industry Recognition",
-    desc: "Winner of “Best Fintech Innovation Award 2023” by Banking Excellence Awards",
+    desc: "Recognized for innovation, excellence and customer first approach",
   },
   {
     number: "Security Certified",
-    desc: "ISO 27001 certified with bank-grade security and data protection standards",
+    desc: "Bank-grade security and data protection standards.",
   },
   {
     number: "RBI Compliant",
-    desc: "Fully compliant with RBI guidelines and regulations for financial services",
+    desc: "Fully compliant with RBI guidelines and regulations",
   },
   {
-    number: "Industry Recognition",
-    desc: "Customers have trusted us with their financial needs",
+    number: "Expert Advisory",
+    desc: "Experienced credit experts guiding borrowers toward better financial outcomes",
     //   icon: "/some-icon.svg"
   },
 ];
