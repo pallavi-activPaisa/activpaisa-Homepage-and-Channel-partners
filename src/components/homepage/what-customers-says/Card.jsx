@@ -18,13 +18,21 @@ const Card = ({ image = "", name, location, description }) => {
       <div className="w-full flex items-center gap-[20px]">
         {/* avatar */}
         <div
-          className="w-[60px] h-[60px] rounded-full flex-shrink-0 overflow-hidden"
+          className="w-[60px] flex flex-col items-start justify-end h-[60px] rounded-full flex-shrink-0 overflow-hidden"
           style={{
             border: "2px solid var(--ui-color-border-neutral-00, #fff)",
             background: "var(--ui-color-on-surface-avatar-1, #e5e7eb)",
             borderRadius: "50%",
           }}
-        ></div>
+        >
+          <Image
+            className="mt-60px rounded-full"
+            src={image}
+            alt="user image"
+            width={60}
+            height={60}
+          />
+        </div>
 
         <div className="w-[332px] ">
           <h3

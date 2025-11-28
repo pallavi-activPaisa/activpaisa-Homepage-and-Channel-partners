@@ -19,8 +19,8 @@ const ThousandsOfHappyCustomers = () => {
         }}
       >
         <div className="w-full  flex flex-col items-center gap-[8px]">
-          <Heading heading="Join Thousands of Happy Customers" />
-          <SubHeading subHeading="Experience the ActivPaisa difference and see why our customers consistency rate us 4.8/5 stars" />
+          <Heading heading="Trusted by Thousands of Borrowers" />
+          <SubHeading subHeading="See why people across India rate ActivPaisa among the highest in financial services" />
         </div>
 
         {/* test */}

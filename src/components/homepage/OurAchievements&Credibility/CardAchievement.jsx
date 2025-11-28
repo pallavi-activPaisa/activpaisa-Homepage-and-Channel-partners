@@ -64,7 +64,7 @@ const CardAchievement = ({ number, title, desc, icon: IconComp }) => {
           className="w-12 h-12 rounded-xl bg-[#F3EEFF] flex items-center justify-center"
           style={{ marginBottom: "24px" }} // Icon → Number/Title gap
         >
-          <Icon />
+          <Icon icon={IconComp} />
         </div>
       )}
 

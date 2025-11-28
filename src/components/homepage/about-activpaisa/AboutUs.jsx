@@ -4,7 +4,7 @@ import BottomSubHeading from "./BottomSubHeading";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="mt-[32px]">
       {/* OUTER BOX */}
       <div
         style={{
@@ -72,27 +72,32 @@ const AboutUs = () => {
               style={{
                 display: "flex",
                 height: "44px",
-                padding: "10px 16px",
+                padding:
+                  "var(--Spacing-sp-10, 10px) var(--Spacing-sp-16, 16px)",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "8px",
 
-                borderRadius: "8px",
-                border: "1px solid var(--UI-Color-Border-neutral-10, #E5E7EB)",
+                /* Correct tokens from your list */
+                borderRadius: "var(--Corner-Radius-2xsmall, 8px)",
+                border:
+                  "var(--Border-Width-width-1, 1px) solid var(--UI-Color-Border-neutral-10, #E5E7EB)",
                 background:
                   "var(--UI-Color-Surface-Container-Neutral-neutral-00, #FFF)",
 
+                /* Drop Shadow / XSmall (correct variable usage) */
                 boxShadow:
-                  "0 1px 2px 0 rgba(17, 24, 39, 0.04), 0 1px 2px 0 rgba(17, 24, 39, 0.04)",
+                  "0 1px 2px 0 var(--effects-shadow-4, rgba(17,24,39,0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17,24,39,0.04))",
 
+                /* Text */
                 color: "var(--UI-Color-On-Surface-on-neutral-00---1, #374151)",
                 textAlign: "center",
 
-                fontFamily: "Inter",
-                fontSize: "16px",
+                fontFamily: "var(--Typography-Label-inter-font-family, Inter)",
+                fontSize: "var(--Typography-Label-L-1-size, 16px)",
                 fontWeight: 500,
-                lineHeight: "18px",
-                letterSpacing: "0",
+                lineHeight: "var(--Typography-Label-L-1-line-height, 18px)",
+                letterSpacing: "var(--Typography-Label-letter-spacing, 0)",
 
                 marginTop: "40px",
                 cursor: "pointer",
@@ -189,19 +194,22 @@ const AboutUs = () => {
           {/* RIGHT IMAGE */}
           <div
             style={{
-              width: "50%",
+              width: "507px",
+              height: "501px",
+              borderRadius: "40px",
+              overflow: "hidden", // IMPORTANT
               display: "flex",
-              justifyContent: "flex-end",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <img
-              src="/Images/aboutUs.png"
+              src="/Images/about-hero.png"
               alt="About ActivPaisa"
               style={{
-                width: "426px",
-                height: "324px",
-                borderRadius: "20px",
-                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover", // Makes it look like reference image
               }}
             />
           </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="footer-main">
+    <footer className="footer-main mt-[72px]">
       {/* Top section: Brand + Columns + Notices */}
       <div className="footer-top">
         {/* Brand Section */}
@@ -83,15 +83,16 @@ const Footer = () => {
             <h4>Resources</h4>
             <p className="sub-title-footer">EMI Calculator</p>
             <p className="sub-title-footer">Check Eligibility</p>
-            <p className="sub-title-footer">Check CIBIL Score</p>
+            <p className="sub-title-footer">Check Credit Score</p>
           </div>
 
           <div className="footer-col">
             <h4>Contact Us</h4>
             <p className="sub-title-footer">care@activpaisa.com</p>
             <p className="sub-title-footer ">
-              C3, C Block, 4th Floor, <br />
-              Sector 2, Noida, Uttar Pradesh (India) – 201305
+              C3, C Block, 4th Floor, Sector 2, Noida, Uttar Pradesh
+              <br />
+              (India) - 201305
             </p>
           </div>
         </div>
@@ -103,33 +104,31 @@ const Footer = () => {
       {/* Notices Section */}
       <div className="footer-notices">
         <p>
-          ActivPaisa does not charge any processing fees before the loan amount
-          is disbursed. If anyone claims otherwise, please do not engage with
-          them. Report such incidents immediately email us at
-          care@activpaisa.com or by contacting us at +91 93184 86890.
+          ActivPaisa does not charge any processing fee before your loan is
+          disbursed. If anyone claims otherwise, please do not engage. Report
+          such incidents immediately at care@activpaisa.com or +91 97739 79796.
         </p>
 
         <h4>Cybersecurity notice:</h4>
         <p>
-          Beware of fraudulent activities by third parties falsely representing
-          ActivPaisa. These scams may involve fake websites, apps, or social
-          media profiles claiming to offer loans or investment opportunities in
-          our name. We do not solicit payments outside our official platform.
-          Access our official services via www.activpaisa.com
+          Beware of fraudulent websites, mobile apps, or social media profiles
+          falsely using the ActivPaisa name. We never ask for payments outside
+          our official platform. Always access our services only via
+          www.activpaisa.com. If you suspect fraud or phishing, please contact
+          us immediately.
         </p>
 
         <h4>FinTech/Digital Lending Complaints:</h4>
         <p>
-          For complaints related to digital lending, email care@activpaisa.com
-          or call +91 93184 86890.
+          For issues related to digital lending, write to care@activpaisa.com or
+          call +91 97739 79796. If your concern is not resolved within the
+          stipulated timeline, you may escalate it to our Grievance Redressal
+          Officer.
         </p>
 
-        <h4>Grievances:</h4>
+        <h4>Grievance Redressal Officer:</h4>
         <p>Name: Priyanka Singh</p>
-        <p>
-          Contact Number: +91 93184 86890 (Mon–Fri, 10:00 AM to 6:00 PM,
-          excluding national holidays)
-        </p>
+        <p>Contact : +91 97739 79796</p>
         <p>Email: Priyanka@activpaisa.com</p>
 
         <p className="trust-text">

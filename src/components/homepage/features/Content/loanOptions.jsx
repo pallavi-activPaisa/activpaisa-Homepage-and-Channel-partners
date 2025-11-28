@@ -1,10 +1,13 @@
 const loanOptions = [
-  { icon: "/Icons/Leading Icon.svg", label: "Personal Loan" },
-  { icon: "/Icons/Leading Icon.svg", label: "Home Equity" },
-  { icon: "/Icons/Leading Icon.svg", label: "Home Purchase" },
-  { icon: "/Icons/Leading Icon.svg", label: "Business Loan" },
-  { icon: "/Icons/Leading Icon.svg", label: "Insurance" },
-  { icon: "/Icons/Leading Icon.svg", label: "More Loan Options" },
+  { icon: "/Icons/Cash-Payment.svg", label: "Personal Loan" },
+  { icon: "/Icons/rupee.svg", label: "Instant Loan" },
+  { icon: "/Icons/House.svg", label: "Home Loan" },
+  { icon: "/Icons/Credit-Card.svg", label: "Credit Cards" },
+
+  // Divider here
+  { isDivider: true },
+
+  { icon: "/Icons/Navigation-Menu.svg", label: "More Loan Options" },
 ];
 
 export default loanOptions;

@@ -16,6 +16,7 @@ const FAQImage = () => {
     >
       <Image
         src="/Icons/image 471.png"
+        alt="faq image"
         width={500}
         height={500}
         // alt="FAQ Illustration"

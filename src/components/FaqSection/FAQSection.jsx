@@ -6,14 +6,14 @@ import "./faq.css";
 
 const FAQSection = () => {
   return (
-    <div style={{ width: "100%", padding: "40px 0" }}>
+    <div style={{ width: "100%", marginTop: "72px" }}>
       {/* OUTSIDE CONTENT */}
       <div style={{ width: "100%", textAlign: "center", marginBottom: "32px" }}>
         <h3 className="faq-heading">Frequently Asked Questions</h3>
 
         <p className="subheading">
           Got questions? We’ve got answers. Find everything you need to know
-          about our loan services and application process.
+          about our loan services and application process
         </p>
       </div>
 
