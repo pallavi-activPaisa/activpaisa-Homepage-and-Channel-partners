@@ -11,7 +11,7 @@ const Card = ({ title, desc, link, image }) => {
           alt={title}
           width={319}
           height={448}
-          className="card-img" // <-- correct class name
+          className="card-img object-cover" // <-- correct class name
         />
       </div>
 

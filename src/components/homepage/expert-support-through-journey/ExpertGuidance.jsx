@@ -66,6 +66,7 @@ const ExpertGuidance = () => {
         {guidanceData.map((guidance) => (
           <Card
             key={guidance.id}
+            id={guidance.id}
             title={guidance.title}
             description={guidance.description}
             points={guidance.points}

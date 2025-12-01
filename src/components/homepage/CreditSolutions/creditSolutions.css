@@ -6,9 +6,9 @@
 
 /* TITLES */
 .cs-title {
-  color: var(--ui-color-on-surface-on-neutral-00---1, #374151);
+  color: var(--ui-color-on-surface-on-neutral-00-1, #374151);
   font-family: var(--typogrraphy-Heading-H3-inter-font-family, Inter);
-  font-size: var(--typogrraphy-Heading-H3-large-size, 32px);
+  font-size: calc(var(--typogrraphy-Heading-H3-large-size) * 1px);
   font-style: normal;
   font-weight: 600;
   line-height: var(--typogrraphy-Heading-H3-large-line-height, 40px); /* 125% */
@@ -16,12 +16,12 @@
 }
 .cs-subtitle {
   margin-bottom: 24px;
-  color: var(--ui-color-on-surface-on-neutral-00---2, #6b7280);
+  color: var(--ui-color-on-surface-on-neutral-00-2, #6b7280);
   font-family: var(--typogrraphy-Paragraph-inter-font-family, Inter);
-  font-size: var(--typogrraphy-Paragraph-para-2-size, 16px);
+  font-size: calc(var(--typogrraphy-Paragraph-para-2-size) * 1px);
   font-style: normal;
   font-weight: 400;
-  line-height: var(--typogrraphy-Paragraph-para-2-line-height, 24px); /* 150% */
+  line-height: calc(var(--typogrraphy-Paragraph-para-2-line-height) * 1px); /* 150% */
   letter-spacing: var(--typogrraphy-Paragraph-letter-spacing, 0);
 }
 
@@ -41,7 +41,7 @@
 /* CARD */
 .loan-card {
   width: 367px;
-  /* height: 616px; */
+  height: 616px;
   padding: 24px;
   align-items: center;
   /* gap: 12px; */
@@ -53,8 +53,8 @@
   background: var(--ui-color-surface-container-brand-primary-00, #f2effc);
 }
 .card-image .card-img {
-  /* width: 100%; */
-  /* height: 448px; */
+  width: 100%;
+  height: 448px;
   background: #dfd8f0;
   /* border-radius: 20px; */
   border-radius: calc(var(--corner-radius-large, 24px) * 1px);
@@ -115,7 +115,7 @@
   background: var(--ui-color-surface-container-neutral-neutral-30, #e5e7eb);
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
   border: none;
   display: flex;
   justify-content: center;
@@ -130,6 +130,7 @@
   background: #f3f4f6;
   border: none;
   cursor: not-allowed;
+  color: rgb(216, 214, 214);
 }
 .arrow-wrapper {
   display: flex;
