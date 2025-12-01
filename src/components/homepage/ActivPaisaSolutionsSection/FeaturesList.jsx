@@ -7,7 +7,7 @@ export default function FeaturesList() {
       title: "100% Digital Process",
       desc: "Complete your loan journey online with minimal documents and zero physical paperwork",
       highlight: "No lengthy paperwork",
-      image: "/Images/mobile.png",
+      image: "/Images/mobile2.png",
     },
     {
       title: "Complete Transparency",
