@@ -1,232 +1,66 @@
 "use client";
-import React from "react";
-import BottomSubHeading from "./BottomSubHeading";
 
-const AboutUs = () => {
+import React from "react";
+
+export default function HeroSection() {
   return (
-    <div className="mt-[32px]">
-      {/* OUTER BOX */}
+    <div className="w-full flex justify-center mt-10">
+      {/* OUTER HERO BOX */}
       <div
+        className="w-[1260px] h-[452px] rounded-[32px] px-[40px] py-[64px] flex justify-between items-center"
         style={{
-          width: "1260px",
-          height: "452px",
-          display: "flex",
-          padding: "64px 40px",
-          flexDirection: "column",
-          justifyContent: "center",
           background:
-            "linear-gradient(45deg, #BD8668 0%, #745FA2 50%, #3236C9 100%)",
-          borderRadius: "28px",
-          margin: "0 auto",
+            "linear-gradient(135deg, #DDA66E 0%, #7A66AB 40%, #343CDA 100%)",
         }}
       >
-        {/* INNER FLEX ROW */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          {/* LEFT SECTION */}
-          <div style={{ width: "50%" }}>
-            <h2
-              style={{
-                color: "#FFF",
-                fontFamily: "Inter",
-                fontSize: "32px",
-                fontWeight: 600,
-                lineHeight: "40px",
-                letterSpacing: "-0.64px",
-              }}
-            >
-              ActivPaisa – Transparent Borrowing,
-              <br />
-              <span
-                style={{
-                  color: "var(--ui-color-on-surface-on-gradient-3, #D0C6F6)",
-                }}
-              >
-                Done Right
-              </span>
-            </h2>
+        {/* LEFT CONTENT */}
+        <div className="w-[50%]">
+          <h2 className="text-white font-inter text-[32px] font-semibold leading-[40px]">
+            ActivPaisa – Transparent Borrowing,
+            <br />
+            <span className="text-[#D0C6F6] font-inter">Done Right</span>
+          </h2>
 
-            <p
-              style={{
-                marginTop: "8px",
-                color: "#FFF",
-                fontFamily: "Inter",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "24px",
-                width: "637px",
-                opacity: 0.9,
-              }}
-            >
-              Empowering you to borrow confidently with expert guidance,
-              intelligent technology, and complete transparency at every step.
-            </p>
+          <p className="text-white/80 mt-3 w-[500px] leading-[24px] text-[16px]">
+            Empowering you to borrow confidently with expert guidance,
+            intelligent technology, and complete transparency at every step.
+          </p>
 
-            {/* UPDATED BUTTON (Your Design System Styles Applied) */}
-            <button
-              style={{
-                display: "flex",
-                height: "44px",
-                padding:
-                  "var(--Spacing-sp-10, 10px) var(--Spacing-sp-16, 16px)",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "8px",
+          {/* BUTTON */}
+          <button className="mt-8 bg-white text-[#374151] px-5 py-2.5 rounded-lg font-inter text-[14px] shadow-md border border-[#E5E7EB]">
+            Check Free Offers
+          </button>
 
-                /* Correct tokens from your list */
-                borderRadius: "var(--Corner-Radius-2xsmall, 8px)",
-                border:
-                  "var(--Border-Width-width-1, 1px) solid var(--UI-Color-Border-neutral-10, #E5E7EB)",
-                background:
-                  "var(--UI-Color-Surface-Container-Neutral-neutral-00, #FFF)",
+          {/* STATS */}
+          <div className="flex gap-[64px] mt-[40px]">
+            <div>
+              <h3 className="text-white text-[22px] font-semibold">₹500 Cr+</h3>
+              <p className="text-white/90 text-[16px]">Loans Disbursed</p>
+            </div>
 
-                /* Drop Shadow / XSmall (correct variable usage) */
-                boxShadow:
-                  "0 1px 2px 0 var(--effects-shadow-4, rgba(17,24,39,0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17,24,39,0.04))",
+            <div>
+              <h3 className="text-white text-[22px] font-semibold">50K+</h3>
+              <p className="text-white/90 text-[16px]">Happy Customers</p>
+            </div>
 
-                /* Text */
-                color: "var(--UI-Color-On-Surface-on-neutral-00---1, #374151)",
-                textAlign: "center",
-
-                fontFamily: "var(--Typography-Label-inter-font-family, Inter)",
-                fontSize: "var(--Typography-Label-L-1-size, 16px)",
-                fontWeight: 500,
-                lineHeight: "var(--Typography-Label-L-1-line-height, 18px)",
-                letterSpacing: "var(--Typography-Label-letter-spacing, 0)",
-                marginTop: "40px",
-                cursor: "pointer",
-              }}
-            >
-              Check Free Offers
-            </button>
-
-            {/* STATS ROW */}
-            <div
-              style={{
-                display: "flex",
-                gap: "56px",
-                marginTop: "40px",
-              }}
-            >
-              <div>
-                <h3
-                  style={{
-                    color: "white",
-                    fontSize: "22px",
-                    marginBottom: "4px",
-                    fontFamily: "Inter",
-                    fontWeight: "700",
-                  }}
-                >
-                  ₹500 Cr+
-                </h3>
-                <p
-                  style={{
-                    color: "#fff",
-                    fontSize: "16px",
-                    margin: 0,
-                    fontFamily: "Inter",
-                    fontWeight: 400,
-                  }}
-                >
-                  Loans Disbursed
-                </p>
-              </div>
-
-              <div>
-                <h3
-                  style={{
-                    color: "white",
-                    fontSize: "22px",
-                    marginBottom: "4px",
-                    fontFamily: "Inter",
-                    fontWeight: "700",
-                  }}
-                >
-                  50K+
-                </h3>
-                <p
-                  style={{
-                    color: "#fff",
-                    fontSize: "16px",
-                    margin: 0,
-                    fontFamily: "Inter",
-                    fontWeight: 400,
-                  }}
-                >
-                  Happy Customers
-                </p>
-              </div>
-
-              <div>
-                <h3
-                  style={{
-                    color: "white",
-                    fontSize: "22px",
-                    marginBottom: "4px",
-                    fontFamily: "Inter",
-                    fontWeight: "700",
-                  }}
-                >
-                  4.8/5
-                </h3>
-                <p
-                  style={{
-                    color: "#fff",
-                    fontSize: "16px",
-                    margin: 0,
-                    fontFamily: "Inter",
-                    fontWeight: 400,
-                  }}
-                >
-                  Customer Rating
-                </p>
-              </div>
+            <div>
+              <h3 className="text-white text-[22px] font-semibold">4.8/5</h3>
+              <p className="text-white/90 text-[16px]">Customer Rating</p>
             </div>
           </div>
-
-          {/* RIGHT IMAGE */}
-          <div
-            style={{
-              width: "507px",
-              height: "548px",
-              borderRadius: "40px",
-
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src="/Images/about-hero.png"
-              alt="About ActivPaisa"
-              style={{
-                width: "504px",
-                height: "501px",
-                objectFit: "cover",
-                position: "relative",
-                bottom: "54px",
-                objectPosition: "center center", // <-- fix
-
-                // Makes it look like reference image
-              }}
-            />
-          </div>
         </div>
-      </div>
 
-      {/* BOTTOM ROW */}
-      <div style={{ marginTop: "24px", marginBottom: "72px" }}>
-        <BottomSubHeading />
+        {/* RIGHT GLASS CARD */}
+        <div className="w-[507px] h-[501px] flex justify-center items-center">
+          <img
+            src="/Images/about-hero.png"
+            className="w-[507px] h-[501px] object-contain drop-shadow-2xl"
+            style={{
+              filter: "drop-shadow(0px 12px 55px rgba(0, 0, 0, 0.35))",
+            }}
+          />
+        </div>
       </div>
     </div>
   );
-};
-
-export default AboutUs;
+}

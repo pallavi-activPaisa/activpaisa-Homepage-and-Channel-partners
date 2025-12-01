@@ -29,9 +29,10 @@
 .cards-container {
   display: flex;
   gap: 24px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
   padding-bottom: 24px;
+  height: 420px;
 }
 
 .card-wrapper {
@@ -42,6 +43,8 @@
 .loan-card {
   width: 367px;
   /* height: 616px; */
+  /* height: 448px; */
+
   padding: 24px;
   align-items: center;
   /* gap: 12px; */
