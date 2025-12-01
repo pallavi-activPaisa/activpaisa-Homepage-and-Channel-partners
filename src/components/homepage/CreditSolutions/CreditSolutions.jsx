@@ -45,7 +45,7 @@ const cardsData = [
     title: "Personal Overdraft",
     desc: "Withdraw funds when needed and pay only for what you use",
     link: "Explore Options",
-    image: "/Images/Balance-Transferpl.png",
+    image: "/Images/Personal-Overdraft.png",
   },
   {
     title: "Loan Against Properties",

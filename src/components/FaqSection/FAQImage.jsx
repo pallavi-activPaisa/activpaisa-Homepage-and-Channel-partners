@@ -12,7 +12,7 @@ const FAQImage = () => {
         textAlign: "center",
         marginTop: "0px",
         width: "418px",
-        height: "737px",
+        height: "600px",
         flexShrink: 0,
         aspectRatio: "38/67",
         background:
