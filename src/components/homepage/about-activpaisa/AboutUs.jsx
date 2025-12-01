@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
+import BottomSubHeading from "./BottomSubHeading";
 
 export default function HeroSection() {
   return (
-    <div className="w-full flex justify-center mt-10 mb-[72px]">
+    <div className="w-full flex  justify-center mt-10 mb-[72px]">
       {/* OUTER HERO BOX */}
       <div
-        className="w-[1260px] h-[452px] rounded-[32px] px-[40px] py-[64px] flex justify-between items-center"
+        className="w-[1260px] h-[452px] px-[40px] py-[64px] gap-[40px] flex justify-between items-center"
         style={{
           borderRadius: "24px",
           background:
@@ -31,8 +32,8 @@ export default function HeroSection() {
           <button
             className="
               mt-8 
-              font-inter text-[14px]
-              flex justify-center items-center
+              
+              
             "
             style={{
               width: "171px",
@@ -62,7 +63,7 @@ export default function HeroSection() {
 
           {/* STATS */}
           <div className="flex gap-[56px] mt-[40px]">
-            <div>
+            <div className="w-[183px] gap-[8px] ">
               <h3
                 style={{
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
@@ -79,6 +80,7 @@ export default function HeroSection() {
 
               <p
                 style={{
+                  width: "183px",
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
                   fontFamily: "Inter",
                   fontSize: "16px",
@@ -92,7 +94,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div>
+            <div className="w-[183px] gap-[8px] ">
               <h3
                 style={{
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
@@ -109,6 +111,7 @@ export default function HeroSection() {
 
               <p
                 style={{
+                  width: "183px",
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
                   fontFamily: "Inter",
                   fontSize: "16px",
@@ -122,7 +125,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div>
+            <div className="w-[183px] gap-[8px]">
               <h3
                 style={{
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
@@ -139,6 +142,7 @@ export default function HeroSection() {
 
               <p
                 style={{
+                  width: "183px",
                   color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
                   fontFamily: "Inter",
                   fontSize: "16px",
@@ -156,7 +160,7 @@ export default function HeroSection() {
 
         {/* RIGHT IMAGE CARD */}
         <div
-          className="w-[507px] h-[501px] relative rounded-[40px] flex justify-center items-center"
+          className="w-[507px]  h-[501px] relative rounded-[40px] flex justify-center items-center"
           aria-hidden="true"
         >
           <img
@@ -165,9 +169,9 @@ export default function HeroSection() {
             style={{
               position: "absolute",
               right: "20px",
-              bottom: "51px",
-              width: "507px",
-              height: "501px",
+              bottom: "40px",
+              width: "537px",
+              height: "515px",
               objectFit: "cover",
               transform: "rotate(-3deg)",
               filter: "drop-shadow(0px 12px 55px rgba(0,0,0,0.35))",
@@ -176,6 +180,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
+      {/* <BottomSubHeading /> */}
     </div>
   );
 }

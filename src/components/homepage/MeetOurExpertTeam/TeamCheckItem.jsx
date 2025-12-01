@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function TeamCheckItem({ text }) {
   return (
     <div className="flex items-center gap-3">
       {/* Small bullet square */}
-      <span
+      {/* <span
         style={{
           width: "13px",
           height: "13px",
@@ -10,7 +12,15 @@ export default function TeamCheckItem({ text }) {
           backgroundColor: "var(--ui-color-on-surface-on-gradient---1, #FFF)",
           display: "inline-block",
         }}
-      ></span>
+      ></span> */}
+      <div className="">
+        <Image
+          src="/Icons/Checkbox-right.svg"
+          alt="right box"
+          width={18}
+          height={18}
+        />
+      </div>
       <p
         style={{
           color: "var(--ui-color-on-surface-on-gradient---1, #FFF)",
