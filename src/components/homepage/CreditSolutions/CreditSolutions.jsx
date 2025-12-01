@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState } from "react";
 import Card from "./Card";
 import ArrowButton from "./ArrowButton";
@@ -7,49 +6,58 @@ import "./creditSolutions.css";
 
 const cardsData = [
   {
-    title: "Personal Loan",
+    title: "Home Loan",
     desc: "Standard loan with a structured application process and wider eligibility",
     link: "Check Offers",
+    image: "/Images/homeloan.png",
   },
   {
-    title: "Instant Personal Loan",
+    title: "Personal Loan",
     desc: "Fast digital approval and quick access to funds with minimal documentation",
     link: "Apply Now",
-  },
-  {
-    title: "Home Loan",
-    desc: " Finance for buying a new house or property",
-    link: "Explore Options",
+    image: "/Images/Personal-Loan.png",
   },
   {
     title: "Credit Cards",
+    desc: "Finance for buying a new house or property",
+    link: "Explore Options",
+    image: "/Images/Credit-Cards.png",
+  },
+  {
+    title: "Instant Personal Loan",
     desc: "Explore cards with superior rewards, benefits, and quick approval",
     link: "Compare Cards",
+    image: "/Images/Instant-PersonalLoan.png",
   },
   {
     title: "Business Loans",
     desc: "Focus on growing your business while we handle your financing",
     link: "Check Eligibility",
+    image: "/Images/Business-Loans.png",
   },
   {
-    title: "Balance Transfer (PL)",
+    title: "Balance Transfer",
     desc: "Move your loan to a lower interest rate and reduce EMIs",
     link: "Check Savings",
+    image: "/Images/Balance-Transferpl.png",
   },
   {
     title: "Personal Overdraft",
     desc: "Withdraw funds when needed and pay only for what you use",
     link: "Explore Options",
+    image: "/Images/Balance-Transferpl.png",
   },
   {
     title: "Loan Against Properties",
-    desc: "High-value loan secured against residential or commercial property",
+    desc: "High-value loan secured against property",
     link: "Learn More",
+    image: "/Images/LoanAgainst-Properties.png",
   },
   {
     title: "Professional Loan",
     desc: "Access tailored loan options to power your professional growth",
     link: "Check Eligibility",
+    image: "/Images/Professional-Loan.png",
   },
 ];
 
@@ -96,7 +104,6 @@ const CreditSolutions = () => {
         ))}
       </div>
 
-      {/* ⬇️ ARROWS + DOTS CENTERED UNDER CARDS */}
       <div className="arrow-bottom-wrapper">
         <ArrowButton
           direction="left"
@@ -104,7 +111,6 @@ const CreditSolutions = () => {
           onClick={scrollLeft}
         />
 
-        {/* Dots */}
         <div className="dots">
           <span className={`dot ${index === 0 ? "active" : ""}`} />
           <span className={`dot ${index === 1 ? "active" : ""}`} />

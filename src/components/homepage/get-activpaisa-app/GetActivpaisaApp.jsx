@@ -291,7 +291,7 @@ const GetActivpaisaApp = () => {
           {/* right side */}
           <div className="w-[252px] h-[279px] ">
             <Image
-              src="/Images/appImage.png"
+              src="/Images/mobileapp.png"
               alt="app image"
               width={252}
               height={279}

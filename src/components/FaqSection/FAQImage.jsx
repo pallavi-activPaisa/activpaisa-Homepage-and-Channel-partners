@@ -8,21 +8,17 @@ const FAQImage = () => {
       style={{
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
         textAlign: "center",
-        marginTop: "116px",
+        marginTop: "0px",
+        width: "418px",
+        height: "737px",
+        flexShrink: 0,
+        aspectRatio: "38/67",
         background:
-          "url(/Icons/image 471.png) lightgray 0px 0px / 100% 129.116% no-repeat",
+          "url('/images/faqimg.png') -475.044px 0px / 322.936% 100% no-repeat",
       }}
-    >
-      <Image
-        src="/Icons/image 471.png"
-        alt="faq image"
-        width={500}
-        height={500}
-        // alt="FAQ Illustration"
-        style={{ objectFit: "contain" }}
-      />
-    </div>
+    ></div>
   );
 };
 

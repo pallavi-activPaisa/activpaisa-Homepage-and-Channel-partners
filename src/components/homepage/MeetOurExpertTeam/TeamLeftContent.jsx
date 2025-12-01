@@ -8,7 +8,7 @@ const teamPoints = [
 
 export default function TeamLeftContent() {
   return (
-    <div className="text-white space-y-6 ">
+    <div className="text-white space-y-6 w-[673px] ">
       {/* Title */}
       <h2
         style={{
@@ -58,7 +58,7 @@ export default function TeamLeftContent() {
           border:
             "var(--Border-Width-width-1, 1px) solid var(--UI-Color-Border-neutral-10, #E5E7EB)",
           background:
-            "var(--UI-Color-Surface-Container-Neutral-neutral-00, #FFF)",
+            "var(--ui-Color-Surface-Container-Neutral-neutral-00, #FFF)",
           boxShadow:
             "0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04))",
           color: "var(--UI-Color-On-Surface-on-neutral-00---1, #374151)",

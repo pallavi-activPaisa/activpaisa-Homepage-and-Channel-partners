@@ -1,5 +1,4 @@
 "use client";
-
 export default function StepCard({ number, title, desc }) {
   return (
     <div className="flex flex-col items-center text-center px-6">
@@ -14,7 +13,7 @@ export default function StepCard({ number, title, desc }) {
           alignItems: "center",
           borderRadius: "24px",
           background:
-            "var(--UI-Color-Surface-Container-Brand-primary-30, #4C2399)",
+            "var(--ui-color-surface-container-brand-primary-30, #4C2399)",
           color: "white",
           fontWeight: "bold",
           marginBottom: "16px",
@@ -35,7 +34,7 @@ export default function StepCard({ number, title, desc }) {
             "calc(var(--typogrraphy-heading-h6-small-line-height, 24) * 1px)",
           letterSpacing:
             "var(--typogrraphy-heading-h6-small-letter-spacing, -0.36px)",
-          marginBottom: "8px", // optional spacing
+          marginBottom: "8px",
         }}
       >
         {title}
@@ -43,7 +42,7 @@ export default function StepCard({ number, title, desc }) {
 
       <p
         style={{
-          color: "var(--UI-Color-On-Surface-on-neutral-00---2, #6B7280)",
+          color: "var(--ui-color-on-surface-on-neutral-00-2, #6B7280)",
           textAlign: "center",
           fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
           fontSize: "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",

@@ -1,38 +1,27 @@
+"use client";
+
 export default function TeamRightBoxes() {
   return (
-    <div className="flex gap-6 justify-center md:justify-end">
-      {/* First small box */}
-
+    <div className="relative w-[419px] h-[302px]">
       <div
         style={{
-          display: "flex",
-          width: "131px",
-          height: "252px",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "var(--Corner-Radius-large, 24px)",
-          background: "var(--UI-Color-On-Surface-on-gradient---2, #F3F4F6)",
-        }}
-      >
-        {/* Your content here */}
-      </div>
+          position: "absolute",
+          right: "0px",
+          bottom: "0px",
+          width: "419px",
+          height: "302px",
+          borderRadius: "24px",
 
-      {/* Second bigger box */}
-      <div
-        style={{
-          display: "flex",
-          width: "237px",
-          height: "252px",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "var(--Corner-Radius-large, 24px)",
-          background: "var(--UI-Color-On-Surface-on-gradient---2, #F3F4F6)",
+          // ⭐ EXACT Figma background shorthand converted to React style:
+          // background: url(<path-to-image>) lightgray 0px -59.972px / 100% 138.652% no-repeat;
+
+          backgroundImage: "url('/Images/meetexpert.png')",
+          // backgroundColor: "lightgray",
+          backgroundPosition: "0px -59.972px",
+          backgroundSize: "100% 138.652%",
+          backgroundRepeat: "no-repeat",
         }}
-      >
-        {/* Your content here */}
-      </div>
+      ></div>
     </div>
   );
 }

@@ -14,17 +14,24 @@ const RightCard = () => {
     >
       <div className="w-full h-fit flex justify-center items-center ">
         <Image
-          src="/Images/readytogetstarted.png"
+          src="/Images/problem-br.jpg"
           alt="Description"
           width={237}
           height={182}
+          // className=" border-radius-[12]"
+          style={{
+            width: "237px",
+            height: "182px",
+            aspectRatio: "237 / 182",
+            borderRadius: "24px",
+          }}
         />
       </div>
 
-      <div className="h-[182px]">
+      <div className="h-[182px]  flex flex-col justify-center items-center ">
         {/* title */}
         <div
-          className="w-[283px] h-[64px] flex justify-center items-center mt-[32px]"
+          className="w-[283px] h-[64px] flex justify-center items-center "
           style={{
             color: "var(--ui-color-on-surface-on-primary-00---2, #4c2399)",
             textAlign: "center",
@@ -32,7 +39,6 @@ const RightCard = () => {
             fontSize: "calc(var(--typogrraphy-heading-h5-large-size) * 1px)",
             fontStyle: "normal",
             fontWeight: 600,
-            //  lineHeight: "calc(var(--typography-heading-h5-large-line-height) * 1px)",
             letterSpacing:
               "calc(var(--typography-heading-h5-large-letter-spacing) * 1px)",
           }}

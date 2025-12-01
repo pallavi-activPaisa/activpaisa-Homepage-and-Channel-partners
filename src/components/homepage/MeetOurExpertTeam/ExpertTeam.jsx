@@ -5,27 +5,27 @@ import TeamRightBoxes from "./TeamRightBoxes";
 
 export default function ExpertTeam() {
   return (
-    <div className="w-full flex justify-center items-center  margin:auto">
+    <div className="w-full flex justify-center items-center">
       <div
         style={{
+          // ⭐ Correct converted gradient (from your Figma variables)
           background:
-            "linear-gradient(45deg, #BD8668 0%, #5D51AF 50%, #3437C8 100%)",
+            "var(--Gradients-G1, linear-gradient(45deg, var(--Surface-Container-Gradients-G1, #BD8668) 0%, var(--Surface-Container-Gradients-G2, #5D51AF) 50%, var(--Surface-Container-Gradients-G3, #3437C8) 100%))",
+
           borderRadius: "24px",
           padding: "74px 48px",
           marginTop: "40px",
           width: "1260px",
           marginRight: "17px",
+          position: "relative", // necessary for absolute right image
         }}
       >
         <div
           style={{
             display: "flex",
-            // width: "1260px",
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "flex-start",
-            // gap: "10px",
-            // margin: "0 auto",
           }}
         >
           <TeamLeftContent />

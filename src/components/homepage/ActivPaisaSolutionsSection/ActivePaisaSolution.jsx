@@ -5,7 +5,6 @@ import StepsList from "./StepsList";
 export default function ActivePaisaSolution() {
   return (
     <div className="w-full flex flex-col mt-[72px] px-[90px]">
-      {/* Heading */}
       <h2
         style={{
           color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
@@ -40,10 +39,8 @@ export default function ActivePaisaSolution() {
         and improves your chances of getting the right loan
       </p>
 
-      {/* Feature Cards */}
       <FeaturesList />
-      {/* How It Works Section */}
-      {/* How It Works Section */}
+
       <div
         style={{
           display: "flex",
@@ -53,8 +50,8 @@ export default function ActivePaisaSolution() {
           gap: "10px",
           width: "1260px",
           height: "400px",
-          padding: "calc(24px) calc(71px)", // padding with calc
-          borderRadius: "calc(var(--corner-radius-large,)*1px)", // border-radius with calc
+          padding: "calc(24px) calc(71px)",
+          borderRadius: "calc(var(--corner-radius-large,)*1px)",
           border:
             "calc(var(--border-width-width-1, )* 1px) solid var(--ui-color-border-neutral-10, #E5E7EB)",
           backgroundColor:
@@ -64,7 +61,7 @@ export default function ActivePaisaSolution() {
       >
         <h2
           style={{
-            color: "var(--ui-color-on-surface-on-neutral-00---3, #4c2399)",
+            color: "var(--ui-color-on-surface-on-neutral-00-3, #4c2399)",
             textAlign: "center",
             fontFamily:
               "var(--typogrraphy-heading-h5-inter-font-family, Inter)",

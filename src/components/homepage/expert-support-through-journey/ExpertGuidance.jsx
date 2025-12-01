@@ -49,7 +49,7 @@ const ExpertGuidance = () => {
         point2: "Personalized improvement plan",
         point3: "Better loan eligibility",
       },
-      icon: "/Icons/Diagram-Increase-Large-Head.svg",
+      icon: "/Icons/creditIcon.svg",
     },
   ];
   return (

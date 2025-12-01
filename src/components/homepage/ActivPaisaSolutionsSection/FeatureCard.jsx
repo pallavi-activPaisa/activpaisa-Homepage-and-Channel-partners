@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-export default function FeatureCard({ number, title, desc, highlight }) {
+export default function FeatureCard({ number, title, desc, highlight, image }) {
   return (
     <div className="bg-white rounded-[24px] border border-[#E6E6E6] p-6 shadow-sm w-[300px] flex flex-col items-center">
       {/* Number Badge */}
@@ -15,7 +15,7 @@ export default function FeatureCard({ number, title, desc, highlight }) {
             alignItems: "center",
             borderRadius: "24px",
             background:
-              "var(--UI-Color-Surface-Container-Brand-primary-30, #4C2399)",
+              "var(--ui-color-surface-container-brand-primary-30, #4C2399)",
             color: "#fff",
             fontWeight: "bold",
             marginBottom: "12px",
@@ -28,7 +28,7 @@ export default function FeatureCard({ number, title, desc, highlight }) {
         </div>
       )}
 
-      {/* Placeholder / Image Box */}
+      {/* Feature Background Image Box */}
       <div
         style={{
           display: "flex",
@@ -38,9 +38,8 @@ export default function FeatureCard({ number, title, desc, highlight }) {
           flexShrink: 0,
           alignSelf: "stretch",
           borderRadius: "24px",
-          opacity: 0.08,
+          background: `url(${image}) lightgray 50% / cover no-repeat`,
           marginBottom: "12px",
-          background: "var(--ui-color-on-surface-on-neutral-00---3, #4C2399)",
         }}
       ></div>
 

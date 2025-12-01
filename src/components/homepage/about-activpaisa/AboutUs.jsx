@@ -9,6 +9,7 @@ const AboutUs = () => {
       <div
         style={{
           width: "1260px",
+          height: "452px",
           display: "flex",
           padding: "64px 40px",
           flexDirection: "column",
@@ -98,7 +99,6 @@ const AboutUs = () => {
                 fontWeight: 500,
                 lineHeight: "var(--Typography-Label-L-1-line-height, 18px)",
                 letterSpacing: "var(--Typography-Label-letter-spacing, 0)",
-
                 marginTop: "40px",
                 cursor: "pointer",
               }}
@@ -121,7 +121,7 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
-                    fontWeight: "600",
+                    fontWeight: "700",
                   }}
                 >
                   ₹500 Cr+
@@ -129,7 +129,7 @@ const AboutUs = () => {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     margin: 0,
                     fontFamily: "Inter",
                     fontWeight: 400,
@@ -146,7 +146,7 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
-                    fontWeight: "600",
+                    fontWeight: "700",
                   }}
                 >
                   50K+
@@ -154,7 +154,7 @@ const AboutUs = () => {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     margin: 0,
                     fontFamily: "Inter",
                     fontWeight: 400,
@@ -171,7 +171,7 @@ const AboutUs = () => {
                     fontSize: "22px",
                     marginBottom: "4px",
                     fontFamily: "Inter",
-                    fontWeight: "600",
+                    fontWeight: "700",
                   }}
                 >
                   4.8/5
@@ -179,7 +179,7 @@ const AboutUs = () => {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     margin: 0,
                     fontFamily: "Inter",
                     fontWeight: 400,
@@ -195,9 +195,9 @@ const AboutUs = () => {
           <div
             style={{
               width: "507px",
-              height: "501px",
+              height: "548px",
               borderRadius: "40px",
-              overflow: "hidden", // IMPORTANT
+
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -207,9 +207,14 @@ const AboutUs = () => {
               src="/Images/about-hero.png"
               alt="About ActivPaisa"
               style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover", // Makes it look like reference image
+                width: "504px",
+                height: "501px",
+                objectFit: "cover",
+                position: "relative",
+                bottom: "54px",
+                objectPosition: "center center", // <-- fix
+
+                // Makes it look like reference image
               }}
             />
           </div>
