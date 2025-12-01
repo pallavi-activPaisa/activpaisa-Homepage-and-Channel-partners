@@ -9,15 +9,17 @@ export default function ExpertTeam() {
       <div
         style={{
           // ⭐ Correct converted gradient (from your Figma variables)
+          // background:
+          //   "var(--Gradients-G1, linear-gradient(45deg, var(--Surface-Container-Gradients-G1, #BD8668) 0%, var(--Surface-Container-Gradients-G2, #5D51AF) 50%, var(--Surface-Container-Gradients-G3, #3437C8) 100%))",
+
+          borderRadius: "var(--Corner-Radius-large, 24px)",
           background:
             "var(--Gradients-G1, linear-gradient(45deg, var(--Surface-Container-Gradients-G1, #BD8668) 0%, var(--Surface-Container-Gradients-G2, #5D51AF) 50%, var(--Surface-Container-Gradients-G3, #3437C8) 100%))",
-
-          borderRadius: "24px",
           padding: "74px 48px",
           marginTop: "40px",
           width: "1260px",
           marginRight: "17px",
-          position: "relative", // necessary for absolute right image
+          position: "relative",
         }}
       >
         <div

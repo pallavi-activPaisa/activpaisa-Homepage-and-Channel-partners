@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import FAQContent from "./FAQContent";
 import FAQImage from "./FAQImage";
 import "./faq.css";
 
 const FAQSection = () => {
+  const [openIndex, setOpenIndex] = useState(0); // first accordion open by default
+
   return (
     <div style={{ width: "100%", marginTop: "72px" }}>
       {/* OUTSIDE CONTENT */}
@@ -28,7 +31,7 @@ const FAQSection = () => {
           margin: "0 auto",
         }}
       >
-        <FAQContent />
+        <FAQContent openIndex={openIndex} setOpenIndex={setOpenIndex} />
         <FAQImage />
       </div>
     </div>

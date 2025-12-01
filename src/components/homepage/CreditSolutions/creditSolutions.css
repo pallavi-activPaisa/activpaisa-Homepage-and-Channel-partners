@@ -6,13 +6,15 @@
 
 /* TITLES */
 .cs-title {
-  color: var(--ui-color-on-surface-on-neutral-00-1, #374151);
-  font-family: var(--typogrraphy-Heading-H3-inter-font-family, Inter);
-  font-size: calc(var(--typogrraphy-Heading-H3-large-size) * 1px);
+  color: var(--UI-Color-On-Surface-on-neutral-00---1, #374151);
+
+  /* Heading/H3/SemiBold/Large */
+  font-family: var(--Typogrraphy-Heading-H3-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Heading-H3-large-size, 32px);
   font-style: normal;
   font-weight: 600;
-  line-height: var(--typogrraphy-Heading-H3-large-line-height, 40px); /* 125% */
-  letter-spacing: var(--typogrraphy-Heading-H3-large-letter-spacing, -0.64px);
+  line-height: var(--Typogrraphy-Heading-H3-large-line-height, 40px); /* 125% */
+  letter-spacing: var(--Typogrraphy-Heading-H3-large-letter-spacing, -0.64px);
 }
 .cs-subtitle {
   margin-bottom: 24px;
