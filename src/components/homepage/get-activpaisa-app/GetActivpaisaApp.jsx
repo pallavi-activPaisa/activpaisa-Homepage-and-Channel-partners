@@ -36,7 +36,7 @@ const GetActivpaisaApp = () => {
       </div>
 
       {/* parent box */}
-      <div className="w-full h-[392px] flex gap-[40px]  mt-[24px]">
+      <div className="w-full h-[356px] flex gap-[40px]  mt-[24px]">
         {/* left box */}
         <div
           className="w-[452px] flex flex-col gap-[24px] h-full "
@@ -289,12 +289,12 @@ const GetActivpaisaApp = () => {
           </div>
 
           {/* right side */}
-          <div className="w-[252px] h-[279px] ">
+          <div className="w-[260px] h-[251px] ">
             <Image
-              src="/Images/mobileapp.png"
+              src="/Images/mobile.png"
               alt="app image"
-              width={252}
-              height={279}
+              width={260}
+              height={251}
             />
           </div>
         </div>

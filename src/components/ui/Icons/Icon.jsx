@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Icon = ({ icon }) => {
+const Icon = ({ icon, width = 24, height = 24 }) => {
   return (
     //  <div className='w-full h-[48px] '>
     <div
@@ -31,7 +31,7 @@ const Icon = ({ icon }) => {
             background: "var(--ui-color-on-surface-on-primary-00---4, #d0c6f6)",
           }}
         ></div> */}
-      <Image src={icon} alt="icon" width={24} height={24} />
+      <Image src={icon} alt="icon" width={width} height={height} />
       {/* </div> */}
     </div>
     // </div>
