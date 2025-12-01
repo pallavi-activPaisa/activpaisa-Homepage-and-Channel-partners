@@ -2,6 +2,7 @@
   width: 1260px;
   /* padding: 0 90px; */
   margin: 0 auto;
+  /* height: fit-content; */
 }
 
 /* TITLES */
@@ -32,11 +33,15 @@
 /* CARDS ROW */
 .cards-container {
   display: flex;
+  /* padding-left: 59px; */
+  
   gap: 24px;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
   padding-bottom: 24px;
-  height: 420px;
+  height: 620px;
+  scrollbar-width: none;
+  /* background-color: tomato; */
 }
 
 .card-wrapper {
@@ -46,7 +51,7 @@
 /* CARD */
 .loan-card {
   width: 367px;
-  /* height: 616px; */
+  height: 616px;
   padding: 24px;
   align-items: center;
   /* gap: 12px; */
