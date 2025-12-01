@@ -7,7 +7,6 @@
 /* TITLES */
 .cs-title {
   color: var(--UI-Color-On-Surface-on-neutral-00---1, #374151);
-
   /* Heading/H3/SemiBold/Large */
   font-family: var(--Typogrraphy-Heading-H3-inter-font-family, Inter);
   font-size: var(--Typogrraphy-Heading-H3-large-size, 32px);
@@ -33,10 +32,16 @@
 .cards-container {
   display: flex;
   gap: 24px;
-  overflow-x: hidden !important;
+  overflow: auto;
+  scrollbar-width: none;
+  /* overflow-x: auto; */
+  /* overflow-y: auto; */
   scroll-behavior: smooth;
   padding-bottom: 24px;
-  height: 420px;
+  height: auto;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .card-wrapper {
