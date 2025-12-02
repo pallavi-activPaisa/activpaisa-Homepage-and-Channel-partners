@@ -51,16 +51,16 @@
   line-height: var(--typography-label-l-1-line-height, 18px); /* 112.5% */
   letter-spacing: var(--typography-label-letter-spacing, 0);
   display: flex;
-  height: 44px;
+  /* height: 44px; */
   padding: var(--spacing-sp-10, 10px) var(--spacing-sp-16, 16px);
   justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: var(--corner-radius-2xsmall, 8px);
-  border: var(--border-width-width-1, 1px) solid
+  border: calc(var(--border-width-width-1)*1px) solid
     var(--ui-color-border-neutral-10, #e5e7eb);
   background: var(--ui-color-surface-container-neutral-neutral-00, #fff);
-  border-width: var(--border-width-width-1, 1px);
+  /* border-width: var(--border-width-width-1, 1px); */
   border-style: solid;
   border-color: var(--ui-color-border-neutral-10, #e5e7eb);
   /* Drop Shadow/XSmall */
