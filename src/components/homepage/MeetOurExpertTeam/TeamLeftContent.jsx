@@ -8,7 +8,7 @@ const teamPoints = [
 
 export default function TeamLeftContent() {
   return (
-    <div className="text-white space-y-6 w-[673px] ">
+    <div className="text-white space-y-3 w-[673px] ">
       {/* Title */}
       <h2
         style={{
@@ -41,13 +41,14 @@ export default function TeamLeftContent() {
         specialists with decades of lending experience
       </p>
       {/* Bullet Points */}
-      <div className="space-y-3">
+      <div className="space-y-2">
         {teamPoints.map((point, i) => (
           <TeamCheckItem key={i} text={point} />
         ))}
       </div>
       {/* Button */}
       <button
+        className="mt-6"
         style={{
           display: "flex",
           justifyContent: "center",

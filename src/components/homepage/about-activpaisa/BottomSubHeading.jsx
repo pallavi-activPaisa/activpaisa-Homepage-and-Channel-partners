@@ -1,81 +1,88 @@
 "use client";
+
 import Image from "next/image";
 
 const BottomSubHeading = () => {
-  const boxStyle = {
-    display: "flex",
-    padding: "12px 16px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "16px",
-    borderRadius: "8px",
-    border: "1px solid #E5E7EB",
-    color: "#374151",
-    textAlign: "center",
-    fontFamily: "Inter",
-    fontSize: "14px",
-    fontWeight: 400,
-    lineHeight: "20px",
-    width: "fit-content",
-  };
-
-  const iconRow = {
-    display: "flex",
-    alignItems: "center",
-    gap: "16px",
-  };
-
   return (
     <div
       style={{
-        display: "flex",
-        gap: "12px",
         width: "1260px",
         margin: "0 auto",
+        marginTop: "16px",
+        display: "flex",
         justifyContent: "center",
       }}
     >
-      {/* Box 1 */}
-      <div style={boxStyle}>
-        <div style={iconRow}>
-          <Image
-            src="/Icons/Check box.svg"
-            alt="Check icon"
-            width={20}
-            height={20}
-          />
-          <p>Quick approval in 24–48 hours</p>
-          <div
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "24px",
+          padding: "12px 24px",
+          border: "1px solid #E5E7EB",
+          borderRadius: "8px",
+          background: "#FFFFFF",
+          fontFamily: "Inter",
+        }}
+      >
+        {/* ITEM 1 */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <Image src="/Icons/Check box.svg" width={20} height={20} alt="icon" />
+          <span
             style={{
-              borderRight: "1px",
-              width: "1px",
-              height: "20px",
-              background: "#E5E7EB",
+              fontSize: "14px",
+              color: "#374151",
+              lineHeight: "20px",
             }}
-          ></div>
-          <Image
-            src="/Icons/Check box.svg"
-            alt="Check icon"
-            width={20}
-            height={20}
-          />
-          <p> Competitive interest rates</p>
+          >
+            Quick approval in 24–48 hours
+          </span>
+        </div>
 
-          <div
+        {/* DIVIDER */}
+        <div
+          style={{
+            width: "1px",
+            height: "20px",
+            background: "#E5E7EB",
+          }}
+        />
+
+        {/* ITEM 2 */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <Image src="/Icons/Check box.svg" width={20} height={20} alt="icon" />
+          <span
             style={{
-              borderRight: "1px",
-              width: "1px",
-              height: "20px",
-              background: "#E5E7EB",
+              fontSize: "14px",
+              color: "#374151",
+              lineHeight: "20px",
             }}
-          ></div>
-          <Image
-            src="/Icons/Check box.svg"
-            alt="Check icon"
-            width={20}
-            height={20}
-          />
-          <p>Expert guidance</p>
+          >
+            Competitive interest rates
+          </span>
+        </div>
+
+        {/* DIVIDER */}
+        <div
+          style={{
+            width: "1px",
+            height: "20px",
+            background: "#E5E7EB",
+          }}
+        />
+
+        {/* ITEM 3 */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <Image src="/Icons/Check box.svg" width={20} height={20} alt="icon" />
+          <span
+            style={{
+              fontSize: "14px",
+              color: "#374151",
+              lineHeight: "20px",
+            }}
+          >
+            Expert guidance
+          </span>
         </div>
       </div>
     </div>

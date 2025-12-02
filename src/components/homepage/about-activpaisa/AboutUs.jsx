@@ -5,36 +5,54 @@ import BottomSubHeading from "./BottomSubHeading";
 
 export default function HeroSection() {
   return (
-    <div className="w-full flex  justify-center mt-10 mb-[72px]">
+    <div className="w-full grid justify-center mt-10 mb-[72px]">
       {/* OUTER HERO BOX */}
       <div
         className="w-[1260px] h-[452px] px-[40px] py-[64px] gap-[40px] flex justify-between items-center"
         style={{
           borderRadius: "24px",
           background:
-            "linear-gradient(45deg, #BD8668 0%, #745FA2 50%, #3236C9 100%)",
+            "var(--Gradients-G1, linear-gradient(45deg, var(--UI-Color-Gradients-G1-100, #BD8668) 0%, var(--UI-Color-Gradients-G1-200, #5D51AF) 50%, var(--UI-Color-Gradients-G1-300, #3437C8) 100%))",
         }}
       >
         {/* LEFT CONTENT */}
         <div className="flex flex-col">
-          <h2 className="text-white font-inter text-[32px] font-semibold leading-[40px]">
+          <h2
+            style={{
+              color: "var(--ui-color-on-surface-on-gradient-1, #FFF)",
+              fontFamily: "Inter",
+              fontSize: "32px",
+              fontStyle: "normal",
+              fontWeight: 600,
+              lineHeight: "40px",
+              letterSpacing: "-0.64px",
+            }}
+          >
             ActivPaisa – Transparent Borrowing,
             <br />
-            <span className="text-[#D0C6F6] font-inter">Done Right</span>
+            <span
+              style={{
+                color: "var(--ui-Color-On-Surface-on-gradient-3, #D0C6F6)",
+                fontFamily: "Inter",
+                fontSize: "32px",
+                fontStyle: "normal",
+                fontWeight: 600,
+                lineHeight: "40px",
+                letterSpacing: "-0.64px",
+              }}
+            >
+              Done Right
+            </span>
           </h2>
 
-          <p className="text-white/80 mt-3 w-[650px] leading-[24px] text-[16px]">
+          <p className="text-white/80 mt-2 w-[650px] leading-[24px] text-[16px]">
             Empowering you to borrow confidently with expert guidance,
             intelligent technology, and complete transparency at every step.
           </p>
 
           {/* UPDATED TOKEN-BASED BUTTON */}
           <button
-            className="
-              mt-8 
-              
-              
-            "
+            className="mt-10"
             style={{
               width: "171px",
               height: "44px",
@@ -44,18 +62,18 @@ export default function HeroSection() {
               color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
               textAlign: "center",
               background:
-                "var(--UI-Color-Surface-Container-Neutral-neutral-00, #FFF)",
-              borderRadius: "var(--Corner-Radius-2xsmall, 8px)",
+                "var(--ui-color-surface-container-neutral-neutral-00, #FFF)",
+              borderRadius: "var(--corner-radius-2xsmall, 8px)",
               border:
-                "var(--Border-Width-width-1, 1px) solid var(--UI-Color-Border-neutral-10, #E5E7EB)",
+                "var(--border-width-width-1, 1px) solid var(--ui-color-border-neutral-10, #E5E7EB)",
               boxShadow:
-                "0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04))",
-              fontFamily: "var(--Typogrraphy-Label-inter-font-family, Inter)",
-              fontSize: "var(--Typogrraphy-Label-L-1-size, 16px)",
+                "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
+              fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+              fontSize: "var(--typogrraphy-label-L-1-size, 16px)",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "var(--Typogrraphy-Label-L-1-line-height, 18px)",
-              letterSpacing: "var(--Typogrraphy-Label-letter-spacing, 0)",
+              lineHeight: "var(--typogrraphy-Label-l-1-line-height, 18px)",
+              letterSpacing: "var(--typogrraphy-label-letter-spacing, 0)",
             }}
           >
             Check Free Offers
@@ -66,7 +84,7 @@ export default function HeroSection() {
             <div className="w-[183px] gap-[8px] ">
               <h3
                 style={{
-                  color: "var(--UI-Color-On-Surface-on-gradient---1, #FFF)",
+                  color: "var(--ui-color-on-surface-on-gradient-1, #FFF)",
                   fontFamily: "Inter",
                   fontSize: "24px",
                   fontStyle: "normal",
@@ -180,7 +198,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      {/* <BottomSubHeading /> */}
+      <BottomSubHeading />
     </div>
   );
 }

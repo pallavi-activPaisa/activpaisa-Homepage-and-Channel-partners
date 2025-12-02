@@ -8,13 +8,9 @@ export default function ExpertTeam() {
     <div className="w-full flex justify-center items-center">
       <div
         style={{
-          // ⭐ Correct converted gradient (from your Figma variables)
-          // background:
-          //   "var(--Gradients-G1, linear-gradient(45deg, var(--Surface-Container-Gradients-G1, #BD8668) 0%, var(--Surface-Container-Gradients-G2, #5D51AF) 50%, var(--Surface-Container-Gradients-G3, #3437C8) 100%))",
-
-          borderRadius: "var(--corner-Radius-large, 24px)",
+          borderRadius: "var(--Corner-Radius-large, 24px)",
           background:
-            "var(--Gradients-G1, linear-gradient(45deg, var(--surface-container-gradients-g1, #BD8668) 0%, var(--corner-container-gradients-G2, #5D51AF) 50%, var(--surface-container-gradients-g3, #3437C8) 100%))",
+            "var(--Gradients-G1, linear-gradient(45deg, var(--UI-Color-Gradients-G1-100, #BD8668) 0%, var(--UI-Color-Gradients-G1-200, #5D51AF) 50%, var(--UI-Color-Gradients-G1-300, #3437C8) 100%))",
           padding: "74px 48px",
           marginTop: "40px",
           width: "1260px",
