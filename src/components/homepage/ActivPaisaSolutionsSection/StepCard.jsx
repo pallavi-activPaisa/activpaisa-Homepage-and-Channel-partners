@@ -42,6 +42,7 @@ export default function StepCard({ number, title, desc }) {
 
       <p
         style={{
+          width: "306px",
           color: "var(--ui-color-on-surface-on-neutral-00-2, #6B7280)",
           textAlign: "center",
           fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",

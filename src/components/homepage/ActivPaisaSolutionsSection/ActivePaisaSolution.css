@@ -1,6 +1,6 @@
 /* Main Heading */
 .aps-heading {
-  color: var(--ui-color-on-surface-on-neutral-00---1, #374151);
+  color: var(--ui-color-on-surface-on-neutral-00-1, #374151);
   font-family: var(--typogrraphy-heading-h3-inter-font-family, Inter);
   font-size: var(--typogrraphy-heading-h3-large-size, 32px);
   font-style: normal;
