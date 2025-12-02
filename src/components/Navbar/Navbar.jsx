@@ -30,9 +30,30 @@ const Navbar = () => {
           </span>
 
           <span className={styles.navHighlight}>Check Credit Score</span>
-
-          <span className={styles.navItem}>About Us</span>
-          <span className={styles.navItem}>Contact Us</span>
+          <span className={styles.navItem}>Learn Money</span>
+          <span className={styles.navItem}>
+            Resources
+            <Image
+              src="/Icons/arrow-down.svg"
+              alt="arrow-down"
+              width={20}
+              height={20}
+              className={styles.arrowIcon}
+            />
+          </span>
+          {/* <span className={styles.navItem}>About Us</span> */}
+          <span className={styles.navItem}>
+            About Us
+            <Image
+              src="/Icons/arrow-down.svg"
+              alt="arrow-down"
+              width={20}
+              height={20}
+              className={styles.arrowIcon}
+            />
+          </span>
+          {/* <span className={styles.navItem}>Contact Us</span> */}
+          <span className={styles.navItem}>Become a Partner</span>
         </div>
       </div>
 

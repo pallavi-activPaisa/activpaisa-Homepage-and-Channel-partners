@@ -1,30 +1,18 @@
-/* 🔵 Main Navbar Layout
-.navbar {
-  height: 72px;
-  width: 1440px;
-  padding: 16px 32px;
-  display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-/* background: var(--ui-color-surface-container-neutral-neutral-00); */
-/* 🔵 Global Box-Sizing */
-
-/* 🔵 Main Navbar Layout */
-
-/* 🔵 Main Navbar Layout */
 .navbar {
   height: 72px;
   width: 100%; /* changed from 1440px to 100% for responsiveness */
   max-width: 1440px; /* keep original max width */
-  padding: 16px 16px;
+  /* padding: 16px 16px; */
+  padding: 16px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--ui-color-surface-container-neutral-neutral-00);
   border-bottom: 1px solid var(--ui-color-border-neutral-10, #e5e7eb);
-
   overflow: hidden; /* prevent scrollbars */
-  box-sizing: border-box; /* include padding in width */
+  box-sizing: border-box;
+  white-space: nowrap;
+  /* gap: 125px; */
 }
 
 /* 🔵 Left Side */
@@ -38,17 +26,16 @@
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 8px;
+  /* gap: 8px; */
 }
-
 .navItem {
-  color: var(--ui-color-on-surface-on-neutral-00---1, #374151);
+  color: var(--ui-color-on-surface-on-neutral-00-1, #374151);
   font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 16px;
   display: flex;
   align-items: center;
+  padding: 8px 16px;
 }
 
 .navHighlight {
