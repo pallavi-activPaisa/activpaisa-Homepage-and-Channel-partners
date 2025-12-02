@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function TeamRightBoxes() {
   return (
-    <div className="w-[419px] h-[302px] mr-[57px] relative">
+    <div className="w-[419px] h-[302px] mr-[57px]  mb-16 relative bottom-[34px]">
       {/* <div
         style={{
           position: "absolute",
@@ -30,6 +30,7 @@ export default function TeamRightBoxes() {
         alt="expert team img"
         width={419}
         height={302}
+        className=" "
       />
     </div>
   );

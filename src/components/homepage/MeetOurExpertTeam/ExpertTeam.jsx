@@ -5,7 +5,7 @@ import TeamRightBoxes from "./TeamRightBoxes";
 
 export default function ExpertTeam() {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center ">
       <div
         style={{
           borderRadius: "var(--Corner-Radius-large, 24px)",
@@ -16,6 +16,7 @@ export default function ExpertTeam() {
           width: "1260px",
           marginRight: "17px",
           position: "relative",
+          height: "396px",
         }}
       >
         <div
