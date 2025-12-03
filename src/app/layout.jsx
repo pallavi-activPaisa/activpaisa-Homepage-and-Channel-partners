@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "activpaisa",
   description: "Get Loans From ActivPaisa at Best Rates",
+  icon: "/Icons/favicon.ico",
 };
 
 export default function RootLayout({ children }) {
