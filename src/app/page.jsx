@@ -23,7 +23,7 @@ import ExpertGuidance from "@/components/homepage/expert-support-through-journey
 
 function Home() {
   return (
-    <div>
+    <div className="w-full flex flex-col justify-center items-center ">
       <Herosection />
       <BorrowSmart />
       <AboutUs />

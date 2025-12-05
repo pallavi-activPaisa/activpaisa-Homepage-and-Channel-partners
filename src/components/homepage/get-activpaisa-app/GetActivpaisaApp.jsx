@@ -29,7 +29,7 @@ const GetActivpaisaApp = () => {
     },
   ];
   return (
-    <div className="w-full mt-[72px] flex flex-col justify-center items-center px-[90px]">
+    <div className="w-[1440px] mt-[72px] flex flex-col justify-center items-center px-[90px]">
       <div className="w-full ">
         <Heading heading="Get the ActivPaisa App" />
         <SubHeading subHeading="Manage your credit, track applications, and access smarter borrowing - anytime, anywhere" />

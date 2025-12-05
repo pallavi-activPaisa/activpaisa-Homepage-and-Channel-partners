@@ -51,7 +51,7 @@ const WhatCustomersSays = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col justify-center pl-[90px]   mt-[72px] overflow-x-hidden">
+    <div className="w-[1440px] flex flex-col justify-center pl-[90px]   mt-[72px] overflow-x-hidden">
       {/* heading */}
       <Heading heading="What Our Customers Say" />
       <SubHeading subHeading="Don’t just take our word for it, Real stories from borrowers who chose ActivPaisa for a smoother experience" />

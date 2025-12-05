@@ -33,7 +33,7 @@ const ProblemBorrowersFace = () => {
     },
   ];
   return (
-    <div className="w-full px-[90px]">
+    <div className="w-[1440px] px-[90px]">
       {/*heading  */}
       <div className="w-full  mt-[72px] gap-[8px]">
         <Heading heading="Problems Borrowers Face" />

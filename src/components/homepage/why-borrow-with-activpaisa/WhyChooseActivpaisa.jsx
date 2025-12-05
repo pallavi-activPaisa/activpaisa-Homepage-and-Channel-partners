@@ -36,7 +36,7 @@ const WhyChooseActivpaisa = () => {
   ];
   return (
     <div
-      className="w-full  flex flex-col justify-center pl-[90px]  "
+      className="w-[1440px]  flex flex-col justify-center  pl-[90px]  "
       style={{
         marginBottom: "72px",
       }}

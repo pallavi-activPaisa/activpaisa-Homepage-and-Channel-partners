@@ -4,7 +4,7 @@ import StepsList from "./StepsList";
 
 export default function ActivePaisaSolution() {
   return (
-    <div className="w-full flex flex-col mt-[72px] px-[90px]">
+    <div className="w-[1440px] flex flex-col mt-[72px] px-[90px]">
       <h2
         style={{
           color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",

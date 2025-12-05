@@ -41,7 +41,7 @@ const OurLendingPartners = () => {
     },
   ];
   return (
-    <div className="w-full mt-[72px] px-[90px]">
+    <div className="w-[1440px] mt-[72px] px-[90px]">
       {/*heading  */}
       <div className="w-full  gap-[8px]">
         <Heading heading="Trusted by India’s Leading Banks & NBFCs" />

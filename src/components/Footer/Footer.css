@@ -10,7 +10,7 @@
   /* max-width: 1440px; */
   padding: 90px;
   gap: 60px; /* gap for top sections */
-  background: var(--ui-color-surface-container-brand-primary-50, #1e064c);
+  /* background: var(--ui-color-surface-container-brand-primary-50, #1e064c); */
   color: #ffffff;
   /* margin-top: "72px" ; */
 }
