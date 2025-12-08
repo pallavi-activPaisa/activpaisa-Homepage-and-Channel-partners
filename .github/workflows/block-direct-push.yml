@@ -1,0 +1,17 @@
+name: Block Direct Pushes
+
+on:
+  push:
+    branches:
+      - stage
+      - main
+
+jobs:
+  prevent-direct-push:
+    name: Prevent Direct Push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail and block direct push
+        run: |
+          echo "❌ Direct pushes to protected branches are not allowed. Use Pull Request instead."
+          exit 1
