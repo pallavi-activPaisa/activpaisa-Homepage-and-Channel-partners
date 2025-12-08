@@ -1,7 +1,7 @@
 import Herosection from "@/components/homepage/Herosection";
+import Navbar from "@/components/Navbar/Navbar";
 import AboutUs from "@/components/homepage/about-activpaisa/AboutUs";
 import BorrowSmart from "@/components/homepage/borrow-smart-not-hard/BorrowSmart";
-
 // import MainOurProduct from "@/components/homepage/Our-Product/MainOurProduct";
 import CreditSolutions from "@/components/homepage/CreditSolutions/CreditSolutions";
 import React from "react";
@@ -24,6 +24,7 @@ import ExpertGuidance from "@/components/homepage/expert-support-through-journey
 function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center ">
+      <Navbar />
       <Herosection />
       <BorrowSmart />
       <AboutUs />
@@ -46,5 +47,4 @@ function Home() {
     </div>
   );
 }
-
 export default Home;
