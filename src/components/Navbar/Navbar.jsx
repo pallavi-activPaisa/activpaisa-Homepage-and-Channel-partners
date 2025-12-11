@@ -44,7 +44,15 @@ const Navbar = () => {
               />
             </span>
 
-            <span className={styles.navHighlight}>Check Credit Score</span>
+            <span
+              style={{
+                color:
+                  "var(--ui-color-state-highlighted-hgt-neutral-light-10-p10, #4c2399)",
+              }}
+              className={styles.navHighlight}
+            >
+              Check Credit Score
+            </span>
             <span className={styles.navItem}>Learn Money</span>
 
             <span className={styles.navItem}>
