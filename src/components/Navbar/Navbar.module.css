@@ -39,7 +39,7 @@
 }
 
 .navHighlight {
-  /* color: var(--ui-color-states-highlighted-primary-1); */
+  color: var(--ui-color-states-highlighted-primary-1);
   font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 600;
