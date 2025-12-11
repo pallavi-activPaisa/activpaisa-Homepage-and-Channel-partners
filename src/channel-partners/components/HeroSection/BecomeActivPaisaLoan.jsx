@@ -11,7 +11,7 @@ export default function BecomeActivPaisaLoan() {
         justifyContent: "center",
         background: "#FFF",
         paddingTop: "72px",
-        paddingBottom: "72px",
+        // paddingBottom: "72px",
         margin: "0 auto",
       }}
     >
@@ -212,8 +212,8 @@ export default function BecomeActivPaisaLoan() {
                 height: "44px",
                 width: "161px",
                 // padding: "10px 16px", // fallback direct value
-                padding:
-                  // "var(--spacing-sp-10, 10px) var(--spacing-sp-16, 16px)",
+                // padding:
+                // "var(--spacing-sp-10, 10px) var(--spacing-sp-16, 16px)",
 
                 justifyContent: "center",
                 alignItems: "center",

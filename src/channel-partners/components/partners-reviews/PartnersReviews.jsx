@@ -60,7 +60,7 @@ const PartnersReviews = () => {
     }
   };
   return (
-    <div className="w-[1440px] flex flex-col justify-center items-center">
+    <div className="w-[1440px] mt-[72px] flex flex-col justify-center items-center">
       <Heading heading="See How ActivPaisa is Changing Lives" />
       <SubHeading subHeading="What partners are saying about us" />
 

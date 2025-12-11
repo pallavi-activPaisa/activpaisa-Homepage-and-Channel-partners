@@ -10,7 +10,7 @@ const WhyActivpaisa = () => {
       title: "High Commissions ",
       description:
         "Earn competitive payouts on every disbursal. No limits, no hidden cuts",
-      icon: "/Icons/blue-dot.svg",
+      icon: "/Icons/High-Commissions.svg",
     },
 
     {
@@ -55,12 +55,7 @@ const WhyActivpaisa = () => {
     },
   ];
   return (
-    <div
-      className="w-[1440px] mt-[72px] flex flex-col justify-center  pl-[90px]  "
-      style={{
-        marginBottom: "72px",
-      }}
-    >
+    <div className="w-[1440px] mt-[72px] flex flex-col justify-center  pl-[90px]  ">
       <Heading heading="Join ActivPaisa Partner Program" />
       <SubHeading subHeading="Get everything you need to start and grow your loan advisory business" />
 

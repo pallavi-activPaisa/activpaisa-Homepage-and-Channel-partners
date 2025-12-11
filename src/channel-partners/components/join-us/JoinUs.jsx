@@ -52,7 +52,7 @@ const JoinUs = () => {
     },
   ];
   return (
-    <div className="w-[1440px] flex justify-center items-center ">
+    <div className="w-[1440px] mt-[72px] flex justify-center items-center ">
       <div
         className="w-[1260px] gap-[40px]  flex flex-col justify-center items-center"
         style={{
@@ -193,34 +193,34 @@ const JoinUs = () => {
           </div>
 
           {/* button */}
-          <div>
-            <button
-              style={{
-                width: "171px",
-                height: "44px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
-                textAlign: "center",
-                background:
-                  "var(--ui-color-surface-container-neutral-neutral-00, #FFF)",
-                borderRadius: "var(--corner-radius-2xsmall, 8px)",
-                border:
-                  "var(--border-width-width-1, 1px) solid var(--ui-color-border-neutral-10, #E5E7EB)",
-                boxShadow:
-                  "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
-                fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
-                fontSize: "var(--typogrraphy-label-L-1-size, 16px)",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "var(--typogrraphy-Label-l-1-line-height, 18px)",
-                letterSpacing: "var(--typogrraphy-label-letter-spacing, 0)",
-              }}
-            >
-              Join as a Partner
-            </button>
-          </div>
+
+          <button
+            style={{
+              width: "171px",
+              height: "44px",
+              borderRadius: "8px", //token not working for radius that's why direct value
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "var(--ui-color-on-surface-on-neutral-00-1, #374151)",
+              textAlign: "center",
+              background:
+                "var(--ui-color-surface-container-neutral-neutral-00, #FFF)",
+              // borderRadius: "calc(var(--corner-radius-2xsmall) * 1px)",
+              border:
+                "var(--border-width-width-1, 1px) solid var(--ui-color-border-neutral-10, #E5E7EB)",
+              boxShadow:
+                "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
+              fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+              fontSize: "calc(var(--typogrraphy-label-L-1-size)*1px)",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "var(--typogrraphy-Label-l-1-line-height, 18px)",
+              letterSpacing: "var(--typogrraphy-label-letter-spacing, 0)",
+            }}
+          >
+            Join as a Partner
+          </button>
         </div>
 
         {/* step card parent container */}

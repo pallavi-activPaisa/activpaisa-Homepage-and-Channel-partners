@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Card from "./Card";
+import Image from "next/image";
 
 const BecomeAdvisor = () => {
   const cardData = [
@@ -42,14 +43,33 @@ const BecomeAdvisor = () => {
       <Heading heading="Who Can Become Loan Advisor?" />
       <SubHeading subHeading="Anyone can earn by helping customers get loans" />
 
-      <div className="w-[1260px] h-[276px]  mt-[24px] flex gap-[40px]">
+      <div className="w-[1260px] h-[362px]  mt-[24px] flex gap-[40px]">
         {/* left side */}
+        <div
+          className="w-[598px] h-[362px]"
+          style={{
+            borderRadius: "24px",
+            // padding: "24px",
+            background:
+              "var(--ui-color-surface-brand-primary-light-10, #F2EFFC)",
+          }}
+        >
+          <Image
+            src="/Images/loan-advisor.png"
+            width={598}
+            height={362}
+            alt="loan advisor"
+          />
+        </div>
+
+        {/* right side */}
         <div
           style={{
             display: "flex",
             width: "622px",
-            alignItems: "flex-start",
-            alignContent: "flex-start",
+            alignItems: "center",
+            alignContent: "center",
+            justifyContent: "center",
             gap: 20,
             flexWrap: "wrap",
           }}
@@ -62,28 +82,6 @@ const BecomeAdvisor = () => {
               // icon={card.icon}
             />
           ))}
-        </div>
-
-        {/* right side */}
-        <div
-          className="w-[598px] h-[276px]"
-          style={{
-            borderRadius: "24px",
-            padding: "24px",
-            background:
-              "var(--ui-color-surface-brand-primary-light-10, #F2EFFC)",
-          }}
-        >
-          {/* inner box */}
-          <div
-            className="w-full h-full"
-            style={{
-              borderRadius: "calc(var(--corner-radius-medium)*1px)",
-              opacity: "0.08",
-              background:
-                "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4C2399)",
-            }}
-          ></div>
         </div>
       </div>
     </div>
