@@ -40,7 +40,7 @@ const WhyActivpaisa = () => {
 
     {
       id: 5,
-      title: "Fast Digital Process",
+      title: "Dedicated Support",
       description:
         "We help you close deals, resolve issues, and grow your loan advisory business",
       icon: "/Icons/streamline-sharp.svg",
@@ -48,7 +48,7 @@ const WhyActivpaisa = () => {
 
     {
       id: 6,
-      title: "Fast Digital Process",
+      title: "Business Training",
       description:
         "Get practical training, sales guidance, and product knowledge",
       icon: "/Icons/Single-Man.svg",

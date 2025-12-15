@@ -3,9 +3,10 @@ import React from "react";
 const StepCard = ({ stepNumber = 1, title, description }) => {
   return (
     <div
-      className="w-[407px] h-[187px] z-40 flex flex-col justify-center items-center bg-green-400 p-[24px]"
+      className="w-[407px] h-[187px] z-40 flex flex-col justify-center items-center "
       style={{
         borderRadius: "24px",
+        padding: "24px",
         border:
           "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
         background: "var(--ui-color-surface-neutral-neutral-light-10, #FFF)",

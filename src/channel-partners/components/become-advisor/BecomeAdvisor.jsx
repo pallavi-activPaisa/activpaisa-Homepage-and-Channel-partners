@@ -43,26 +43,8 @@ const BecomeAdvisor = () => {
       <Heading heading="Who Can Become Loan Advisor?" />
       <SubHeading subHeading="Anyone can earn by helping customers get loans" />
 
-      <div className="w-[1260px] h-[362px]  mt-[24px] flex gap-[40px]">
+      <div className="w-[1260px] h-[276px]  mt-[24px] flex gap-[40px]">
         {/* left side */}
-        <div
-          className="w-[598px] h-[362px]"
-          style={{
-            borderRadius: "24px",
-            // padding: "24px",
-            background:
-              "var(--ui-color-surface-brand-primary-light-10, #F2EFFC)",
-          }}
-        >
-          <Image
-            src="/Images/loan-advisor.png"
-            width={598}
-            height={362}
-            alt="loan advisor"
-          />
-        </div>
-
-        {/* right side */}
         <div
           style={{
             display: "flex",
@@ -82,6 +64,23 @@ const BecomeAdvisor = () => {
               // icon={card.icon}
             />
           ))}
+        </div>
+        {/* right side */}
+        <div
+          className="w-[598px] h-[276px]"
+          style={{
+            borderRadius: "24px",
+            // padding: "24px",
+            background:
+              "var(--ui-color-surface-brand-primary-light-10, #F2EFFC)",
+          }}
+        >
+          <Image
+            src="/Images/loan-advisors.png"
+            width={598}
+            height={276}
+            alt="loan advisor"
+          />
         </div>
       </div>
     </div>

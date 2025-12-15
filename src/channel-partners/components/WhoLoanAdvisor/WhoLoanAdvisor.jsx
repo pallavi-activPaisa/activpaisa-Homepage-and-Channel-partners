@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function WhoLoanAdvisor() {
@@ -30,27 +31,37 @@ export default function WhoLoanAdvisor() {
               "var(--ui-color-surface-brand-primary-light-10, #F2EFFC)",
             display: "flex",
             width: "594px",
-            padding: "24px",
+            // padding: "24px",
             flexDirection: "column",
-            height: "476px",
+            height: "524px",
           }}
         >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-              borderRadius: "16px",
-              opacity: "0.08",
-              background:
-                "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-P40, #4C2399)",
-            }}
-          ></div>
+          {/* image */}
+
+          <Image
+            src="/Images/loan-advisor2.png"
+            width={594}
+            height={524}
+            alt="loan advisor2"
+          />
         </div>
         {/* RIGHT SIDE CONTENT */}
-        <div>
+        <div
+          style={{
+            width: "627px",
+            height: "524px",
+            // backgroundColor: "red",
+            padding: "24px",
+            borderRadius: "24px",
+            border:
+              "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
+            background:
+              "var(--ui-color-surface-neutral-neutral-light-10, #FFF)",
+
+            boxShadow:
+              "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -230,4 +241,3 @@ export default function WhoLoanAdvisor() {
     </section>
   );
 }
-   

@@ -54,9 +54,9 @@ export default function BecomeActivPaisaLoan() {
                   "var(--typography-heading-h2-small-letter-spacing, -0.64px)",
               }}
             >
-              Become an ActivPaisa Loan Advisor, <br />
+              Earn up to ₹1 Lakh Monthly, <br />
               <span style={{ color: "#e1d2fc" }}>
-                Earn up to ₹1 Lakh Monthly
+                Become an ActivPaisa Loan Advisor
               </span>
             </h1>
 
@@ -74,8 +74,9 @@ export default function BecomeActivPaisaLoan() {
                 letterSpacing: "var(--typography-paragraph-letter-spacing, 0)",
               }}
             >
-              Help people access the right loans from top banks and NBFCs, and
-              earn commissions on every successful disbursal
+              Earn commissions on every successful disbursal by helping
+              customers get the
+              <br /> right loans from top banks and NBFCs
             </p>
           </div>
 
@@ -93,12 +94,16 @@ export default function BecomeActivPaisaLoan() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "64px",
+                gap: "87px",
               }}
             >
               {/* 100+ */}
               <div
-                style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                }}
               >
                 <div
                   style={{
@@ -243,17 +248,28 @@ export default function BecomeActivPaisaLoan() {
           </div>
         </div>
 
-        {/* RIGHT BLUR BOX */}
+        {/* RIGHT IMAGE CARD */}
         <div
-          style={{
-            width: "480px",
-            height: "300px",
-            borderRadius: "24px",
-            border: "1px solid rgba(255,255,255,0.2)",
-            background: "rgba(255,255,255,0.10)",
-            backdropFilter: "blur(20px)",
-          }}
-        ></div>
+          className="w-[466px]  h-[546px] relative rounded-[40px] flex justify-center items-center"
+          aria-hidden="true"
+        >
+          <img
+            src="/Images/partner-hero.png"
+            alt="About ActivPaisa"
+            style={{
+              position: "absolute",
+              right: "36px",
+              top: "10px",
+
+              width: "537px",
+              height: "515px",
+              objectFit: "cover",
+              transform: "rotate(1deg)",
+              filter: "drop-shadow(0px 12px 55px rgba(0,0,0,0.35))",
+            }}
+            className="select-none pointer-events-none"
+          />
+        </div>
       </div>
     </section>
   );

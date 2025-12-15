@@ -14,7 +14,15 @@ const LenderScroll = () => {
   ];
   return (
     <div className="w-[1440px] h-[284px] flex justify-center items-center  mt-[72px]">
-      <div className="w-[1260px] h-[284px]  flex justify-center items-center">
+      <div
+        className="w-[1260px] h-[284px]  flex justify-center items-center"
+        style={{
+          borderRadius: "24px",
+          border:
+            "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
+          background: "var(--ui-color-surface-neutral-neutral-light-10, #FFF)",
+        }}
+      >
         <div
           style={{
             display: "flex",

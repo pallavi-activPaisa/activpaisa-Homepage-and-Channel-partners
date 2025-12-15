@@ -57,6 +57,13 @@ const JoinUs = () => {
         className="w-[1260px] gap-[40px]  flex flex-col justify-center items-center"
         style={{
           padding: "48px 64px",
+          borderRadius: "24px",
+          border:
+            "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
+          background: "var(--ui-color-surface-neutral-neutral-light-10, #FFF)",
+
+          boxShadow:
+            "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04)), 0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
         }}
       >
         {/* title */}

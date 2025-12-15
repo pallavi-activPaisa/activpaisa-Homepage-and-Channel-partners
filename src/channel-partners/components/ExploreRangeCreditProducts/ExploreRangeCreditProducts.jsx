@@ -238,7 +238,7 @@ export default function ExploreRangeCreditProducts() {
         ref={scrollRef}
         style={{
           display: "flex",
-          gap: "24px",
+          gap: "17px",
           overflowX: "auto",
           scrollBehavior: "smooth",
           paddingBottom: "10px",

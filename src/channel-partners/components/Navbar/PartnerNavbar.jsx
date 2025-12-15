@@ -43,9 +43,8 @@ export default function PartnerNavbar() {
               />
             </div>
 
-            <div className={styles.menuItem}>Decode Loans</div>
-
-            <div className={styles.menuItemActive}>Become a Partner</div>
+            <div className={styles.menuItemActive}>Advisor Training</div>
+            <div className={styles.menuItem}>How it Works?</div>
 
             <div className={styles.menuItem}>
               Resources
