@@ -9,7 +9,7 @@ import BaseButton from "@/components/ui/BaseButton";
 
 const StillHaveQuestion = () => {
   return (
-    <div className="w-full mt-[70px] flex justify-center items-center  mb-[70px]">
+    <div className="w-full mt-[72px] flex justify-center items-center px-[90px] mb-[70px]">
       <div
         className="w-[1260px]  gap-[40px]  flex flex-col items-start"
         style={{
@@ -23,12 +23,12 @@ const StillHaveQuestion = () => {
       >
         <div className="w-full  flex flex-col items-center gap-[8px]">
           <Heading heading="Still have Questions?" />
-          <SubHeading subHeading="Get clear, personalized guidance from our experts for any loan or credit question" />
+          <SubHeading subHeading="Get clarity on payouts, requirements, and onboarding steps proces" />
         </div>
 
         <div className=" flex justify-center gap-[18px] w-full">
-          <Button label="Chat with Expert" size="small" />
-          <BaseButton label="Schedule a Call" size="small" />
+          <Button label="Talk to Business Expert" size="small" />
+          <BaseButton label="Book Your Free Callback" size="small" />
         </div>
       </div>
     </div>

@@ -61,7 +61,7 @@
   background: var(--brand-primary-40);
 }
 .button-small {
-  width: 154px;
+  /* width: 154px; */
   height: 36px;
   border-radius: var(--corner-radius-2xsmall, 8px);
   background: var(--ui-color-surface-container-brand-primary-30, #4c2399);
