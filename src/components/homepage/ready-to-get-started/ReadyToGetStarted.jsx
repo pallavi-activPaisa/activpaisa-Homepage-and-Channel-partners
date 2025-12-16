@@ -5,7 +5,7 @@ import Button from "@/components/ui/button/Button";
 
 const ReadyToGetStarted = () => {
   return (
-    <div className="w-full flex justify-center items-center px-[90px]">
+    <div className="w-full flex justify-center items-center ">
       <div
         className="w-[1260px]   h-[230px] mt-[72px] flex flex-col items-start"
         style={{

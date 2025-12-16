@@ -9,7 +9,7 @@ import BaseButton from "@/components/ui/BaseButton";
 
 const StillHaveQuestion = () => {
   return (
-    <div className="w-full mt-[70px] flex justify-center items-center px-[90px] mb-[70px]">
+    <div className="w-full mt-[70px] flex justify-center items-center  mb-[70px]">
       <div
         className="w-[1260px]  gap-[40px]  flex flex-col items-start"
         style={{

@@ -8,25 +8,25 @@ const cardsData = [
   {
     title: "Home Loan",
     desc: "Standard loan with a structured application process and wider eligibility",
-    link: "Check Offers",
+    link: "Explore Options",
     image: "/Images/homeloan.png",
   },
   {
     title: "Personal Loan",
     desc: "Fast digital approval and quick access to funds with minimal documentation",
-    link: "Apply Now",
+    link: "Check Offers",
     image: "/Images/Personal-Loan.png",
   },
   {
     title: "Credit Cards",
     desc: "Finance for buying a new house or property",
-    link: "Explore Options",
+    link: "Compare Cards",
     image: "/Images/Credit-Cards.png",
   },
   {
     title: "Instant Personal Loan",
     desc: "Explore cards with superior rewards, benefits, and quick approval",
-    link: "Compare Cards",
+    link: "Apply Now",
     image: "/Images/Instant-PersonalLoan.png",
   },
   {
