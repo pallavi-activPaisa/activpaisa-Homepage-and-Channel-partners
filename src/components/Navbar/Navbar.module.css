@@ -44,6 +44,15 @@
   font-size: 14px;
   font-weight: 600;
   padding: 8px 16px;
+  color: var(--ui-color-state-highlighted-hgt-neutral-light-10-p10, #4c2399),
+
+    /* label / l-2 / semibold */
+    /* font-family :  var(--typogrraphy-label-inter-font-family, inter),
+    font-size: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+    font-style: "normal",
+    font-weight: 600,
+    line-height: "var(--typogrraphy-label-l-2-line-height, 16px)",
+    letter-spacing: "var(--typogrraphy-label-letter-spacing, 0)" */
 }
 
 .arrowIcon {

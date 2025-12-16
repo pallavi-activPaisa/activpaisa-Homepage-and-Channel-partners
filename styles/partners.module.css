@@ -1,0 +1,175 @@
+/* FULL WIDTH WRAPPER — BORDER FIX */
+.navWrapper {
+  width: 100vw; /* full viewport width FIX */
+  margin-left: calc(50% - 50vw); /* remove centering issues */
+  margin-right: calc(50% - 50vw);
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* INNER NAVBAR */
+.navbarPartner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: 72px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.leftWrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Logo + Divider + Partners */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 4.966px;
+}
+
+.partnerText {
+  color: var(
+    --ui-color-on-surface-neutral-light-10-on-neutral-light-10-N20,
+    #9ca3af
+  );
+
+  /* Heading/H6/SemiBold/Large */
+  font-family: var(--Typogrraphy-Heading-H6-inter-font-family, Inter);
+  font-size: var(--typogrraphy-heading-h6-large-size, 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--Typogrraphy-Heading-H6-large-line-height, 28px); /* 140% */
+  letter-spacing: var(--Typogrraphy-Heading-H6-large-letter-spacing, -0.4px);
+}
+
+.divider {
+  width: 20px;
+  height: 20px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 4px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+  color: var(
+    --UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40,
+    #374151
+  );
+
+  /* Label/L-2/Medium */
+  font-family: var(--Typogrraphy-Label-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Label-L-2-size, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
+  letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+}
+
+.menuItemActive {
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+  color: var(--UI-Color-State-Highlighted-hgt-neutral-light-10-P10, #4c2399);
+
+  /* Label/L-2/SemiBold */
+  font-family: var(--Typogrraphy-Label-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Label-L-2-size, 14px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
+  letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+}
+
+.menuArrow {
+  margin-left: 4px;
+}
+
+/* RIGHT BUTTONS */
+.rightButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.loginBtn {
+  column-gap: 122px;
+  display: flex;
+  padding: var(--Spacing-sp-10, 10px) var(--Spacing-sp-16, 16px);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Corner-Radius-2xsmall, 8px);
+  border: var(--Border-Width-width-1, 1px) solid
+    var(--UI-Color-Border-Default-bd-neutral-medium-10, #e5e7eb);
+  background: var(--UI-Color-Surface-Neutral-neutral-light-10, #fff);
+
+  /* Drop Shadow/XSmall */
+  box-shadow:
+    0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04)),
+    0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04));
+  gap: var(--Spacing-sp-6, 6px);
+  color: var(
+    --UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40,
+    #374151
+  );
+  text-align: center;
+
+  /* Label/L-2/Medium */
+  font-family: var(--Typogrraphy-Label-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Label-L-2-size, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
+  letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+}
+
+.joinBtn {
+  display: flex;
+  padding: var(--Spacing-sp-10, 10px) var(--Spacing-sp-16, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Spacing-sp-6, 6px);
+  border-radius: var(--Corner-Radius-2xsmall, 8px);
+  background: var(--UI-Color-Surface-Brand-primary-strong-10, #4c2399);
+
+  /* Drop Shadow/XSmall */
+  box-shadow:
+    0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04)),
+    0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04));
+  color: var(
+    --UI-Color-On-Surface-primary-strong-30-on-primary-strong-30-N10,
+    #fff
+  );
+  text-align: center;
+
+  /* Label/L-2/Medium */
+  font-family: var(--Typogrraphy-Label-inter-font-family, Inter);
+  font-size: var(--Typogrraphy-Label-L-2-size, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
+  letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+}
+:global(html),
+:global(body) {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* horizontal scroll gone */
+}

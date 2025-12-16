@@ -14,7 +14,7 @@ export default function ExpertTeam() {
           padding: "74px 48px",
           marginTop: "40px",
           width: "1260px",
-          marginRight: "17px",
+          // marginRight: "17px",
           position: "relative",
           height: "396px",
         }}

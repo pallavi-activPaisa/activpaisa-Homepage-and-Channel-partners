@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div
-      className="w-full flex justify-center items-center mt-[72px]"
+      className="w-full  flex justify-center items-center mt-[72px]"
       style={{
         background:
           "var(--ui-color-surface-container-brand-primary-50, #1e064c)",

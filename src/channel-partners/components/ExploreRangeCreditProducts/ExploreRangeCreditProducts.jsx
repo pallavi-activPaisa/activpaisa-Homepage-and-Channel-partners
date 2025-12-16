@@ -1,0 +1,340 @@
+// "use client";
+// import ArrowButton from "@/components/homepage/CreditSolutions/ArrowButton";
+// import React from "react";
+
+// export default function ExploreRangeCreditProducts() {
+//   const cards = [
+//     {
+//       title: "Home Loan",
+//       desc: "Finance for buying a new house or property",
+//       img: "/partnerspage/House-3--Streamline-Ultimate.svg",
+//     },
+//     {
+//       title: "Personal Loan",
+//       desc: "Standard loan with a structured application process & wider eligibility",
+
+//       img: "/partnerspage/Cash-Payment-Bag--Streamline-Ultimate.svg",
+//     },
+//     {
+//       title: "Credit Cards",
+//       desc: "Explore cards with superior rewards, benefits, and quick approval",
+//       //   img: "/partnerspage/House-3--Streamline-Ultimate.svg",
+//       img: "/partnerspage/Credit-Card-1--Streamline-Ultimate.svg",
+//     },
+//     {
+//       title: "Instant Personal Loan",
+//       desc: "Fast digital approval and quick access to funds with minimal documentation",
+//       img: "/partnerspage/Video-Edit-Brightness-1--Streamline-Ultimate.svg",
+//     },
+//   ];
+
+//   return (
+//     <div
+//       style={{
+//         width: "1260px",
+//         display: "flex",
+//         flexDirection: "column",
+//         gap: "24px",
+//         margin: "0 auto",
+//       }}
+//     >
+//       {/* Heading + Subtitle */}
+//       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+//         <h1
+//           style={{
+//             color: "#374151",
+//             fontFamily: "Inter",
+//             fontSize: "32px",
+//             fontWeight: 600,
+//             lineHeight: "40px",
+//             margin: 0,
+//           }}
+//         >
+//           Explore Our Range of Credit Products
+//         </h1>
+
+//         <p
+//           style={{
+//             color: "#6B7280",
+//             fontFamily: "Inter",
+//             fontSize: "16px",
+//             fontWeight: 400,
+//             lineHeight: "24px",
+//             margin: 0,
+//           }}
+//         >
+//           Provide loans for various customer needs
+//         </p>
+//       </div>
+
+//       {/* Cards */}
+//       <div
+//         style={{
+//           display: "flex",
+//           gap: "24px",
+//         }}
+//       >
+//         {cards.map((card, index) => (
+//           <div
+//             key={index}
+//             style={{
+//               width: "301px",
+//               height: "232px",
+//               borderRadius: "24px",
+//               background: "#000000",
+//               padding: "24px",
+//               display: "flex",
+//               flexDirection: "column",
+//               gap: "16px",
+//               boxShadow:
+//                 "0px 1px 3px rgba(0,0,0,0.08), 0px 1px 2px rgba(0,0,0,0.04)",
+//               borderRadius: "24px",
+//               background:
+//                 "var(--gradients-g1, linear-gradient(45deg, var(--ui-color-gradients-g1-100, #BD8668) 0%, var(--ui-color-gradients-g1-200, #5D51AF) 50%, var(--ui-color-gradients-g1-300, #3437C8) 100%))",
+//             }}
+//           >
+//             {/* Icon Box */}
+//             <div
+//               style={{
+//                 width: "48px",
+//                 height: "48px",
+//                 padding: "12px",
+//                 background: "#F2EFFC",
+//                 borderRadius: "8px",
+//                 display: "flex",
+//                 justifyContent: "center",
+//                 alignItems: "center",
+//               }}
+//             >
+//               <img
+//                 src={card.img}
+//                 alt={card.title}
+//                 style={{
+//                   width: "24px",
+//                   height: "24px",
+//                   objectFit: "contain",
+//                 }}
+//               />
+//             </div>
+
+//             {/* Title */}
+//             {/* Title */}
+//             <span
+//               style={{
+//                 fontFamily: "Inter",
+//                 fontSize: "20px",
+//                 fontWeight: 600,
+//                 color: "#FFFFFF",
+//                 margin: 0,
+//                 height: "64px", // ← FIXED HEIGHT
+//                 display: "flex", // ← TO ALIGN VERTICALLY
+//                 alignItems: "center", // ← TITLE CENTERED
+//               }}
+//             >
+//               {card.title}
+//             </span>
+
+//             {/* Description */}
+//             <p
+//               style={{
+//                 width: "253px",
+//                 fontFamily: "Inter",
+//                 fontSize: "14px",
+//                 fontWeight: 400,
+//                 color: "#FFFFFF",
+//                 margin: 0,
+//                 lineHeight: "20px",
+//                 textAlign: "left",
+//               }}
+//             >
+//               {card.desc}
+//             </p>
+//           </div>
+//         ))}
+//       </div>
+//       <ArrowButton />
+//     </div>
+//   );
+// }
+"use client";
+import React, { useRef, useState } from "react";
+import ArrowButton from "@/channel-partners/ui/common/ArrowButton";
+
+export default function ExploreRangeCreditProducts() {
+  const cards = [
+    {
+      title: "Home Loan",
+      desc: "Finance for buying a new house or property",
+      img: "/partnerspage/House-3--Streamline-Ultimate.svg",
+    },
+    {
+      title: "Personal Loan",
+      desc: "Standard loan with a structured application process & wider eligibility",
+      img: "/partnerspage/Cash-Payment-Bag--Streamline-Ultimate.svg",
+    },
+    {
+      title: "Credit Cards",
+      desc: "Explore cards with superior rewards, benefits, and quick approval",
+      img: "/partnerspage/Credit-Card-1--Streamline-Ultimate.svg",
+    },
+    {
+      title: "Instant Personal Loan",
+      desc: "Fast digital approval and quick access to funds with minimal documentation",
+      img: "/partnerspage/Video-Edit-Brightness-1--Streamline-Ultimate.svg",
+    },
+  ];
+
+  const scrollRef = useRef(null);
+  const [index, setIndex] = useState(0);
+
+  const scrollAmount = 320; // card width + gap
+
+  const handleNext = () => {
+    const container = scrollRef.current;
+    if (container) {
+      container.scrollLeft += scrollAmount;
+      if (index < cards.length - 1) setIndex(index + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    const container = scrollRef.current;
+    if (container) {
+      container.scrollLeft -= scrollAmount;
+      if (index > 0) setIndex(index - 1);
+    }
+  };
+
+  return (
+    <div
+      style={{
+        width: "1260px",
+        margin: "0 auto",
+        display: "flex",
+        flexDirection: "column",
+        gap: "24px",
+      }}
+    >
+      {/* Heading */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+        <h1
+          style={{
+            color: "#374151",
+            fontSize: "32px",
+            fontWeight: 600,
+            margin: 0,
+          }}
+        >
+          Explore Our Range of Credit Products
+        </h1>
+
+        <p style={{ color: "#6B7280", fontSize: "16px", margin: 0 }}>
+          Provide loans for various customer needs
+        </p>
+      </div>
+
+      {/* 4-CARD SCROLLABLE ROW */}
+      <div
+        ref={scrollRef}
+        style={{
+          display: "flex",
+          gap: "17px",
+          overflowX: "auto",
+          scrollBehavior: "smooth",
+          paddingBottom: "10px",
+        }}
+      >
+        {cards.map((card, i) => (
+          <div
+            key={i}
+            style={{
+              minWidth: "301px",
+              height: "232px",
+              borderRadius: "24px",
+              padding: "24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              background:
+                "linear-gradient(45deg, #BD8668 0%, #5D51AF 50%, #3437C8 100%)",
+            }}
+          >
+            {/* Icon */}
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                padding: "12px",
+                background: "#F2EFFC",
+                borderRadius: "8px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={card.img}
+                alt={card.title}
+                style={{ width: "24px", height: "24px" }}
+              />
+            </div>
+
+            <span
+              style={{
+                fontSize: "20px",
+                fontWeight: 600,
+                color: "#FFFFFF",
+                height: "64px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              {card.title}
+            </span>
+
+            <p style={{ fontSize: "14px", color: "#FFFFFF", margin: 0 }}>
+              {card.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* ARROWS + BULLETS (BELOW CARDS) */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "24px",
+        }}
+      >
+        <ArrowButton
+          direction="left"
+          disabled={index === 0}
+          onClick={handlePrev}
+        />
+
+        {/* BULLETS */}
+        <div style={{ display: "flex", gap: "8px" }}>
+          {cards.map((_, i) => (
+            <div
+              key={i}
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "50%",
+                background: i === index ? "#0B0F19" : "#D1D5DB",
+              }}
+            ></div>
+          ))}
+        </div>
+
+        <ArrowButton
+          direction="right"
+          disabled={index === cards.length - 1}
+          onClick={handleNext}
+        />
+      </div>
+    </div>
+  );
+}
