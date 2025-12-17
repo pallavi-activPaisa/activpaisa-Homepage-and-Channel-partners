@@ -78,7 +78,7 @@ const Navbar = () => {
             </span>
 
             {/* ⭐ ROUTE ADDED HERE */}
-            <Link href="/Channel-partners" className={styles.navItem}>
+            <Link href="/partners" className={styles.navItem}>
               Become a Partner
             </Link>
           </div>
