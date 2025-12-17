@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../../../styles/partners.module.css";
@@ -11,14 +10,14 @@ export default function PartnerNavbar() {
         {/* LEFT SECTION */}
         <div className={styles.leftWrapper}>
           {/* Logo + Divider + Partners */}
-          <div className={styles.logoSection}>
+          <Link href="/" className={styles.logoSection}>
             <Image
               src="/Brand/logo.svg"
               alt="ActivPaisa Logo"
-              width={130}
-              height={30}
+              width={138}
+              height={28}
+              priority
             />
-
             <Image
               src="/partnerspage/Divider.svg"
               alt="Divider"
@@ -26,9 +25,8 @@ export default function PartnerNavbar() {
               height={26.069}
               className={styles.divider}
             />
-
             <span className={styles.partnerText}>Partners</span>
-          </div>
+          </Link>
 
           {/* MENU ITEMS */}
           <div className={styles.menu}>
