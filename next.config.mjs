@@ -9,6 +9,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+
+  // Required for Netlify static deploy
+  output: "export",
+
+  images: {
+    unoptimized: true, // 🔴 VERY IMPORTANT
+  },
 };
 
 export default nextConfig;
