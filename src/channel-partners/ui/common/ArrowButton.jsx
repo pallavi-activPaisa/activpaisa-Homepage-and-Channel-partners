@@ -11,15 +11,17 @@ export default function ArrowButton({
       disabled={disabled}
       onClick={onClick}
       style={{
-        width: "40px",
-        height: "40px",
+        width: "36px",
+        height: "36px",
+        // width: "40px",
+        // height: "40px",
         borderRadius: "50%",
         background: disabled ? "#F3F4F6" : "#E5E7EB",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         // border: "1px solid #E5E7EB",
-        boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
+        // boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
         cursor: disabled ? "not-allowed" : "pointer",
         transition: "all 0.2s ease-in-out",
       }}

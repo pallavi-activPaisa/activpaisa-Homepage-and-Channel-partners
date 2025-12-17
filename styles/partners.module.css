@@ -13,7 +13,10 @@
   width: 100%;
   margin: 0 auto;
   height: 72px;
+
   padding: 16px 32px;
+  /* padding: 16px 48px; */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +33,7 @@
 .logoSection {
   display: flex;
   align-items: center;
-  gap: 4.966px;
+  gap: 2.48px;
 }
 
 .partnerText {
@@ -41,7 +44,9 @@
 
   /* Heading/H6/SemiBold/Large */
   font-family: var(--Typogrraphy-Heading-H6-inter-font-family, Inter);
-  font-size: var(--typogrraphy-heading-h6-large-size, 20px);
+  /* font-size: calc(var(--typogrraphy-heading-h6-large-size) * 1);
+   */
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: var(--Typogrraphy-Heading-H6-large-line-height, 28px); /* 140% */
@@ -49,8 +54,8 @@
 }
 
 .divider {
-  width: 20px;
-  height: 20px;
+  /* width: 20px; */
+  height: 24px;
 }
 
 /* MENU */
