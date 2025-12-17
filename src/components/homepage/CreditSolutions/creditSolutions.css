@@ -29,15 +29,14 @@
 }
 
 /* CARDS ROW */
-.cards-container {
+.cards-containers {
   display: flex;
   gap: 24px;
   overflow: auto;
   scrollbar-width: none;
-  /* overflow-x: auto; */
-  /* overflow-y: auto; */
+  
   scroll-behavior: smooth;
-  padding-bottom: 24px;
+  
   height: auto;
 }
 .container::-webkit-scrollbar {
