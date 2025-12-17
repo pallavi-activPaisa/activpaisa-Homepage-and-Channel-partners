@@ -90,7 +90,7 @@ const CreditSolutions = () => {
         profile, and borrowing needs
       </p>
 
-      <div className="cards-container" ref={scrollRef}>
+      <div className="cards-containers" ref={scrollRef}>
         {cardsData.map((c, i) => (
           <div
             key={i}
