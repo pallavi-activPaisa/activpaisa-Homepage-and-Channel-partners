@@ -65,7 +65,18 @@ const PartnersReviews = () => {
       <SubHeading subHeading="What partners are saying about us" />
 
       {/* parent div for cards */}
-      <div className="cards-container " ref={scrollRef}>
+      <div
+        className="hide-scrollbar w-[1260px] mt-[24px]"
+        style={{
+          display: "flex",
+          gap: "17px",
+          overflowX: "auto",
+          scrollBehavior: "smooth",
+          scrollSnapType: "x mandatory",
+          WebkitOverflowScrolling: "touch",
+        }}
+        ref={scrollRef}
+      >
         {cardData.map((card) => (
           <Card
             key={card.id}
