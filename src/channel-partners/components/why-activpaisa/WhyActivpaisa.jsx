@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import SubHeading from "./Sub-heading";
 import Card from "./Card";
+import MobWhyActivPaisa from "./MobWhyActivPaisa";
 
 const WhyActivpaisa = () => {
   const cardData = [
@@ -55,25 +56,30 @@ const WhyActivpaisa = () => {
     },
   ];
   return (
-    <div className="w-[1440px] mt-[72px] flex flex-col justify-center  pl-[90px]  ">
-      <Heading heading="Join ActivPaisa Partner Program" />
-      <SubHeading subHeading="Get everything you need to start and grow your loan advisory business" />
+    <div className="w-full">
+      <div className="block md:hidden">
+        <MobWhyActivPaisa />
+      </div>
+      <div className="hidden md:flex w-[1440px] mt-[72px] flex-col justify-center pl-[90px]">
+        <Heading heading="Join ActivPaisa Partner Program" />
+        <SubHeading subHeading="Get everything you need to start and grow your loan advisory business" />
 
-      {/* cards section */}
-      {cardData && (
-        <div className="w-full   mt-[24px] flex flex-wrap gap-[20px]  justify-start ">
-          {cardData.map((card) => (
-            <Card
-              key={card.id}
-              title={card.title}
-              description={card.description}
-              icon={card.icon}
-              width={card.width}
-              height={card.height}
-            />
-          ))}
-        </div>
-      )}
+        {/* cards section */}
+        {cardData && (
+          <div className="w-full   mt-[24px] flex flex-wrap gap-[20px]  justify-start ">
+            {cardData.map((card) => (
+              <Card
+                key={card.id}
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+                width={card.width}
+                height={card.height}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
