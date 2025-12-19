@@ -1,119 +1,263 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import AuthHeading from "@/components/ui/Auth/AuthHeading";
+import AuthText from "@/components/ui/Auth/AuthText";
+import AuthLabel from "@/components/ui/Auth/AuthLabel";
+import PhoneInput from "@/components/ui/Auth/PhoneInput";
+import AuthButton from "@/components/ui/Auth/AuthButton";
+import AuthInputError from "@/components/ui/Auth/AuthInputError";
+
+import SignupOTP from "./SignupOTP";
 
 const SignupForm = () => {
+  const [step, setStep] = useState("PHONE"); // PHONE | OTP
   const [phone, setPhone] = useState("");
-  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [error, setError] = useState("");
+  const [otpError, setOtpError] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Get OTP for:", phone);
-    // Add logic to trigger OTP
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value) && value.length <= 10) {
+      setPhone(value);
+      if (error) setError("");
+    }
   };
+
+  const handleBlur = () => {
+    // Optional blur validation
+  };
+
+  const handleGetOtp = () => {
+    // Validation logic requested by user
+    if (phone === "7310249234") {
+      setError("");
+      setOtpError("");
+      setStep("OTP");
+    } else {
+      setError("Verify and enter the correct phone number");
+    }
+  };
+
+  const handleConfirmOtp = (otp) => {
+    // TESTING ONLY: 1234 is correct
+    if (otp === "1234") {
+      console.log("OTP Verified!");
+      setOtpError("");
+    } else {
+      setOtpError("Incorrect OTP. Please try again.");
+    }
+  };
+
+  // Button enables for ANY 10-digit number
+  const isButtonEnabled = phone.length === 10;
+
+  if (step === "OTP") {
+    return (
+      <SignupOTP
+        phone={phone}
+        error={otpError}
+        onBack={() => setStep("PHONE")}
+        onConfirm={handleConfirmOtp}
+      />
+    );
+  }
 
   return (
     <div
-      className="w-full h-[515px] bg-amber-300"
       style={{
-        padding: "0px 160px",
+        width: "100%",
+        padding: "0 calc(160 * 1px)",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
-      <div className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Become a Channel Partner
-        </h1>
-        <p className="text-gray-500">Start by verifying your phone number</p>
-      </div>
+      {/* CONTENT COLUMN */}
+      <div
+        style={{
+          width: "calc(432 * 1px)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "calc(32 * 1px)", // Figma main vertical gap
+        }}
+      >
+        {/* HEADING */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "calc(8 * 1px)",
+            alignSelf: "stretch",
+          }}
+        >
+          <AuthHeading>Become a Channel Partner</AuthHeading>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="space-y-2">
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Phone Number
-          </label>
-          <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600 bg-white">
-            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm border-r border-gray-200 pr-3 bg-gray-50">
-              +91
-            </span>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              className="block flex-1 border-0 bg-transparent py-2.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-              placeholder="Enter your 10-digit Phone number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              pattern="[0-9]{10}"
-              required
-            />
-          </div>
+          <AuthText>Start by verifying your phone number</AuthText>
         </div>
 
-        <button
-          type="submit"
-          className="flex w-full justify-center rounded-md bg-gray-100 px-3 py-3 text-sm font-semibold text-gray-400 shadow-sm hover:bg-indigo-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-200"
-          // Add disabled state logic if needed
+        {/* FORM */}
+        <form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "calc(24 * 1px)",
+            alignSelf: "stretch",
+          }}
         >
-          Get OTP
-        </button>
+          {/* PHONE */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "calc(8 * 1px)",
+              alignSelf: "stretch",
+            }}
+          >
+            <AuthLabel>Phone Number</AuthLabel>
 
-        <div className="flex items-start gap-x-3">
-          <div className="flex h-6 items-center">
-            <input
-              id="terms"
-              name="terms"
-              type="checkbox"
-              checked={termsAccepted}
-              onChange={(e) => setTermsAccepted(e.target.checked)}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-600 border-gray-300 rounded"
+            <PhoneInput
+              value={phone}
+              onChange={handlePhoneChange}
+              onBlur={handleBlur}
+              placeholder="Enter your 10-digit Phone number"
+              error={!!error}
             />
+            {error && <AuthInputError>{error}</AuthInputError>}
           </div>
-          <div className="text-sm leading-6">
-            <label htmlFor="terms" className="text-gray-500">
+
+          {/* OTP BUTTON */}
+          <AuthButton
+            type="button"
+            disabled={!isButtonEnabled}
+            onClick={handleGetOtp}
+          >
+            Get OTP
+          </AuthButton>
+
+          {/* TERMS */}
+          <div
+            style={{
+              display: "flex",
+              gap: "calc(4 * 1px)",
+              alignItems: "flex-start",
+            }}
+          >
+            <input type="checkbox" />
+
+            <div style={{
+              color: "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
+              fontFamily: "var(--typogrraphy-paragraph-inter-font-family, inter)",
+              fontSize: "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
+              lineHeight: "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
+            }}>
               I have read and accept the{" "}
               <Link
                 href="/terms"
-                className="font-semibold text-indigo-600 hover:text-indigo-500"
+                style={{
+                  color:
+                    "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                  textDecoration: "none",
+                }}
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 href="/privacy"
-                className="font-semibold text-indigo-600 hover:text-indigo-500"
+                style={{
+                  color:
+                    "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                  textDecoration: "none",
+                }}
               >
                 Privacy Policy
               </Link>
-            </label>
-          </div>
-        </div>
-      </form>
-
-      <div className="mt-8">
-        <div className="rounded-md bg-amber-50 p-4 border border-amber-100">
-          <div className="flex">
-            <div className="ml-3 flex-1 md:flex md:justify-between text-center md:text-left">
-              <p className="text-xs text-amber-800">
-                <span className="font-bold">Registering as an entity?</span> Use
-                the mobile number and PAN of any one director or owner
-              </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <p className="mt-8 text-center text-sm text-gray-500">
-        Already a Partner?{" "}
-        <Link
-          href="/login"
-          className="font-semibold text-indigo-600 hover:text-indigo-500"
+        </form>
+        {/* FOOTER */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "calc(20 * 1px)", // Figma: 20px between note & login
+            alignSelf: "stretch",
+            alignItems: "center",
+          }}
         >
-          Log in
-        </Link>
-      </p>
+          {/* INFO NOTE */}
+          <div
+            style={{
+              display: "flex",
+              width: "calc(400 * 1px)",
+              padding: "calc(6 * 1px) calc(8 * 1px)",
+              flexDirection: "column",
+              gap: "calc(16 * 1px)",
+              borderRadius: "calc(8 * 1px)",
+              background:
+                "var(--ui-color-surface-warning-warning-medium-20, #fef3c7)",
+            }}
+          >
+            <AuthText
+              style={{
+                color: "var(--ui-color-on-surface-warning-medium-20-on-warning-medium-20, #d97706)",
+                fontSize: "calc(var(--typogrraphy-paragraph-para-4-size) * 1px)",
+                lineHeight: "calc(var(--typogrraphy-paragraph-para-4-line-height) * 1px)",
+              }}
+            >
+              Registering as an entity? Use the mobile number <br /> and PAN of any
+              one director or owner
+            </AuthText>
+          </div>
+          {/* LOGIN */}
+          <div
+            style={{
+              margin: 0,
+              textAlign: "center",
+              color:
+                "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
+
+              /* Label / L-3 / Regular */
+              fontFamily:
+                "var(--typogrraphy-label-inter-font-family, Inter)",
+              fontSize:
+                "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight:
+                "calc(var(--typogrraphy-label-l-3-line-height, 14) * 1px)",
+              letterSpacing:
+                "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+            }}
+          >
+            Already a Partner?{" "}
+            <Link
+              href="/login"
+              style={{
+                color:
+                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-p40, #4c2399)",
+                /* Label / L-3 / Regular */
+                fontFamily:
+                  "var(--typogrraphy-label-inter-font-family, Inter)",
+                fontSize:
+                  "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight:
+                  "calc(var(--typogrraphy-label-l-3-line-height, 14) * 1px)",
+                letterSpacing:
+                  "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+                textDecoration: "none",
+              }}
+            >
+              Log in
+            </Link>
+          </div>
+
+        </div>
+
+      </div>
     </div>
   );
 };

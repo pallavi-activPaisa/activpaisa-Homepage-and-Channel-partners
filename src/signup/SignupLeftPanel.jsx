@@ -7,10 +7,9 @@ const SignupLeftPanel = () => {
       style={{
         width: "720px",
         height: "695px",
-
         padding: "20px",
 
-        backgroundColor: "red",
+
       }}
     >
       <div

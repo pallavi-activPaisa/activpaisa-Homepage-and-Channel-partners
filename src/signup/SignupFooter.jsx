@@ -1,16 +1,41 @@
 import React from 'react';
 import Link from 'next/link';
+import AuthText from "@/components/ui/Auth/AuthText";
 
 const SignupFooter = () => {
     return (
-        <footer className="w-full py-6 px-8 sm:px-12 text-center text-xs text-gray-500 mt-auto">
-            <p className="mb-2">© 2025 activpaisa. All rights reserved.</p>
-            <div className="flex justify-center gap-4">
-                <Link href="/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
-                <span>|</span>
-                <Link href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
-                <span>|</span>
-                <Link href="/disclaimer" className="hover:text-gray-900 transition-colors">Disclaimer</Link>
+        <footer style={{
+            display: "flex",
+            padding: "40px 0",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            alignSelf: "stretch",
+        }}>
+            <AuthText style={{
+                color:
+                    "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+                fontSize:
+                    "calc(var(--typogrraphy-paragraph-para-4-size) * 1px)",
+                lineHeight:
+                    "calc(var(--typogrraphy-paragraph-para-4-line-height) * 1px)",
+            }
+            }>© 2025 activpaisa. All rights reserved.</AuthText>
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "16px",
+            }}>
+                <AuthText style={{
+                    color:
+                        "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+                    fontSize:
+                        "calc(var(--typogrraphy-paragraph-para-4-size) * 1px)",
+                    lineHeight:
+                        "calc(var(--typogrraphy-paragraph-para-4-line-height) * 1px)",
+                }
+                }>Privacy Policy | Terms of Service | Disclaimer</AuthText>
             </div>
         </footer>
     );
