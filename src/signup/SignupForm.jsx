@@ -9,6 +9,7 @@ import AuthButton from "@/components/ui/Auth/AuthButton";
 import AuthInputError from "@/components/ui/Auth/AuthInputError";
 
 import SignupOTP from "./SignupOTP";
+import SignupPAN from "./SignupPAN";
 
 const SignupForm = () => {
   const [step, setStep] = useState("PHONE"); // PHONE | OTP
@@ -44,6 +45,7 @@ const SignupForm = () => {
     if (otp === "1234") {
       console.log("OTP Verified!");
       setOtpError("");
+      setStep("pan");
     } else {
       setOtpError("Incorrect OTP. Please try again.");
     }
@@ -61,6 +63,10 @@ const SignupForm = () => {
         onConfirm={handleConfirmOtp}
       />
     );
+  }
+
+  if (step === "pan") {
+    return <SignupPAN />;
   }
 
   return (
@@ -145,12 +151,18 @@ const SignupForm = () => {
           >
             <input type="checkbox" />
 
-            <div style={{
-              color: "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
-              fontFamily: "var(--typogrraphy-paragraph-inter-font-family, inter)",
-              fontSize: "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
-              lineHeight: "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
-            }}>
+            <div
+              style={{
+                color:
+                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
+                fontFamily:
+                  "var(--typogrraphy-paragraph-inter-font-family, inter)",
+                fontSize:
+                  "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
+                lineHeight:
+                  "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
+              }}
+            >
               I have read and accept the{" "}
               <Link
                 href="/terms"
@@ -201,13 +213,16 @@ const SignupForm = () => {
           >
             <AuthText
               style={{
-                color: "var(--ui-color-on-surface-warning-medium-20-on-warning-medium-20, #d97706)",
-                fontSize: "calc(var(--typogrraphy-paragraph-para-4-size) * 1px)",
-                lineHeight: "calc(var(--typogrraphy-paragraph-para-4-line-height) * 1px)",
+                color:
+                  "var(--ui-color-on-surface-warning-medium-20-on-warning-medium-20, #d97706)",
+                fontSize:
+                  "calc(var(--typogrraphy-paragraph-para-4-size) * 1px)",
+                lineHeight:
+                  "calc(var(--typogrraphy-paragraph-para-4-line-height) * 1px)",
               }}
             >
-              Registering as an entity? Use the mobile number <br /> and PAN of any
-              one director or owner
+              Registering as an entity? Use the mobile number <br /> and PAN of
+              any one director or owner
             </AuthText>
           </div>
           {/* LOGIN */}
@@ -219,10 +234,8 @@ const SignupForm = () => {
                 "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
 
               /* Label / L-3 / Regular */
-              fontFamily:
-                "var(--typogrraphy-label-inter-font-family, Inter)",
-              fontSize:
-                "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
+              fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+              fontSize: "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight:
@@ -238,10 +251,8 @@ const SignupForm = () => {
                 color:
                   "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-p40, #4c2399)",
                 /* Label / L-3 / Regular */
-                fontFamily:
-                  "var(--typogrraphy-label-inter-font-family, Inter)",
-                fontSize:
-                  "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
+                fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+                fontSize: "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight:
@@ -254,9 +265,7 @@ const SignupForm = () => {
               Log in
             </Link>
           </div>
-
         </div>
-
       </div>
     </div>
   );
