@@ -1,20 +1,20 @@
-import React from 'react';
-import SignupHeader from './SignupHeader';
-import SignupForm from './SignupForm';
-import SignupFooter from './SignupFooter';
+import React from "react";
+import SignupHeader from "./SignupHeader";
+import SignupForm from "./SignupForm";
+import SignupFooter from "./SignupFooter";
 
 const SignupRightPanel = () => {
-    return (
-        <div className="flex-1 flex flex-col h-full overflow-y-auto bg-white relative">
-            <SignupHeader />
+  return (
+    <div className="w-[720px] h-[695px] flex-1 flex flex-col  overflow-y-auto bg-white relative">
+      <SignupHeader />
 
-            <div className="flex-1 flex items-center justify-center w-full">
-                <SignupForm />
-            </div>
+      <div className="flex-1 flex items-center justify-center w-full">
+        <SignupForm />
+      </div>
 
-            <SignupFooter />
-        </div>
-    );
+      <SignupFooter />
+    </div>
+  );
 };
 
 export default SignupRightPanel;
