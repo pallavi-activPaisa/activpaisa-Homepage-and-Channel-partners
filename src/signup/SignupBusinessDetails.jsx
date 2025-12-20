@@ -190,7 +190,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
                         </div>
                     )}
 
-                    {/* Business Details Form (Fetched OR Manual) */}
+                    {/* Business Details Form (Fetched OR Manual done ) */}
                     {showForm && (
                         <>
                             <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
