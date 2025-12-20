@@ -5,10 +5,10 @@ import SignupFooter from "./SignupFooter";
 
 const SignupRightPanel = () => {
   return (
-    <div className="w-[720px] h-[695px] flex-1 flex flex-col  overflow-y-auto bg-white relative">
+    <div className="flex-1 h-full flex flex-col bg-white overflow-y-auto relative">
       <SignupHeader />
 
-      <div className="flex-1 flex items-center justify-center w-full">
+      <div className="flex-1 flex items-center justify-center w-full mt-[60px]">
         <SignupForm />
       </div>
 

@@ -10,10 +10,12 @@ import AuthInputError from "@/components/ui/Auth/AuthInputError";
 
 import SignupOTP from "./SignupOTP";
 import SignupPAN from "./SignupPAN";
+import SignupPassword from "./SignupPassword";
 
 const SignupForm = () => {
-  const [step, setStep] = useState("PHONE"); // PHONE | OTP
+  const [step, setStep] = useState("PHONE"); // PHONE | OTP | PAN | PASSWORD
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState(""); // Shared email state
   const [error, setError] = useState("");
   const [otpError, setOtpError] = useState("");
 
@@ -45,7 +47,7 @@ const SignupForm = () => {
     if (otp === "1234") {
       console.log("OTP Verified!");
       setOtpError("");
-      setStep("pan");
+      setStep("PAN");
     } else {
       setOtpError("Incorrect OTP. Please try again.");
     }
@@ -65,8 +67,27 @@ const SignupForm = () => {
     );
   }
 
-  if (step === "pan") {
-    return <SignupPAN />;
+  if (step === "PAN") {
+    return (
+      <SignupPAN
+        onComplete={(verifiedEmail) => {
+          setEmail(verifiedEmail);
+          setStep("PASSWORD");
+        }}
+      />
+    );
+  }
+
+  if (step === "PASSWORD") {
+    return (
+      <SignupPassword
+        email={email}
+        onComplete={() => {
+          console.log("Final Signup Complete");
+          // Navigate to dashboard or success page
+        }}
+      />
+    );
   }
 
   return (
@@ -76,6 +97,7 @@ const SignupForm = () => {
         padding: "0 calc(160 * 1px)",
         display: "flex",
         justifyContent: "center",
+
       }}
     >
       {/* CONTENT COLUMN */}

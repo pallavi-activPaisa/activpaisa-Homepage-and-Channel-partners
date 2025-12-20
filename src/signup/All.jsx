@@ -4,7 +4,7 @@ import SignupRightPanel from "./SignupRightPanel";
 
 const All = () => {
   return (
-    <div className="w-[1440px] h-[695px] flex   justify-center items-center ">
+    <div className="w-full h-screen flex bg-white overflow-hidden">
       <SignupLeftPanel />
       <SignupRightPanel />
     </div>

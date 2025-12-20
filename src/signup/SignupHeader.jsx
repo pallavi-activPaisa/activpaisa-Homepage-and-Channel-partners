@@ -8,6 +8,7 @@ const SignupHeader = () => {
     <header
       style={{
         display: "flex",
+        position: "fixed",
         width: "720px",
         height: "60px",
         padding: "0px 16px",
