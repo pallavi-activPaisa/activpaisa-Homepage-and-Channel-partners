@@ -7,6 +7,7 @@ import AuthLabel from "@/components/ui/Auth/AuthLabel";
 import PhoneInput from "@/components/ui/Auth/PhoneInput";
 import AuthButton from "@/components/ui/Auth/AuthButton";
 import AuthInputError from "@/components/ui/Auth/AuthInputError";
+import AuthCheckbox from "@/components/ui/Auth/AuthCheckbox";
 
 import SignupOTP from "./SignupOTP";
 import SignupPAN from "./SignupPAN";
@@ -20,6 +21,7 @@ const SignupForm = () => {
   const [email, setEmail] = useState(""); // Shared email state
   const [error, setError] = useState("");
   const [otpError, setOtpError] = useState("");
+  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -55,8 +57,8 @@ const SignupForm = () => {
     }
   };
 
-  // Button enables for ANY 10-digit number
-  const isButtonEnabled = phone.length === 10;
+  // Button enables for ANY 10-digit number AND terms accepted
+  const isButtonEnabled = phone.length === 10 && isTermsAccepted;
 
   if (step === "OTP") {
     return (
@@ -188,51 +190,35 @@ const SignupForm = () => {
           </AuthButton>
 
           {/* TERMS */}
-          <div
-            style={{
-              display: "flex",
-              gap: "calc(4 * 1px)",
-              alignItems: "flex-start",
-              // backgroundColor: "red",
-            }}
-          >
-            <input className="mt-[4px]" type="checkbox" />
-
-            <div
-              style={{
-                color:
-                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
-                fontFamily:
-                  "var(--typogrraphy-paragraph-inter-font-family, inter)",
-                fontSize:
-                  "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
-                lineHeight:
-                  "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
-              }}
-            >
-              I have read and accept the{" "}
-              <Link
-                href="/terms"
-                style={{
-                  color:
-                    "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                  textDecoration: "none",
-                }}
-              >
-                Terms of Service
-              </Link>{" "}
-              and <br />
-              <Link
-                href="/privacy"
-                style={{
-                  color:
-                    "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                  textDecoration: "none",
-                }}
-              >
-                Privacy Policy
-              </Link>
-            </div>
+          <div style={{ width: "100%" }}>
+            <AuthCheckbox
+              checked={isTermsAccepted}
+              onChange={(e) => setIsTermsAccepted(e.target.checked)}
+              label={
+                <span>
+                  I have read and accept the{" "}
+                  <Link
+                    href="/terms"
+                    style={{
+                      color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Terms of Service
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    href="/privacy"
+                    style={{
+                      color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <br />  Privacy Policy
+                  </Link>
+                </span>
+              }
+            />
           </div>
         </form>
         {/* FOOTER */}
@@ -279,8 +265,6 @@ const SignupForm = () => {
               textAlign: "center",
               color:
                 "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
-
-              /* Label / L-3 / Regular */
               fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
               fontSize: "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
               fontStyle: "normal",
@@ -297,7 +281,6 @@ const SignupForm = () => {
               style={{
                 color:
                   "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-p40, #4c2399)",
-                /* Label / L-3 / Regular */
                 fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
                 fontSize: "calc(var(--typogrraphy-label-l-3-size, 12) * 1px)",
                 fontStyle: "normal",

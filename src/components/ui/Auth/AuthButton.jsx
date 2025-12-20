@@ -24,7 +24,7 @@ const AuthButton = ({ children, style, disabled, ...props }) => {
             style={{
                 display: "flex",
                 height: "calc(44 * 1px)",
-                width: "100%", // Ensure full width
+                width: "400px", // Ensure full width
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "calc(8 * 1px)",

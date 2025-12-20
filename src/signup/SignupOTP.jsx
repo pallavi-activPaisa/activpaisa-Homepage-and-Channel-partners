@@ -28,14 +28,20 @@ const OtpInputItem = ({ value, onChange, onKeyDown, onFocus, error, index }) => 
             }}
             onBlur={() => setIsFocused(false)}
             style={{
-                width: "calc(64 * 1px)",
-                height: "calc(64 * 1px)",
+                width: "calc(46 * 1px)",
+                height: "calc(46 * 1px)",
                 borderRadius: "calc(12 * 1px)",
                 background: "#FFF",
                 textAlign: "center",
-                fontSize: "24px",
-                fontWeight: "600",
-                color: "#111827",
+
+                /* Typography Update */
+                color: "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
+                fontFamily: "Inter",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: "400",
+                lineHeight: "16px",
+
                 outline: "none",
 
                 /* Interactive Border Logic */
@@ -98,7 +104,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
     return (
         <div
             style={{
-                width: "100%",
+                width: "400px",
                 padding: "0 calc(160 * 1px)",
                 display: "flex",
                 justifyContent: "center",
@@ -110,7 +116,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    gap: "calc(32 * 1px)",
+                    gap: "calc(24 * 1px)",
                 }}
             >
                 {/* HEADING & SUBTEXT */}
@@ -136,7 +142,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                                 color:
                                     "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
                                 cursor: "pointer",
-                                fontWeight: 500,
+                                fontWeight: 400,
                             }}
                         >
                             Change Phone number
@@ -147,16 +153,17 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                 {/* OTP INPUTS */}
                 <div
                     style={{
+                        width: "400px",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         gap: "calc(16 * 1px)",
-                        marginBottom: "calc(8 * 1px)",
+
                     }}>
                     <div
                         style={{
                             display: "flex",
-                            gap: "calc(16 * 1px)",
+                            gap: "calc(8 * 1px)",
                             justifyContent: "center",
                         }}
                     >
@@ -200,15 +207,18 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                 {/* TIMER / RESEND */}
                 <div
                     style={{
-                        color:
-                            "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
-                        fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
-                        fontSize: "calc(var(--typogrraphy-paragraph-para-3-size, 14) * 1px)",
-                        lineHeight:
-                            "calc(var(--typogrraphy-paragraph-para-3-line-height, 20) * 1px)",
                         display: "flex",
-                        gap: "4px",
-                        justifyContent: "center",
+                        height: "20px",
+                        justifyContent: "flex-end",
+                        color: "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
+                        fontFamily: "Inter",
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "16px",
+                        alignItems: "center",
+                        gap: "var(--Spacing-sp-8, 8px)",
+                        flex: "1 0 0",
                     }}
                 >
                     {timeLeft > 0 ? (
@@ -218,7 +228,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                                 style={{
                                     color:
                                         "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                                    fontWeight: 500,
+                                    fontWeight: 400,
                                 }}
                             >
                                 {timeLeft} sec
@@ -230,7 +240,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                             style={{
                                 color:
                                     "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                                fontWeight: 500,
+                                fontWeight: 400,
                                 cursor: "pointer",
                             }}
                         >

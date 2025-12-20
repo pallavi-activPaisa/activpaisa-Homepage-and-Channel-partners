@@ -234,7 +234,7 @@ const SignupPAN = ({ onComplete }) => {
                 fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
                 fontSize: "14px",
                 fontWeight: "400",
-                marginTop: "calc(8 * 1px)"
+
               }}>
                 {panError}
               </p>
@@ -250,7 +250,12 @@ const SignupPAN = ({ onComplete }) => {
                 <AuthInput
                   value="Ananya Singh" // Dummy Data
                   readOnly
-                  style={{ background: "#F3F4F6", color: "#6B7280" }}
+                  style={{
+                    borderRadius: "calc(var(--corner-radius-2xsmall, 8) * 1px)",
+                    border: "calc(var(--border-width-width-1, 1) * 1px) solid var(--ui-color-border-default-bd-neutral-medium-10, #e5e7eb)",
+                    background: "var(--ui-color-surface-neutral-neutral-light-30, #f3f4f6)"
+                  }
+                  }
                 />
               </div>
 
@@ -260,7 +265,12 @@ const SignupPAN = ({ onComplete }) => {
                 <AuthInput
                   value="22 / 02 / 1997" // Dummy Data
                   readOnly
-                  style={{ background: "#F3F4F6", color: "#6B7280" }}
+                  style={{
+                    borderRadius: "calc(var(--corner-radius-2xsmall, 8) * 1px)",
+                    border: "calc(var(--border-width-width-1, 1) * 1px) solid var(--ui-color-border-default-bd-neutral-medium-10, #e5e7eb)",
+                    background: "var(--ui-color-surface-neutral-neutral-light-30, #f3f4f6)"
+                  }
+                  }
                 />
               </div>
 
@@ -274,7 +284,7 @@ const SignupPAN = ({ onComplete }) => {
                     if (emailError) setEmailError("");
                   }}
                   type="email"
-                  placeholder="hello4325@gmail.com"
+                  placeholder="Enter your E-Mail ID"
                   error={!!emailError}
                 />
                 {emailError && (
@@ -292,54 +302,57 @@ const SignupPAN = ({ onComplete }) => {
             </>
           )}
 
-          {/* SECTION 4: TERMS (Hidden if Verified) */}
-          {!isPanVerified && (
-            <div>
-              <AuthCheckbox
-                checked={isTermsAccepted}
-                onChange={(e) => setIsTermsAccepted(e.target.checked)}
-                label={
-                  <span>
-                    I have read and accept the{" "}
-                    <Link
-                      href="/terms"
-                      style={{
-                        color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                        textDecoration: "none",
-                      }}
-                    >
-                      Terms of Service
-                    </Link>{" "}
-                    and{" "}
-                    <Link
-                      href="/privacy"
-                      style={{
-                        color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                        textDecoration: "none",
-                      }}
-                    >
-                      <br />  Privacy Policy
-                    </Link>
-                  </span>
-                }
-              />
-            </div>
-          )}
 
-          {/* SECTION 5: ACTION BUTTON */}
+
+          {/* SECTION 4: ACTION BUTTON */}
           <div>
             <AuthButton type="button" disabled={!isButtonEnabled} onClick={handleContinue}>
               {isPanVerified ? "Next" : "Continue"}
             </AuthButton>
           </div>
 
-          {/* SECTION 6: FOOTER NOTE (Hidden if Verified) */}
+          {/* GROUPS TERMS & FOOTER NOTE TO CONTROL SPACING (20px) */}
           {!isPanVerified && (
-            <div>
-              <AuthNote>
-                Registering as an entity? Use the mobile number
-                and PAN of any one director or owner
-              </AuthNote>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'calc(20 * 1px)' }}>
+              {/* SECTION 5: TERMS */}
+              <div>
+                <AuthCheckbox
+                  checked={isTermsAccepted}
+                  onChange={(e) => setIsTermsAccepted(e.target.checked)}
+                  label={
+                    <span>
+                      I have read and accept the{" "}
+                      <Link
+                        href="/terms"
+                        style={{
+                          color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                          textDecoration: "none",
+                        }}
+                      >
+                        Terms of Service
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="/privacy"
+                        style={{
+                          color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                          textDecoration: "none",
+                        }}
+                      >
+                        <br />  Privacy Policy
+                      </Link>
+                    </span>
+                  }
+                />
+              </div>
+
+              {/* SECTION 6: FOOTER NOTE */}
+              <div>
+                <AuthNote>
+                  Registering as an entity? Use the mobile number <br />
+                  and PAN of any one director or owner
+                </AuthNote>
+              </div>
             </div>
           )}
         </div>
