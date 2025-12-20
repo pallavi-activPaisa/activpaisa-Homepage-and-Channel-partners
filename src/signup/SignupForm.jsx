@@ -122,7 +122,6 @@ const SignupForm = () => {
         padding: "0 calc(160 * 1px)",
         display: "flex",
         justifyContent: "center",
-
       }}
     >
       {/* CONTENT COLUMN */}
@@ -194,9 +193,10 @@ const SignupForm = () => {
               display: "flex",
               gap: "calc(4 * 1px)",
               alignItems: "flex-start",
+              // backgroundColor: "red",
             }}
           >
-            <input type="checkbox" />
+            <input className="mt-[4px]" type="checkbox" />
 
             <div
               style={{
@@ -221,7 +221,7 @@ const SignupForm = () => {
               >
                 Terms of Service
               </Link>{" "}
-              and{" "}
+              and <br />
               <Link
                 href="/privacy"
                 style={{

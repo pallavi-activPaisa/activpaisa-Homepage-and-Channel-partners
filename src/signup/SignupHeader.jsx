@@ -42,11 +42,14 @@ const SignupHeader = () => {
           style={{
             color:
               "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
-            fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
-            fontSize: "calc(var(--typogrraphy-label-l-2-size) * 1px)",
+            fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+            fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+            fontStyle: "normal",
             fontWeight: 500,
-            lineHeight: "calc(var(--typogrraphy-label-l-2-line-height) * 1px)",
-            textDecoration: "none",
+            lineHeight:
+              "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
+            letterSpacing:
+              "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
           }}
         >
           Help
