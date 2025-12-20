@@ -173,8 +173,16 @@ const SignupPassword = ({ email, onComplete }) => {
                         <AuthInput
                             value={password}
                             onChange={(e) => {
-                                setPassword(e.target.value);
+                                const val = e.target.value;
+                                setPassword(val);
                                 if (passwordError) setPasswordError("");
+
+                                // Re-validate match if confirm password has value
+                                if (confirmPassword && val !== confirmPassword) {
+                                    setConfirmError("Passwords do not match. Please review and confirm both entries are exactly the same");
+                                } else {
+                                    setConfirmError("");
+                                }
                             }}
                             type={showPassword ? "text" : "password"}
                             placeholder="********"
@@ -211,8 +219,13 @@ const SignupPassword = ({ email, onComplete }) => {
                         <AuthInput
                             value={confirmPassword}
                             onChange={(e) => {
-                                setConfirmPassword(e.target.value);
-                                if (confirmError) setConfirmError("");
+                                const val = e.target.value;
+                                setConfirmPassword(val);
+                                if (val && val !== password) {
+                                    setConfirmError("Passwords do not match. Please review and confirm both entries are exactly the same");
+                                } else {
+                                    setConfirmError("");
+                                }
                             }}
                             type={showConfirmPassword ? "text" : "password"}
                             placeholder="********"
@@ -235,7 +248,11 @@ const SignupPassword = ({ email, onComplete }) => {
 
                     {/* Action Button */}
                     <div>
-                        <AuthButton type="button" onClick={handleSetPassword}>
+                        <AuthButton
+                            type="button"
+                            onClick={handleSetPassword}
+                            disabled={!PASSWORD_REGEX.test(password) || password !== confirmPassword}
+                        >
                             Set New Password
                         </AuthButton>
                     </div>

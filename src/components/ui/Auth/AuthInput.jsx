@@ -32,8 +32,8 @@ const AuthInput = ({ value, onChange, placeholder, style, error, type = "text", 
                 borderRadius: "8px",
 
                 /* Glow effect on focus */
-                boxShadow: isFocused
-                    ? `0 0 0 3px ${error ? 'rgba(220, 38, 38, 0.12)' : 'rgba(109, 40, 217, 0.12)'}`
+                boxShadow: isFocused && !error
+                    ? "0 0 0 3px rgba(109, 40, 217, 0.12)"
                     : "0 1px 2px 0 var(--effects-shadow-4, rgba(17, 24, 39, 0.04))",
 
                 transition: "border 0.15s ease, box-shadow 0.15s ease",

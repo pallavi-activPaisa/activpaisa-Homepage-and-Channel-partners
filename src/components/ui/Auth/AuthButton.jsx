@@ -36,13 +36,13 @@ const AuthButton = ({ children, style, disabled, ...props }) => {
                 cursor: currentCursor,
                 border: "none",
                 transition: "background-color 0.2s ease", // Smooth transition
-                ...style,
+                ...style, // Allow overrides
             }}
             {...props}
         >
             <span
                 style={{
-                    color: currentText,
+                    color: style?.color || currentText, // Use style color if provided (for Outline buttons), else default
                     fontFamily:
                         "var(--typogrraphy-label-inter-font-family, inter)",
                     fontSize:

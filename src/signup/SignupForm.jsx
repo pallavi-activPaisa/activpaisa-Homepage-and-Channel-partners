@@ -11,6 +11,8 @@ import AuthInputError from "@/components/ui/Auth/AuthInputError";
 import SignupOTP from "./SignupOTP";
 import SignupPAN from "./SignupPAN";
 import SignupPassword from "./SignupPassword";
+import SignupBusinessDetails from "./SignupBusinessDetails";
+import SignupSuccess from "./SignupSuccess";
 
 const SignupForm = () => {
   const [step, setStep] = useState("PHONE"); // PHONE | OTP | PAN | PASSWORD
@@ -70,8 +72,23 @@ const SignupForm = () => {
   if (step === "PAN") {
     return (
       <SignupPAN
-        onComplete={(verifiedEmail) => {
-          setEmail(verifiedEmail);
+        onComplete={(data, type) => {
+          if (type === "entity") {
+            setStep("BUSINESS_DETAILS");
+          } else {
+            setEmail(data);
+            setStep("PASSWORD");
+          }
+        }}
+      />
+    );
+  }
+
+  if (step === "BUSINESS_DETAILS") {
+    return (
+      <SignupBusinessDetails
+        onComplete={() => {
+          setEmail("abc@gmail.com");
           setStep("PASSWORD");
         }}
       />
@@ -83,9 +100,17 @@ const SignupForm = () => {
       <SignupPassword
         email={email}
         onComplete={() => {
-          console.log("Final Signup Complete");
-          // Navigate to dashboard or success page
+          setStep("SUCCESS");
         }}
+      />
+    );
+  }
+
+  if (step === "SUCCESS") {
+    return (
+      <SignupSuccess
+        onFinish={() => console.log("Finish Verification")}
+        onJoinCommunity={() => console.log("Join WhatsApp")}
       />
     );
   }
