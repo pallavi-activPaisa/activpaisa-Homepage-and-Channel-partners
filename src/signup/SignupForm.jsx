@@ -129,7 +129,8 @@ const SignupForm = () => {
       {/* CONTENT COLUMN */}
       <div
         style={{
-          width: "calc(432 * 1px)",
+          width: "calc(400 * 1px)",
+
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -200,7 +201,8 @@ const SignupForm = () => {
                   <Link
                     href="/terms"
                     style={{
-                      color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                      color:
+                        "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
                       textDecoration: "none",
                     }}
                   >
@@ -210,11 +212,12 @@ const SignupForm = () => {
                   <Link
                     href="/privacy"
                     style={{
-                      color: "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                      color:
+                        "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
                       textDecoration: "none",
                     }}
                   >
-                    <br />  Privacy Policy
+                    <br /> Privacy Policy
                   </Link>
                 </span>
               }

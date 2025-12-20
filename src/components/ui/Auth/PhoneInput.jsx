@@ -26,7 +26,7 @@ const PhoneInput = ({
         display: "flex",
         alignItems: "center",
         height: "48px",
-        width: "100%",
+        width: "400px",
         background: "#fff",
 
         /* Base + Hover + Error border */
