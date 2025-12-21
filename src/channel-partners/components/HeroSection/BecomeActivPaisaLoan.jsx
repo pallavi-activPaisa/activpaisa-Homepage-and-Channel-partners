@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import MobBecomeActivPaisaLoan from "./MobBecomeActivPaisaLoan";
+import Link from "next/link";
 
 export default function BecomeActivPaisaLoan() {
   return (
@@ -33,7 +34,7 @@ export default function BecomeActivPaisaLoan() {
               padding: "64px 40px",
               borderRadius: "24px",
               background:
-                "var(--gradients-g1, linear-gradient(45deg, var(--ui-color-gradients-g1-100, #BD8668) 0%, var(--ui-color-gradients-g1-200, #5D51AF) 50%, var(--ui-color-gradients-g1-300, #3437C8) 100%))"
+                "var(--gradients-g1, linear-gradient(45deg, var(--ui-color-gradients-g1-100, #BD8668) 0%, var(--ui-color-gradients-g1-200, #5D51AF) 50%, var(--ui-color-gradients-g1-300, #3437C8) 100%))",
             }}
           >
             {/* LEFT SIDE */}
@@ -45,7 +46,9 @@ export default function BecomeActivPaisaLoan() {
               }}
             >
               {/* H1 and P with 8px gap */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+              >
                 <h1
                   style={{
                     color:
@@ -77,7 +80,8 @@ export default function BecomeActivPaisaLoan() {
                     fontWeight: 400,
                     lineHeight:
                       "var(--typography-paragraph-para-2-line-height, 24px)",
-                    letterSpacing: "var(--typography-paragraph-letter-spacing, 0)",
+                    letterSpacing:
+                      "var(--typography-paragraph-letter-spacing, 0)",
                   }}
                 >
                   Earn commissions on every successful disbursal by helping
@@ -117,7 +121,8 @@ export default function BecomeActivPaisaLoan() {
                           "var(--ui-color-on-surface-specials-on-gradient-g1-n10, #fff)",
                         fontFamily:
                           "var(--typography-heading-h5-inter-font-family, inter)",
-                        fontSize: "var(--typography-heading-h5-large-size, 24px)",
+                        fontSize:
+                          "var(--typography-heading-h5-large-size, 24px)",
                         fontWeight: 700,
                         lineHeight:
                           "var(--typography-heading-h5-large-line-height, 32px)",
@@ -135,8 +140,10 @@ export default function BecomeActivPaisaLoan() {
                           "var(--typography-label-inter-font-family, inter)",
                         fontSize: "var(--typography-label-l-1-size, 16px)",
                         fontWeight: 400,
-                        lineHeight: "var(--typography-label-l-1-line-height, 18px)",
-                        letterSpacing: "var(--typography-label-letter-spacing, 0)",
+                        lineHeight:
+                          "var(--typography-label-l-1-line-height, 18px)",
+                        letterSpacing:
+                          "var(--typography-label-letter-spacing, 0)",
                       }}
                     >
                       Banks & NBFCs
@@ -145,7 +152,11 @@ export default function BecomeActivPaisaLoan() {
 
                   {/* ₹500+ Cr */}
                   <div
-                    style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
                   >
                     <div
                       style={{
@@ -153,7 +164,8 @@ export default function BecomeActivPaisaLoan() {
                           "var(--ui-color-on-surface-specials-on-gradient-g1-n10, #fff)",
                         fontFamily:
                           "var(--typography-heading-h5-inter-font-family, inter)",
-                        fontSize: "var(--typography-heading-h5-large-size, 24px)",
+                        fontSize:
+                          "var(--typography-heading-h5-large-size, 24px)",
                         fontWeight: 700,
                         lineHeight:
                           "var(--typography-heading-h5-large-line-height, 32px)",
@@ -171,8 +183,10 @@ export default function BecomeActivPaisaLoan() {
                           "var(--typography-label-inter-font-family, inter)",
                         fontSize: "var(--typography-label-l-1-size, 16px)",
                         fontWeight: 400,
-                        lineHeight: "var(--typography-label-l-1-line-height, 18px)",
-                        letterSpacing: "var(--typography-label-letter-spacing, 0)",
+                        lineHeight:
+                          "var(--typography-label-l-1-line-height, 18px)",
+                        letterSpacing:
+                          "var(--typography-label-letter-spacing, 0)",
                       }}
                     >
                       Loans Facilitated
@@ -181,7 +195,11 @@ export default function BecomeActivPaisaLoan() {
 
                   {/* 1000+ */}
                   <div
-                    style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
                   >
                     <div
                       style={{
@@ -189,7 +207,8 @@ export default function BecomeActivPaisaLoan() {
                           "var(--ui-color-on-surface-specials-on-gradient-g1-n10, #fff)",
                         fontFamily:
                           "var(--typography-heading-h5-inter-font-family, inter)",
-                        fontSize: "var(--typography-heading-h5-large-size, 24px)",
+                        fontSize:
+                          "var(--typography-heading-h5-large-size, 24px)",
                         fontWeight: 700,
                         lineHeight:
                           "var(--typography-heading-h5-large-line-height, 32px)",
@@ -207,8 +226,10 @@ export default function BecomeActivPaisaLoan() {
                           "var(--typography-label-inter-font-family, inter)",
                         fontSize: "var(--typography-label-l-1-size, 16px)",
                         fontWeight: 400,
-                        lineHeight: "var(--typography-label-l-1-line-height, 18px)",
-                        letterSpacing: "var(--typography-label-letter-spacing, 0)",
+                        lineHeight:
+                          "var(--typography-label-l-1-line-height, 18px)",
+                        letterSpacing:
+                          "var(--typography-label-letter-spacing, 0)",
                       }}
                     >
                       Partners across India
@@ -217,40 +238,45 @@ export default function BecomeActivPaisaLoan() {
                 </div>
 
                 {/* BUTTON */}
-                <button
-                  style={{
-                    display: "flex",
-                    height: "44px",
-                    width: "161px",
-                    // padding: "10px 16px", // fallback direct value
-                    // padding:
-                    // "var(--spacing-sp-10, 10px) var(--spacing-sp-16, 16px)",
+                <Link href="/partners/signup">
+                  <button
+                    style={{
+                      display: "flex",
+                      height: "44px",
+                      width: "161px",
+                      // padding: "10px 16px", // fallback direct value
+                      // padding:
+                      // "var(--spacing-sp-10, 10px) var(--spacing-sp-16, 16px)",
 
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "8px",
-                    borderRadius: "8px", // direct fallback
-                    border: "1px solid #E5E7EB",
-                    background: "#FFF",
-                    boxShadow:
-                      "0 1px 2px 0 rgba(17, 24, 39, 0.04), 0 1px 2px 0 rgba(17, 24, 39, 0.04)",
-                    color: "#374151",
-                    textAlign: "center",
-                    color:
-                      "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
-                    textAlign: "center",
-                    fontFamily: "var(--typography-label-inter-font-family, inter)",
-                    fontSize: "var(--typography-label-l-1-size, 16px)",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "var(--typography-label-l-1-line-height, 18px)",
-                    letterSpacing: "var(--typography-label-letter-spacing, 0)",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "8px",
+                      borderRadius: "8px", // direct fallback
+                      border: "1px solid #E5E7EB",
+                      background: "#FFF",
+                      boxShadow:
+                        "0 1px 2px 0 rgba(17, 24, 39, 0.04), 0 1px 2px 0 rgba(17, 24, 39, 0.04)",
+                      color: "#374151",
+                      textAlign: "center",
+                      color:
+                        "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+                      textAlign: "center",
+                      fontFamily:
+                        "var(--typography-label-inter-font-family, inter)",
+                      fontSize: "var(--typography-label-l-1-size, 16px)",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight:
+                        "var(--typography-label-l-1-line-height, 18px)",
+                      letterSpacing:
+                        "var(--typography-label-letter-spacing, 0)",
 
-                    cursor: "pointer",
-                  }}
-                >
-                  Join as a Partner
-                </button>
+                      cursor: "pointer",
+                    }}
+                  >
+                    Join as a Partner
+                  </button>
+                </Link>
               </div>
             </div>
 

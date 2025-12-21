@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../../../styles/partners.module.css";
+import { Pointer } from "lucide-react";
 
 export default function PartnerNavbar() {
   return (
@@ -71,7 +72,11 @@ export default function PartnerNavbar() {
         {/* RIGHT SIDE BUTTONS */}
         <div className={styles.rightButtons}>
           <button className={styles.loginBtn}>Partner Login</button>
-          <button className={styles.joinBtn}>Join as a Partner</button>
+          <Link className=" cursor-pointer" href="/partners/signup">
+            <button style={{ cursor: Pointer }} className={styles.joinBtn}>
+              Join as a Partner
+            </button>
+          </Link>
         </div>
       </nav>
     </div>

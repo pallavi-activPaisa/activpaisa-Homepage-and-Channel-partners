@@ -66,10 +66,10 @@ const PhoneInput = ({
           alignItems: "center",
 
           /* ✅ Figma focus border + glow + Error handling */
-          border:
-            isFocused && error
-              ? `0px solid ${errorColor}`
-              : `1px solid ${focusColor}`,
+          border: isFocused
+            ? `1px solid ${error ? errorColor : focusColor}`
+            : "none",
+
           boxShadow: isFocused
             ? `0 0 0 3px ${error ? "rgba(220, 38, 38, 0.12)" : "rgba(109, 40, 217, 0.12)"}`
             : "none",
