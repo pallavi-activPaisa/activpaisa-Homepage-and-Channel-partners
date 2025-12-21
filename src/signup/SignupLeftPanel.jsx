@@ -170,6 +170,7 @@ const SignupLeftPanel = () => {
                                 message={cardData[activeIndex].message}
                                 name={cardData[activeIndex].name}
                                 location={cardData[activeIndex].location}
+                                avatarSrc="/Icons/user.svg"
                             />
                         </div>
 

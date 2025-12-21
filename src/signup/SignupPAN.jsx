@@ -151,7 +151,7 @@ const SignupPAN = ({ onComplete }) => {
                   justifyContent: "center",
                   alignItems: "center",
                   gap: "calc(var(--spacing-sp-6)*1px)",
-                  borderRadius: "calc(var(--corner-radius-2xsmall) * 1px) 0 0 calc(var(--corner-radius-2xsmall) * 1px)",
+                  borderRadius: "8px 0 0 var(--Corner-Radius-2xsmall, 8px)",
                   border: "calc(var(--border-width-width-1) * 1px) solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
                   background:
                     businessType === "individual"
@@ -172,6 +172,7 @@ const SignupPAN = ({ onComplete }) => {
                     fontWeight: "500",
                     lineHeight: "var(--typogrraphy-label-l-2-line-height, 16px)",
                     letterSpacing: "var(--typogrraphy-label-letter-spacing, 0)",
+                    borderRadius: "8px 0 0 var(--Corner-Radius-2xsmall, 8px)",
                   }}
                 >
                   Individual
@@ -206,6 +207,7 @@ const SignupPAN = ({ onComplete }) => {
                     fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
                     fontSize: "calc(var(--typogrraphy-label-l-2-size)*1px)",
                     fontStyle: "normal",
+
                     fontWeight: "500",
                   }}
                 >

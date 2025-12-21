@@ -157,7 +157,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        gap: "calc(16 * 1px)",
+                        gap: "calc(8 * 1px)",
 
                     }}>
                     <div

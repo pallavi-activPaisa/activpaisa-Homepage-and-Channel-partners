@@ -3,7 +3,7 @@ import Image from "next/image";
 import "../app/build/css/tokens.css";
 
 // Reusing styles logic but inline or scoped to avoid messing with other files
-const SignupReviewCard = ({ message, name, location }) => {
+const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
   return (
     <div
       style={{
@@ -56,77 +56,70 @@ const SignupReviewCard = ({ message, name, location }) => {
       </p>
 
       {/* partner info */}
-      <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+      <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
         {/* Avatar */}
         <div
           style={{
-            width: "48px",
-            height: "48px",
+            width: "46px",
+            height: "46px",
             borderRadius: "50%",
             background: "#F3E8FF", // Light purple bg
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            color: "#6B21A8", // Purple icon color
+            // color: "#6B21A8", // Removed as we are using an image
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
+          <Image
+            src={avatarSrc || "/Icons/user.svg"}
+            alt={name || "User"}
+            width={31}
+            height={40}
+            style={{ objectFit: "contain" }}
+          />
         </div>
+        <div>  {/* Text Info */}
+          <div>
+            {/* name */}
+            <h5
+              style={{
+                color:
+                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+                fontFamily:
+                  "var(--typogrraphy-heading-h6-inter-font-family, Inter)",
+                fontSize:
+                  "calc(var(--typogrraphy-heading-h6-small-size, 18px) * 1px)",
+                fontStyle: "normal",
+                fontWeight: 600,
+                lineHeight:
+                  "calc(var(--typogrraphy-heading-h6-small-line-height, 24px) * 1px)",
+                letterSpacing:
+                  "calc(var(--typogrraphy-heading-h6-small-letter-spacing, -0.36px) * 1px)",
+              }}
+            >
+              {name}
+            </h5>
 
-        {/* Text Info */}
-        <div>
-          {/* name */}
-          <h5
-            style={{
-              color:
-                "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
-              fontFamily:
-                "var(--typogrraphy-heading-h6-inter-font-family, Inter)",
-              fontSize:
-                "calc(var(--typogrraphy-heading-h6-small-size, 18px) * 1px)",
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight:
-                "calc(var(--typogrraphy-heading-h6-small-line-height, 24px) * 1px)",
-              letterSpacing:
-                "calc(var(--typogrraphy-heading-h6-small-letter-spacing, -0.36px) * 1px)",
-            }}
-          >
-            {name}
-          </h5>
+            {/* location */}
+            <p
+              style={{
 
-          {/* location */}
-          <p
-            style={{
-              marginTop: "6px",
-              color:
-                "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
-              fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
-              fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight:
-                "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
-              letterSpacing:
-                "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
-            }}
-          >
-            {location}
-          </p>
-        </div>
+                color:
+                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
+                fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+                fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight:
+                  "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
+                letterSpacing:
+                  "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+              }}
+            >
+              {location}
+            </p>
+          </div></div>
+
       </div>
 
       {/* stars */}
