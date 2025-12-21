@@ -143,6 +143,7 @@
   font-weight: 500;
   line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
   letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+  cursor: pointer;
 }
 
 .joinBtn {
@@ -171,6 +172,7 @@
   font-weight: 500;
   line-height: var(--Typogrraphy-Label-L-2-line-height, 16px); /* 114.286% */
   letter-spacing: var(--Typogrraphy-Label-letter-spacing, 0);
+  cursor: pointer;
 }
 :global(html),
 :global(body) {
