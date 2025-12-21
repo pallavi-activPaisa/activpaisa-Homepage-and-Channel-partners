@@ -1,8 +1,8 @@
 /* FULL WIDTH WRAPPER — BORDER FIX */
 .navWrapper {
-  /* width: 100vw; /* full viewport width FIX */
-  /* margin-left: calc(50% - 50vw); remove centering issues */
-  /* margin-right: calc(50% - 50vw);  */
+   width: 100vw;
+  margin-left: calc(50% - 50vw); 
+  margin-right: calc(50% - 50vw); 
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
 }
