@@ -77,10 +77,10 @@ const SignupForm = () => {
       <SignupPAN
         onComplete={(data, type) => {
           setSignupType(type);
+          setEmail(data);
           if (type === "entity") {
             setStep("BUSINESS_DETAILS");
           } else {
-            setEmail(data);
             setStep("PASSWORD");
           }
         }}
@@ -103,7 +103,7 @@ const SignupForm = () => {
     return (
       <SignupPassword
         email={email}
-        onEmailChange={signupType === "entity" ? (e) => setEmail(e.target.value) : undefined}
+        // Email is now pre-filled from PAN step for both flows, so it should be read-only (undefined onEmailChange)
         onComplete={() => {
           setStep("SUCCESS");
         }}

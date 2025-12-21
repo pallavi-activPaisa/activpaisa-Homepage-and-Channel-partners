@@ -66,16 +66,22 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
             background: "#F3E8FF", // Light purple bg
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
+            overflow: "hidden",
             // color: "#6B21A8", // Removed as we are using an image
           }}
         >
           <Image
             src={avatarSrc || "/Icons/user.svg"}
             alt={name || "User"}
-            width={31}
-            height={40}
-            style={{ objectFit: "contain" }}
+            width={32}
+            height={41}
+            style={{
+              width: "31.62px",
+              height: "40.25px",
+              marginTop: "10px",
+              objectFit: "contain",
+            }}
           />
         </div>
         <div>  {/* Text Info */}
