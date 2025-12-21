@@ -17,6 +17,7 @@ import SignupSuccess from "./SignupSuccess";
 
 const SignupForm = () => {
   const [step, setStep] = useState("PHONE"); // PHONE | OTP | PAN | PASSWORD
+  const [signupType, setSignupType] = useState("individual"); // individual | entity
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState(""); // Shared email state
   const [error, setError] = useState("");
@@ -75,6 +76,7 @@ const SignupForm = () => {
     return (
       <SignupPAN
         onComplete={(data, type) => {
+          setSignupType(type);
           if (type === "entity") {
             setStep("BUSINESS_DETAILS");
           } else {
@@ -90,7 +92,7 @@ const SignupForm = () => {
     return (
       <SignupBusinessDetails
         onComplete={() => {
-          setEmail("abc@gmail.com");
+          // Email is NOT set here for Entity flow, allow user to enter it in next step
           setStep("PASSWORD");
         }}
       />
@@ -101,6 +103,7 @@ const SignupForm = () => {
     return (
       <SignupPassword
         email={email}
+        onEmailChange={signupType === "entity" ? (e) => setEmail(e.target.value) : undefined}
         onComplete={() => {
           setStep("SUCCESS");
         }}

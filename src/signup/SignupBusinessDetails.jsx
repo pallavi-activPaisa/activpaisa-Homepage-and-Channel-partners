@@ -129,7 +129,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
         >
           <AuthHeading>Business Details</AuthHeading>
           <AuthText>
-            Provide basic information about your business to proceed
+            Provide basic information about your <br /> business to proceed
           </AuthText>
         </div>
 
@@ -157,7 +157,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
             </label>
 
             {/* Options Row */}
-            <div style={{ display: "flex", gap: "24px" }}>
+            <div style={{ display: "flex", gap: "8px" }}>
               <AuthCheckbox
                 checked={hasGst === true}
                 onChange={() => {
@@ -248,7 +248,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
                   readOnly={isReadOnly}
                   style={
                     isReadOnly
-                      ? { background: "#F3F4F6", color: "#6B7280" }
+                      ? { background: "#F3F4F6", color: "#374151" }
                       : {}
                   }
                 />
@@ -269,7 +269,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
                   readOnly={isReadOnly}
                   style={
                     isReadOnly
-                      ? { background: "#F3F4F6", color: "#6B7280" }
+                      ? { background: "#F3F4F6", color: "#374151" }
                       : {}
                   }
                 />
@@ -418,25 +418,17 @@ const SignupBusinessDetails = ({ onComplete }) => {
                 }}
               >
                 <AuthLabel>Business Address</AuthLabel>
-                <textarea
-                  readOnly={isReadOnly}
+                <AuthInput
                   value={formData.address}
                   onChange={(e) =>
                     setFormData({ ...formData, address: e.target.value })
                   }
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    borderRadius: "8px",
-                    border: "1px solid #E5E7EB",
-                    background: isReadOnly ? "#F3F4F6" : "#FFF",
-                    color: isReadOnly ? "#6B7280" : "#374151",
-                    fontFamily: "Inter",
-                    fontSize: "14px",
-                    outline: "none",
-                    resize: "none",
-                    height: "80px",
-                  }}
+                  readOnly={isReadOnly}
+                  style={
+                    isReadOnly
+                      ? { background: "#F3F4F6", color: "#374151" }
+                      : {}
+                  }
                 />
               </div>
             </>

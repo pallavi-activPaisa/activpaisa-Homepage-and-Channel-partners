@@ -8,10 +8,12 @@ const SignupHeader = () => {
     <header
       style={{
         display: "flex",
-        position: "fixed",
-        width: "720px",
+        position: "sticky",
+        top: 0,
+        zIndex: 10,
+        width: "100%",
         height: "60px",
-        padding: "0px 16px",
+        padding: " 16px",
         justifyContent: "space-between",
         alignItems: "center",
         alignSelf: "stretch",

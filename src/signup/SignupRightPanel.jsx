@@ -8,7 +8,7 @@ const SignupRightPanel = () => {
     <div className="flex-1 h-full flex flex-col bg-white overflow-y-auto relative">
       <SignupHeader />
 
-      <div className="flex-1 flex items-center justify-center w-full mt-[60px]">
+      <div className="flex-1 flex items-center justify-center w-full">
         <SignupForm />
       </div>
 

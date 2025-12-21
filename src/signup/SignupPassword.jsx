@@ -3,7 +3,7 @@ import AuthButton from "@/components/ui/Auth/AuthButton";
 import AuthInput from "@/components/ui/Auth/AuthInput";
 import AuthLabel from "@/components/ui/Auth/AuthLabel";
 
-const SignupPassword = ({ email, onComplete }) => {
+const SignupPassword = ({ email, onEmailChange, onComplete }) => {
   // Email is passed as prop now
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -285,8 +285,14 @@ const SignupPassword = ({ email, onComplete }) => {
             <AuthLabel>E-mail ID</AuthLabel>
             <AuthInput
               value={email}
-              readOnly
-              style={{ background: "#F3F4F6", color: "#6B7280" }}
+              onChange={onEmailChange} // Allow editing if handler provided
+              readOnly={!onEmailChange} // Read-only if no handler
+              style={
+                !onEmailChange
+                  ? { background: "#F3F4F6", color: "#374151" }
+                  : {}
+              }
+              placeholder="Enter your E-Mail ID"
             />
           </div>
 
