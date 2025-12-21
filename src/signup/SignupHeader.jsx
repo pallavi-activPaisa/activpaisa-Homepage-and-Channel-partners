@@ -1,0 +1,79 @@
+"use client";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+const SignupHeader = () => {
+  return (
+    <header
+      style={{
+        display: "flex",
+        position: "sticky",
+        top: 0,
+        zIndex: 10,
+        width: "100%",
+        height: "60px",
+        padding: " 16px",
+        justifyContent: "space-between",
+        alignItems: "center",
+        alignSelf: "stretch",
+        background: "var(--ui-color-surface-neutral-neutral-light-10, #fff)",
+      }}
+    >
+      {/* LEFT: LOGO */}
+      <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+        <Image
+          src="/Brand/logo.svg"
+          alt="ActivPaisa Logo"
+          width={138}
+          height={27}
+          priority
+        />
+      </Link>
+
+      {/* RIGHT: MENU */}
+      <nav
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "16px",
+        }}
+      >
+        <Link
+          href="/help"
+          style={{
+            color:
+              "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+            fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
+            fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight:
+              "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
+            letterSpacing:
+              "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+          }}
+        >
+          Help
+        </Link>
+
+        <Link
+          href="/about"
+          style={{
+            color:
+              "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+            fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
+            fontSize: "calc(var(--typogrraphy-label-l-2-size) * 1px)",
+            fontWeight: 500,
+            lineHeight: "calc(var(--typogrraphy-label-l-2-line-height) * 1px)",
+            textDecoration: "none",
+          }}
+        >
+          About Us
+        </Link>
+      </nav>
+    </header>
+  );
+};
+
+export default SignupHeader;

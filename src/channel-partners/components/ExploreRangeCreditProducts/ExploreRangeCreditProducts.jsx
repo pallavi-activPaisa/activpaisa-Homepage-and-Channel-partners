@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import ArrowButton from "@/channel-partners/ui/common/ArrowButton";
+import MobExploreRangeCreditProducts from "./MobExploreRangeCreditProducts";
 
 export default function ExploreRangeCreditProducts() {
   const cards = [
@@ -69,127 +70,132 @@ export default function ExploreRangeCreditProducts() {
   };
 
   return (
-    <div
-      style={{
-        width: "1260px",
-        margin: "0 auto",
-        display: "flex",
-        flexDirection: "column",
-        gap: "24px",
-      }}
-    >
-      {/* Heading */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-        <h1
+    <>
+      <div className="block md:hidden">
+        <MobExploreRangeCreditProducts />
+      </div>
+      <div className="hidden md:block">
+        <div
           style={{
-            color: "#374151",
-            fontSize: "32px",
-            fontWeight: 600,
-            margin: 0,
+            width: "1260px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "24px",
           }}
         >
-          Explore Our Range of Credit Products
-        </h1>
-        <p style={{ color: "#6B7280", fontSize: "16px", margin: 0 }}>
-          Provide loans for various customer needs
-        </p>
-      </div>
-
-      {/* Cards */}
-      <div
-        ref={scrollRef}
-        className="hide-scrollbar"
-        style={{
-          display: "flex",
-          gap: "17px",
-          overflowX: "auto",
-          scrollBehavior: "smooth",
-          scrollSnapType: "x mandatory",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
-        {cards.map((card, i) => (
-          <div
-            key={i}
-            style={{
-              minWidth: "301px",
-              height: "232px",
-              borderRadius: "24px",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-              background:
-                "linear-gradient(45deg, #BD8668 0%, #5D51AF 50%, #3437C8 100%)",
-              scrollSnapAlign: "start",
-              color: "#fff",
-            }}
-          >
-            <div
+          {/* Heading */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+            <h1
               style={{
-                width: "48px",
-                height: "48px",
-                padding: "12px",
-                background: "#F2EFFC",
-                borderRadius: "8px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                color: "#374151",
+                fontSize: "32px",
+                fontWeight: 600,
+                margin: 0,
               }}
             >
-              <img
-                src={card.img}
-                alt={card.title}
-                style={{ width: "24px", height: "24px" }}
-              />
-            </div>
-            <span style={{ fontSize: "20px", fontWeight: 600 }}>
-              {card.title}
-            </span>
-            <p style={{ fontSize: "14px", margin: 0 }}>{card.desc}</p>
+              Explore Our Range of Credit Products
+            </h1>
+            <p style={{ color: "#6B7280", fontSize: "16px", margin: 0 }}>
+              Provide loans for various customer needs
+            </p>
           </div>
-        ))}
-      </div>
 
-      {/* Arrows + Bullets */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "24px",
-        }}
-      >
-        <ArrowButton
-          direction="left"
-          disabled={page === 0}
-          onClick={() => scrollToPage(page - 1)}
-        />
+          {/* Cards */}
+          <div
+            ref={scrollRef}
+            className="hide-scrollbar"
+            style={{
+              display: "flex",
+              gap: "17px",
+              overflowX: "auto",
+              scrollBehavior: "smooth",
+              scrollSnapType: "x mandatory",
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
+            {cards.map((card, i) => (
+              <div
+                key={i}
+                style={{
+                  minWidth: "301px",
+                  height: "232px",
+                  borderRadius: "24px",
+                  padding: "24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "24px",
+                  background:
+                    "linear-gradient(45deg, #BD8668 0%, #5D51AF 50%, #3437C8 100%)",
+                  scrollSnapAlign: "start",
+                  color: "#fff",
+                }}
+              >
+                <div
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    padding: "12px",
+                    background: "#F2EFFC",
+                    borderRadius: "8px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                </div>
+                <span style={{ fontSize: "20px", fontWeight: 600 }}>
+                  {card.title}
+                </span>
+                <p style={{ fontSize: "14px", margin: 0 }}>{card.desc}</p>
+              </div>
+            ))}
+          </div>
 
-        <div style={{ display: "flex", gap: "8px" }}>
-          {Array.from({ length: totalBullets }).map((_, i) => (
-            <div
-              key={i}
-              onClick={() => scrollToPage(i)}
-              style={{
-                width: "8px",
-                height: "8px",
-                borderRadius: "50%",
-                cursor: "pointer",
-                background: i === page ? "#0B0F19" : "#D1D5DB",
-              }}
+          {/* Arrows + Bullets */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "24px",
+            }}
+          >
+            <ArrowButton
+              direction="left"
+              disabled={page === 0}
+              onClick={() => scrollToPage(page - 1)}
             />
-          ))}
-        </div>
 
-        <ArrowButton
-          direction="right"
-          disabled={page === totalBullets - 1}
-          onClick={() => scrollToPage(page + 1)}
-        />
-      </div>
+            <div style={{ display: "flex", gap: "8px" }}>
+              {Array.from({ length: totalBullets }).map((_, i) => (
+                <div
+                  key={i}
+                  onClick={() => scrollToPage(i)}
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    cursor: "pointer",
+                    background: i === page ? "#0B0F19" : "#D1D5DB",
+                  }}
+                />
+              ))}
+            </div>
 
-      <style jsx>{`
+            <ArrowButton
+              direction="right"
+              disabled={page === totalBullets - 1}
+              onClick={() => scrollToPage(page + 1)}
+            />
+          </div>
+
+          <style jsx>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -198,6 +204,8 @@ export default function ExploreRangeCreditProducts() {
           -ms-overflow-style: none;
         }
       `}</style>
-    </div>
+        </div>
+      </div>
+    </>
   );
 }
