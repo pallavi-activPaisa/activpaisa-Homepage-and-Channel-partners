@@ -330,6 +330,7 @@ import SignupSuccess from "./SignupSuccess";
 import { sendOTP } from "../../lib/api.js"; // ⭐ ADDED
 
 const SignupForm = () => {
+  const [authData, setAuthData] = useState({ userId: "", token: "" });
   const [step, setStep] = useState("PHONE");
   const [signupType, setSignupType] = useState("individual");
   const [phone, setPhone] = useState("");
@@ -374,7 +375,11 @@ const SignupForm = () => {
         phone={phone}
         error={otpError}
         onBack={() => setStep("PHONE")}
-        onConfirm={(otp) => setStep("PAN")}
+        onConfirm={(data) => {
+          // data contains { ...res, token, userId } from SignupOTP
+          setAuthData({ userId: data.userId, token: data.token });
+          setStep("PAN");
+        }}
       />
     );
   }
@@ -382,6 +387,8 @@ const SignupForm = () => {
   if (step === "PAN") {
     return (
       <SignupPAN
+        userId={authData.userId}
+        token={authData.token}
         onComplete={(data, type) => {
           setSignupType(type);
           setEmail(data);
@@ -395,20 +402,14 @@ const SignupForm = () => {
     );
   }
 
-  if (step === "BUSINESS_DETAILS") {
-    return (
-      <SignupBusinessDetails
-        onComplete={() => {
-          setStep("PASSWORD");
-        }}
-      />
-    );
-  }
+  // ... BUSINESS_DETAILS ...
 
   if (step === "PASSWORD") {
     return (
       <SignupPassword
         email={email}
+        userId={authData.userId}
+        token={authData.token}
         onComplete={() => {
           setStep("SUCCESS");
         }}

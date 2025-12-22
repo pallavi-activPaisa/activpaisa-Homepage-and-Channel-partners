@@ -6,28 +6,37 @@ import AuthInput from "@/components/ui/Auth/AuthInput";
 import AuthCheckbox from "@/components/ui/Auth/AuthCheckbox";
 import AuthNote from "@/components/ui/Auth/AuthNote";
 import AuthLabel from "@/components/ui/Auth/AuthLabel";
+import { verifyPAN, submitEmail } from "../../lib/api.js";
 
-const SignupPAN = ({ onComplete }) => {
+
+const SignupPAN = ({ onComplete, userId: propUserId, token: propToken }) => {
+  // Fallback to localStorage if props are missing
+  const userId = propUserId || (typeof window !== "undefined" ? localStorage.getItem("userId") : "");
+  const token = propToken || (typeof window !== "undefined" ? localStorage.getItem("token") : "");
+
   const [pan, setPan] = useState("");
   const [businessType, setBusinessType] = useState("individual");
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
   const [panError, setPanError] = useState("");
+  const [loading, setLoading] = useState(false);
+
 
   // Regex for Indian PAN: 5 letters, 4 digits, 1 letter
   const PAN_REGEX = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
 
-  // Strict check for specific PAN
-  const VALID_PAN = "ABCDE1234F";
 
-  const [email, setEmail] = useState("abc@gmail.com");
+  const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [isPanVerified, setIsPanVerified] = useState(false);
+  const [panDetails, setPanDetails] = useState({ fullName: "", dateOfBirth: "" });
+
 
   // Enable button if terms are accepted (validation happens on click)
   // If verified, button relies on email being present (basic check)
   const isButtonEnabled = isPanVerified
     ? email.length > 0
     : (isTermsAccepted && pan.length > 0);
+
 
   const handlePanChange = (e) => {
     const value = e.target.value.toUpperCase();
@@ -37,25 +46,53 @@ const SignupPAN = ({ onComplete }) => {
     }
   };
 
-  const handleContinue = () => {
+
+  const handleContinue = async () => {
+    setLoading(true);
+    setPanError("");
+    setEmailError("");
+
+
     if (!isPanVerified) {
       // Step 1: Verify PAN
-      if (pan !== VALID_PAN) {
-        setPanError("Please verify and enter the correct PAN Number");
-      } else {
-        // Verify success -> Show Details for both Individual and Entity
+      if (!PAN_REGEX.test(pan)) {
+        setPanError("Invalid PAN format");
+        setLoading(false);
+        return;
+      }
+
+
+      try {
+        const res = await verifyPAN(userId, token, pan, businessType.toUpperCase());
+        setPanDetails({
+          fullName: res.fullName,
+          dateOfBirth: res.dob || res.dateOfBirth,
+        });
         setIsPanVerified(true);
+      } catch (err) {
+        setPanError(err.message);
       }
     } else {
-      // Step 2: Submit Details (Only for Individual flow now)
-      // Step 2: Submit Details
+      // Step 2: Submit Email
       if (!email || !email.includes("@")) {
         setEmailError("Please enter a valid email ID");
-      } else {
+        setLoading(false);
+        return;
+      }
+
+
+      try {
+        await submitEmail(userId, token, email);
         if (onComplete) onComplete(email, businessType);
+      } catch (err) {
+        setEmailError(err.message);
       }
     }
+
+
+    setLoading(false);
   };
+
 
   return (
     // ROOT CONTAINER (From Figma Screenshot 1)
@@ -125,20 +162,23 @@ const SignupPAN = ({ onComplete }) => {
           </p>
         </div>
 
+
         {/* FORM CONTENT CONTAINER */}
         {/* Flex Column, Gap 24px between distinct sections */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'calc(24 * 1px)' }}>
 
+
           {/* SECTION 1: BUSINESS TYPE */}
           <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
             <AuthLabel>Business Type</AuthLabel>
+
 
             {/* Selection Buttons */}
             {/* Width 202px, Height 36px, Gap 8px */}
             <div className="w-[202px] h-[36px] flex gap-[8px]">
               <button
                 onClick={() => !isPanVerified && setBusinessType("individual")}
-                disabled={isPanVerified}
+                disabled={isPanVerified || loading}
                 className="w-[97px] h-[36px]"
                 style={{
                   display: "flex",
@@ -175,9 +215,10 @@ const SignupPAN = ({ onComplete }) => {
                 </span>
               </button>
 
+
               <button
                 onClick={() => !isPanVerified && setBusinessType("entity")}
-                disabled={isPanVerified}
+                disabled={isPanVerified || loading}
                 style={{
                   display: "flex",
                   width: "calc(97 * 1px)",
@@ -204,6 +245,7 @@ const SignupPAN = ({ onComplete }) => {
                     fontSize: "calc(var(--typogrraphy-label-l-2-size)*1px)",
                     fontStyle: "normal",
 
+
                     fontWeight: "500",
                   }}
                 >
@@ -213,9 +255,11 @@ const SignupPAN = ({ onComplete }) => {
             </div>
           </div>
 
+
           {/* SECTION 2: PAN NUMBER INPUT */}
           <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
             <AuthLabel>PAN Number</AuthLabel>
+
 
             <AuthInput
               value={pan}
@@ -233,11 +277,13 @@ const SignupPAN = ({ onComplete }) => {
                 fontSize: "14px",
                 fontWeight: "400",
 
+
               }}>
                 {panError}
               </p>
             )}
           </div>
+
 
           {/* SECTION 3: VERIFICATION DETAILS (Shown Only After Verify) */}
           {isPanVerified && (
@@ -246,7 +292,7 @@ const SignupPAN = ({ onComplete }) => {
               <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
                 <AuthLabel>Name (As Per PAN)</AuthLabel>
                 <AuthInput
-                  value="Ananya Singh" // Dummy Data
+                  value={panDetails.fullName}
                   readOnly
                   style={{
                     borderRadius: "calc(var(--corner-radius-2xsmall, 8) * 1px)",
@@ -257,11 +303,12 @@ const SignupPAN = ({ onComplete }) => {
                 />
               </div>
 
+
               {/* DOB Field */}
               <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
                 <AuthLabel>Date of Birth (As Per PAN)</AuthLabel>
                 <AuthInput
-                  value="22 / 02 / 1997" // Dummy Data
+                  value={panDetails.dateOfBirth}
                   readOnly
                   style={{
                     borderRadius: "calc(var(--corner-radius-2xsmall, 8) * 1px)",
@@ -271,6 +318,7 @@ const SignupPAN = ({ onComplete }) => {
                   }
                 />
               </div>
+
 
               {/* Email Field */}
               <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>
@@ -302,12 +350,14 @@ const SignupPAN = ({ onComplete }) => {
 
 
 
+
           {/* SECTION 4: ACTION BUTTON */}
           <div>
-            <AuthButton type="button" disabled={!isButtonEnabled} onClick={handleContinue}>
-              {isPanVerified ? "Next" : "Continue"}
+            <AuthButton type="button" disabled={!isButtonEnabled || loading} onClick={handleContinue}>
+              {loading ? "Loading..." : (isPanVerified ? "Next" : "Continue")}
             </AuthButton>
           </div>
+
 
           {/* GROUPS TERMS & FOOTER NOTE TO CONTROL SPACING (20px) */}
           {!isPanVerified && (
@@ -337,12 +387,13 @@ const SignupPAN = ({ onComplete }) => {
                           textDecoration: "none",
                         }}
                       >
-                        <br />  Privacy Policy
+                        <br />  Privacy Policy
                       </Link>
                     </span>
                   }
                 />
               </div>
+
 
               {/* SECTION 6: FOOTER NOTE */}
               <div>
@@ -358,5 +409,6 @@ const SignupPAN = ({ onComplete }) => {
     </div>
   );
 };
+
 
 export default SignupPAN;

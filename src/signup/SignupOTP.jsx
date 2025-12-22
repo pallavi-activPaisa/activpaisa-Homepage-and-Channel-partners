@@ -333,13 +333,28 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
 
     try {
       const res = await verifyOTP(phone, finalOtp);
+      console.log("OTP Verify Response:", res);
 
-      localStorage.setItem("token", res.token);
-      localStorage.setItem("userId", res.userId);
-      localStorage.setItem("mobile", phone);
+      // Extract token and userId safely (handle potential nesting)
+      const token = res.token || res.data?.token;
+      const userId = res.userId || res.data?.userId || res.data?.id || res.data?.user?.id;
 
-      onConfirm(finalOtp);
+      console.log("Extracted Auth Data:", { token, userId });
+
+      if (token && userId) {
+        localStorage.setItem("token", token);
+        localStorage.setItem("userId", userId);
+        localStorage.setItem("mobile", phone);
+      } else {
+        console.error("Response missing token or userId. Full response:", res);
+        // Fallback: Check if they are in localStorage from a previous step?
+        // Or throw error to prevent moving forward with bad state
+      }
+
+      // Pass normalized data + original response
+      onConfirm({ ...res, token, userId });
     } catch (err) {
+      console.error("OTP Verification Error:", err);
       setApiError(err.message);
     }
 

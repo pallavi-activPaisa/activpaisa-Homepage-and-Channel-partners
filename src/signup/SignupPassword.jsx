@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import AuthButton from "@/components/ui/Auth/AuthButton";
 import AuthInput from "@/components/ui/Auth/AuthInput";
 import AuthLabel from "@/components/ui/Auth/AuthLabel";
+import { setPassword } from "../../lib/api.js";
 
-const SignupPassword = ({ email, onEmailChange, onComplete }) => {
+const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailChange, onComplete }) => {
+  // Fallback to localStorage if props are missing
+  const userId = propUserId || (typeof window !== "undefined" ? localStorage.getItem("userId") : "");
+  const token = propToken || (typeof window !== "undefined" ? localStorage.getItem("token") : "");
+
   // Email is passed as prop now
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [loading, setLoading] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -44,7 +51,8 @@ const SignupPassword = ({ email, onEmailChange, onComplete }) => {
   // Image 'Typing State' shows a thin line. Let's do a continuous bar.
   const strengthWidth = `${(strength / 5) * 100}%`;
 
-  const handleSetPassword = () => {
+  const handleSetPassword = async () => {
+    console.log("handleSetPassword Clicked. Password len:", password.length);
     let isValid = true;
     setPasswordError("");
     setConfirmError("");
@@ -66,8 +74,19 @@ const SignupPassword = ({ email, onEmailChange, onComplete }) => {
     }
 
     if (isValid) {
-      console.log("Password set successfully!");
-      if (onComplete) onComplete();
+      console.log("Validation passed. Calling API...", { userId, hasToken: !!token });
+      setLoading(true);
+      try {
+        await setPassword(userId, token, password, confirmPassword);
+        console.log("Password set successfully!");
+        if (onComplete) onComplete();
+      } catch (err) {
+        console.error("API Error:", err);
+        setPasswordError(err.message || "Failed to set password");
+      }
+      setLoading(false);
+    } else {
+      console.log("Validation Failed");
     }
   };
 
@@ -428,10 +447,10 @@ const SignupPassword = ({ email, onEmailChange, onComplete }) => {
               type="button"
               onClick={handleSetPassword}
               disabled={
-                !PASSWORD_REGEX.test(password) || password !== confirmPassword
+                !PASSWORD_REGEX.test(password) || password !== confirmPassword || loading
               }
             >
-              Set New Password
+              {loading ? "Setting Password..." : "Set New Password"}
             </AuthButton>
           </div>
         </div>
