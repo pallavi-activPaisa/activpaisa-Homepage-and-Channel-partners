@@ -43,20 +43,16 @@ const SignupPAN = ({ onComplete }) => {
       if (pan !== VALID_PAN) {
         setPanError("Please verify and enter the correct PAN Number");
       } else {
-        if (businessType === "entity") {
-          // For Entity: Immediately move to next step after verification
-          if (onComplete) onComplete(null, "entity");
-        } else {
-          // For Individual: Show details + Email input on the same screen
-          setIsPanVerified(true);
-        }
+        // Verify success -> Show Details for both Individual and Entity
+        setIsPanVerified(true);
       }
     } else {
       // Step 2: Submit Details (Only for Individual flow now)
-      if (email !== "abc@gmail.com") {
-        setEmailError("Please enter the correct email ID");
+      // Step 2: Submit Details
+      if (!email || !email.includes("@")) {
+        setEmailError("Please enter a valid email ID");
       } else {
-        if (onComplete) onComplete(email, "individual");
+        if (onComplete) onComplete(email, businessType);
       }
     }
   };
@@ -243,8 +239,8 @@ const SignupPAN = ({ onComplete }) => {
             )}
           </div>
 
-          {/* SECTION 3: VERIFICATION DETAILS (Shown Only After Verify & Individual) */}
-          {isPanVerified && businessType === "individual" && (
+          {/* SECTION 3: VERIFICATION DETAILS (Shown Only After Verify) */}
+          {isPanVerified && (
             <>
               {/* Name Field */}
               <div style={{ display: "flex", flexDirection: "column", gap: "calc(8 * 1px)" }}>

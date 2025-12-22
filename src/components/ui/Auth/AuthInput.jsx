@@ -9,6 +9,8 @@ const AuthInput = ({
   type = "text",
   startIcon,
   endIcon,
+  disabled,
+  readOnly,
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -35,7 +37,12 @@ const AuthInput = ({
         /* Base + Hover + Error border */
         border: isFocused
           ? `1px solid ${error ? errorColor : focusColor}`
-          : `1px solid ${error ? errorColor : isHover ? hoverBorder : baseBorder}`,
+          : `1px solid ${error
+            ? errorColor
+            : isHover && !disabled && !readOnly
+              ? hoverBorder
+              : baseBorder
+          }`,
 
         borderRadius: "8px",
 
@@ -63,6 +70,8 @@ const AuthInput = ({
       )}
       <input
         type={type}
+        disabled={disabled}
+        readOnly={readOnly}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
