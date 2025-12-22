@@ -396,10 +396,10 @@ const SignupBusinessDetails = ({ onComplete }) => {
                               (e.target.style.background = "#F9FAFB")
                             }
                             onMouseLeave={(e) =>
-                              (e.target.style.background =
-                                formData.corporation === type
-                                  ? "#F3F4F6"
-                                  : "transparent")
+                            (e.target.style.background =
+                              formData.corporation === type
+                                ? "#F3F4F6"
+                                : "transparent")
                             }
                           >
                             {type}
@@ -444,7 +444,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
               {isLoading
                 ? "Fetching..."
                 : hasGst === true && !isFetched
-                  ? "Fetch Details"
+                  ? "Next"
                   : "Next"}
             </AuthButton>
           </div>
