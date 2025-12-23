@@ -39,6 +39,7 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
       {/* message */}
       <p
         style={{
+          height: "112px",
           color:
             "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
           fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
@@ -84,7 +85,9 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
             }}
           />
         </div>
-        <div>  {/* Text Info */}
+        <div>
+          {" "}
+          {/* Text Info */}
           <div>
             {/* name */}
             <h5
@@ -109,7 +112,6 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
             {/* location */}
             <p
               style={{
-
                 color:
                   "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30, #6b7280)",
                 fontFamily: "var(--typogrraphy-label-inter-font-family, Inter)",
@@ -124,8 +126,8 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
             >
               {location}
             </p>
-          </div></div>
-
+          </div>
+        </div>
       </div>
 
       {/* stars */}

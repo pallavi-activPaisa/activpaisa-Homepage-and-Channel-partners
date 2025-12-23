@@ -16,6 +16,7 @@ import SignupBusinessDetails from "./SignupBusinessDetails";
 import SignupSuccess from "./SignupSuccess";
 
 import { sendOTP } from "../../lib/api.js";
+import AuthNote from "@/components/ui/Auth/AuthNote";
 
 const SignupForm = () => {
   const [authData, setAuthData] = useState({ userId: "", token: "" });
@@ -197,12 +198,99 @@ const SignupForm = () => {
               label={
                 <span>
                   I have read and accept the{" "}
-                  <Link href="/terms">Terms of Service</Link> and{" "}
-                  <Link href="/privacy">Privacy Policy</Link>
+                  <Link
+                    className=" hover:underline"
+                    style={{
+                      color:
+                        "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+
+                      fontFamily:
+                        "var(--typogrraphy-paragraph-inter-font-family, inter)",
+                      fontSize:
+                        "calc(var(--typogrraphy-paragraph-para-3-size) * 1px)",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      lineHeight:
+                        "calc(var(--typogrraphy-paragraph-para-3-line-height, 20px) * 1px)",
+                      letterSpacing:
+                        "calc(var(--typogrraphy-paragraph-letter-spacing, 0) * 1px)",
+                    }}
+                    href="/terms"
+                  >
+                    Terms of Service
+                  </Link>{" "}
+                  and <br />
+                  <Link
+                    className=" hover:underline"
+                    style={{
+                      color:
+                        "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+
+                      fontFamily:
+                        "var(--typogrraphy-paragraph-inter-font-family, inter)",
+                      fontSize:
+                        "calc(var(--typogrraphy-paragraph-para-3-size) * 1px)",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      lineHeight:
+                        "calc(var(--typogrraphy-paragraph-para-3-line-height, 20px) * 1px)",
+                      letterSpacing:
+                        "calc(var(--typogrraphy-paragraph-letter-spacing, 0) * 1px)",
+                    }}
+                    href="/privacy"
+                  >
+                    Privacy Policy
+                  </Link>
                 </span>
               }
             />
           </div>
+
+          <div>
+            <AuthNote>
+              Registering as an entity? Use the mobile number <br /> and PAN of
+              any one director or owner
+            </AuthNote>
+          </div>
+
+          <p
+            className="text-center"
+            style={{
+              color:
+                "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n30)",
+              textAlign: "center",
+
+              fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
+              fontSize: "calc(var(--typogrraphy-label-l-2-size) * 1px)",
+              fontStyle: "normal",
+              fontWeight: "400",
+              lineHeight:
+                "calc(var(--typogrraphy-label-l-2-line-height) * 1px)",
+              letterSpacing:
+                "calc(var(--typogrraphy-label-letter-spacing) * 1px)",
+            }}
+          >
+            Already a Partner?
+            <Link
+              style={{
+                color:
+                  "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-p40)",
+
+                fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
+                fontSize: "calc(var(--typogrraphy-label-l-2-size) * 1px)",
+                fontStyle: "normal",
+                fontWeight: "400",
+                lineHeight:
+                  "calc(var(--typogrraphy-label-l-2-line-height) * 1px)",
+                letterSpacing:
+                  "calc(var(--typogrraphy-label-letter-spacing) * 1px)",
+              }}
+              href="/"
+            >
+              {" "}
+              Log in
+            </Link>
+          </p>
         </form>
       </div>
     </div>

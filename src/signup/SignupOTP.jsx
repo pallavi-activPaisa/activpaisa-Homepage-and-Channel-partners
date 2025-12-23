@@ -4,67 +4,73 @@ import AuthText from "@/components/ui/Auth/AuthText";
 import AuthButton from "@/components/ui/Auth/AuthButton";
 import { verifyOTP, sendOTP } from "../../lib/api.js";
 
-const OtpInputItem = forwardRef(({ value, onChange, onKeyDown, onFocus, error, index }, ref) => {
-  const [isHover, setIsHover] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
+const OtpInputItem = forwardRef(
+  ({ value, onChange, onKeyDown, onFocus, error, index }, ref) => {
+    const [isHover, setIsHover] = useState(false);
+    const [isFocused, setIsFocused] = useState(false);
 
-  const baseBorder = "var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)";
-  const hoverBorder = "var(--ui-color-border-default-bd-neutral-dark-20, #9CA3AF)";
-  const focusColor = "var(--ui-color-border-primary-light-10, #6D28D9)";
-  const errorColor = "var(--ui-color-border-error-medium-20, #DC2626)";
+    const baseBorder = "var(--ui-color-border-default-bd-neutral-medium-10)";
+    const hoverBorder =
+      "var(--ui-color-border-default-bd-neutral-dark-20, #9CA3AF)";
+    const focusColor = "var(--ui-color-border-primary-light-10, #6D28D9)";
+    const errorColor = "var(--ui-color-border-error-medium-20, #DC2626)";
 
-  return (
-    <input
-      ref={ref}
-      type="text"
-      inputMode="numeric"
-      maxLength="1"
-      value={value}
-      onChange={onChange}
-      onKeyDown={onKeyDown}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      onFocus={(e) => {
-        setIsFocused(true);
-        if (onFocus) onFocus(e);
-      }}
-      onBlur={() => setIsFocused(false)}
-      style={{
-        width: "calc(46 * 1px)",
-        height: "calc(46 * 1px)",
-        borderRadius: "calc(12 * 1px)",
-        background: "#FFF",
-        textAlign: "center",
+    return (
+      <input
+        ref={ref}
+        type="text"
+        inputMode="numeric"
+        maxLength="1"
+        value={value}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+        onFocus={(e) => {
+          setIsFocused(true);
+          if (onFocus) onFocus(e);
+        }}
+        onBlur={() => setIsFocused(false)}
+        style={{
+          width: "calc(46 * 1px)",
+          height: "calc(46 * 1px)",
+          borderRadius: "calc(8 * 1px)",
+          background: "#FFF",
+          textAlign: "center",
 
-        /* Typography Update */
-        color: "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
-        fontFamily: "Inter",
-        fontSize: "14px",
-        fontStyle: "normal",
-        fontWeight: "400",
-        lineHeight: "16px",
+          /* Typography Update */
+          color:
+            "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40)",
 
-        outline: "none",
+          fontFamily: "Inter",
+          fontSize: "14px",
+          fontStyle: "normal",
+          fontWeight: "400",
+          lineHeight: "16px",
 
-        /* Interactive Border Logic */
-        border: `1px solid ${error
-          ? errorColor
-          : isFocused
-            ? focusColor
-            : isHover
-              ? hoverBorder
-              : baseBorder
+          outline: "none",
+
+          /* Interactive Border Logic */
+          border: `1px solid ${
+            error
+              ? errorColor
+              : isFocused
+                ? focusColor
+                : isHover
+                  ? hoverBorder
+                  : baseBorder
           }`,
 
-        boxShadow: isFocused
-          ? `0 0 0 3px ${error ? 'rgba(220, 38, 38, 0.12)' : 'rgba(109, 40, 217, 0.12)'}`
-          : "none",
+          boxShadow: isFocused
+            ? `0 0 0 3px ${error ? "rgba(220, 38, 38, 0.12)" : "rgba(109, 40, 217, 0.12)"}`
+            : "none",
 
-        transition: "border-color 0.15s ease, box-shadow 0.15s ease",
-      }}
-    />
-  );
-});
+          transition: "border-color 0.15s ease, box-shadow 0.15s ease",
+        }}
+      />
+    );
+  }
+);
 
 const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
   // --- STATE from Working Code ---
@@ -116,7 +122,8 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
 
       // Extract token and userId safely
       const token = res.token || res.data?.token;
-      const userId = res.userId || res.data?.userId || res.data?.id || res.data?.user?.id;
+      const userId =
+        res.userId || res.data?.userId || res.data?.id || res.data?.user?.id;
 
       console.log("Extracted Auth Data:", { token, userId });
 
@@ -212,8 +219,8 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
             flexDirection: "column",
             alignItems: "center",
             gap: "calc(8 * 1px)",
-
-          }}>
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -237,14 +244,19 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
 
           {/* ERROR MESSAGE */}
           {apiError && (
-            <p style={{
-              margin: 0,
-              color: "var(--ui-color-border-error-medium-20, #dc2626)",
-              fontFamily: "var(--typogrraphy-paragraph-inter-font-family, Inter)",
-              fontSize: "calc(var(--typogrraphy-paragraph-para-4-size, 12) * 1px)",
-              fontWeight: 400,
-              lineHeight: "calc(var(--typogrraphy-paragraph-para-4-line-height, 16) * 1px)",
-            }}>
+            <p
+              style={{
+                margin: 0,
+                color: "var(--ui-color-border-error-medium-20, #dc2626)",
+                fontFamily:
+                  "var(--typogrraphy-paragraph-inter-font-family, Inter)",
+                fontSize:
+                  "calc(var(--typogrraphy-paragraph-para-4-size, 12) * 1px)",
+                fontWeight: 400,
+                lineHeight:
+                  "calc(var(--typogrraphy-paragraph-para-4-line-height, 16) * 1px)",
+              }}
+            >
               {apiError}
             </p>
           )}
@@ -265,7 +277,8 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
             display: "flex",
             height: "20px",
             justifyContent: "flex-end",
-            color: "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
+            color:
+              "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
             fontFamily: "Inter",
             fontSize: "14px",
             fontStyle: "normal",
