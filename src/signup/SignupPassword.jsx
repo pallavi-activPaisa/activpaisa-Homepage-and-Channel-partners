@@ -1,25 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AuthButton from "@/components/ui/Auth/AuthButton";
 import AuthInput from "@/components/ui/Auth/AuthInput";
 import AuthLabel from "@/components/ui/Auth/AuthLabel";
 import { setPassword } from "../../lib/api.js";
 
 const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailChange, onComplete }) => {
-  // Fallback to localStorage if props are missing
-  const userId = propUserId || (typeof window !== "undefined" ? localStorage.getItem("userId") : "");
-  const token = propToken || (typeof window !== "undefined" ? localStorage.getItem("token") : "");
+  // =================================================================
+  // STATE & VARIABLES
+  // =================================================================
 
-  // Email is passed as prop now
-  const [password, setPassword] = useState("");
+  // 1. Retrieve Creds from Props or LocalStorage with a fallback
+  // Use state to ensure we capture checking localStorage after mount if needed, 
+  // but direct reading here is also fine for synchronous access.
+  const [userId, setUserId] = useState(propUserId || "");
+  const [token, setToken] = useState(propToken || "");
+
+  useEffect(() => {
+    // If props are missing, try to load from localStorage on mount
+    if (!userId) {
+      const storedId = localStorage.getItem("userId");
+      if (storedId) {
+        console.log("Retrieved userId from localStorage:", storedId);
+        setUserId(storedId);
+      }
+    }
+    if (!token) {
+      const storedToken = localStorage.getItem("token");
+      if (storedToken) {
+        console.log("Retrieved token from localStorage");
+        setToken(storedToken);
+      }
+    }
+  }, [propUserId, propToken, userId, token]);
+
+  // Form State
+  const [password, setPasswordState] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  // UI State
   const [loading, setLoading] = useState(false);
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   const [passwordError, setPasswordError] = useState("");
   const [confirmError, setConfirmError] = useState("");
+  const [successMessage, setSuccessMessage] = useState(""); // To show success feedback
+
+  // =================================================================
+  // PASSWORD STRENGTH LOGIC
+  // =================================================================
 
   // Regex: At least 8 chars, 1 lowercase, 1 uppercase, 1 number, 1 symbol
   const PASSWORD_REGEX =
@@ -42,30 +70,35 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
     if (score <= 2) return "var(--ui-color-border-error-medium-20, #DC2626)"; // Weak (Red)
     if (score <= 4)
       return "var(--ui-color-surface-warning-medium-20-on-warning-medium-20, #D97706)"; // Medium (Orange/Yellow)
-    return "var(--ui-color-border-success-medium-20, #16A34A)"; // Strong (Green) -- assuming green var or hardcoded
+    return "var(--ui-color-border-success-medium-20, #16A34A)"; // Strong (Green)
   };
 
   const strengthColor = getStrengthColor(strength);
-  // 5 criteria, so 20% per criteria.
-  // Design might show 4 distinct bars or one continuous bar?
-  // Image 'Typing State' shows a thin line. Let's do a continuous bar.
   const strengthWidth = `${(strength / 5) * 100}%`;
+
+  // =================================================================
+  // HANDLERS
+  // =================================================================
 
   const handleSetPassword = async () => {
     console.log("handleSetPassword Clicked. Password len:", password.length);
-    let isValid = true;
+
+    // 1. Reset Errors
     setPasswordError("");
     setConfirmError("");
+    setSuccessMessage("");
 
+    let isValid = true;
+
+    // 2. Validate Password Format
     if (!PASSWORD_REGEX.test(password)) {
-      // Use the specific requirements text as error or just generic?
-      // Image 'Password Format' shows the text as the "error" state styling.
       setPasswordError(
         "Password must be at least 8 characters, with 1 uppercase, 1 lowercase, 1 number, and 1 symbol"
       );
       isValid = false;
     }
 
+    // 3. Validate Match
     if (password !== confirmPassword) {
       setConfirmError(
         "Passwords do not match. Please review and confirm both entries are exactly the same"
@@ -73,22 +106,45 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
       isValid = false;
     }
 
-    if (isValid) {
-      console.log("Validation passed. Calling API...", { userId, hasToken: !!token });
-      setLoading(true);
-      try {
-        await setPassword(userId, token, password, confirmPassword);
-        console.log("Password set successfully!");
-        if (onComplete) onComplete();
-      } catch (err) {
-        console.error("API Error:", err);
-        setPasswordError(err.message || "Failed to set password");
-      }
-      setLoading(false);
-    } else {
+    if (!isValid) {
       console.log("Validation Failed");
+      return; // Stop execution if validation fails
     }
+
+    // 4. API Call
+    console.log("Validation passed. Calling API...", { userId, hasToken: !!token });
+
+    // Ensure we have userId and token before calling
+    if (!userId || !token) {
+      setPasswordError("Missing user identification. Please try signing up again.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      // Call the API
+      await setPassword(userId, token, password, confirmPassword);
+      console.log("Password set successfully!");
+
+      // 5. Success Handling & Delay
+      setSuccessMessage("Password set successfully! Redirecting...");
+
+      // Wait for 4 seconds before moving to the next step
+      setTimeout(() => {
+        if (onComplete) onComplete();
+      }, 4000);
+
+    } catch (err) {
+      console.error("API Error:", err);
+      setPasswordError(err.message || "Failed to set password");
+      setLoading(false); // Only stop loading on error, keep loading state on success to prevent double clicks
+    }
+    // Note: We don't set loading(false) on success immediately to keep the UI in a "processing/success" state during the 4s delay
   };
+
+  // =================================================================
+  // ICONS
+  // =================================================================
 
   const LockIcon = () => (
     <svg
@@ -133,30 +189,6 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
       }}
     >
       {visible ? (
-        // Eye Open
-        // <svg
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   width="16"
-        //   height="16"
-        //   viewBox="0 0 16 16"
-        //   fill="none"
-        // >
-        //   <path
-        //     d="M1.33325 8.00004C1.33325 8.00004 3.99992 2.66671 7.99992 2.66671C11.9999 2.66671 14.6666 8.00004 14.6666 8.00004C14.6666 8.00004 11.9999 13.3334 7.99992 13.3334C3.99992 13.3334 1.33325 8.00004 1.33325 8.00004Z"
-        //     stroke="#9CA3AF"
-        //     strokeWidth="1.33333"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        //   <path
-        //     d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
-        //     stroke="#9CA3AF"
-        //     strokeWidth="1.33333"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        // </svg>
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="19"
@@ -170,37 +202,6 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
           />
         </svg>
       ) : (
-        // Eye Closed (Simple representation or path from image)
-        // <svg
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   width="16"
-        //   height="16"
-        //   viewBox="0 0 16 16"
-        //   fill="none"
-        // >
-        //   <path
-        //     d="M14.6666 8.00004C14.6666 8.00004 11.9999 13.3334 7.99992 13.3334C4.68525 13.3334 2.21725 9.71271 1.54725 8.35804"
-        //     stroke="#9CA3AF"
-        //     strokeWidth="1.33333"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        //   <path
-        //     d="M3.20874 3.20871C4.46941 2.84671 5.92274 2.66671 7.99991 2.66671C11.9999 2.66671 14.6666 8.00004 14.6666 8.00004"
-        //     stroke="#9CA3AF"
-        //     strokeWidth="1.33333"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        //   <path
-        //     d="M6.58529 6.58536C6.77090 6.39965 6.99128 6.25232 7.23380 6.15183C7.47632 6.05134 7.73623 5.99966 7.99862 5.99979C8.26102 5.99992 8.52075 6.05186 8.76295 6.15263C9.00516 6.25340 9.22509 6.40103 9.41014 6.58703C9.59518 6.77303 9.74175 6.99373 9.84130 7.23640C9.94084 7.47907 9.99140 7.73894 9.99009 8.00099C9.98877 8.26305 9.93561 8.52212 9.83363 8.76329C9.73165 9.00446 9.58285 9.22300 9.39581 9.40636L1.59581 1.60636L14.3958 14.4064"
-        //     stroke="#9CA3AF"
-        //     strokeWidth="1.33333"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        // </svg>
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -328,7 +329,7 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
               value={password}
               onChange={(e) => {
                 const val = e.target.value;
-                setPassword(val);
+                setPasswordState(val);
                 if (passwordError) setPasswordError("");
 
                 // Re-validate match if confirm password has value
@@ -439,6 +440,24 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
                 {confirmError}
               </p>
             )}
+
+            {/* SUCCESS MESSAGE */}
+            {successMessage && (
+              <p
+                style={{
+                  color: "var(--ui-color-border-success-medium-20, #16A34A)",
+                  fontFamily:
+                    "var(--typogrraphy-label-inter-font-family, Inter)",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  textAlign: "center",
+                  marginTop: "8px"
+                }}
+              >
+                {successMessage}
+              </p>
+            )}
+
           </div>
 
           {/* Action Button */}
@@ -450,7 +469,7 @@ const SignupPassword = ({ email, userId: propUserId, token: propToken, onEmailCh
                 !PASSWORD_REGEX.test(password) || password !== confirmPassword || loading
               }
             >
-              {loading ? "Setting Password..." : "Set New Password"}
+              {loading ? "Processing..." : "Set New Password"}
             </AuthButton>
           </div>
         </div>

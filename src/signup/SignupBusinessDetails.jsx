@@ -6,8 +6,9 @@ import AuthLabel from "@/components/ui/Auth/AuthLabel";
 import AuthHeading from "@/components/ui/Auth/AuthHeading";
 import AuthText from "@/components/ui/Auth/AuthText";
 import "../app/build/css/tokens.css";
+import { verifyGST, updateBusinessProfile } from "../../lib/api.js";
 
-const SignupBusinessDetails = ({ onComplete }) => {
+const SignupBusinessDetails = ({ onComplete, userId, token }) => {
   const [hasGst, setHasGst] = useState(null);
   const [gstin, setGstin] = useState("");
   const [gstError, setGstError] = useState("");
@@ -22,9 +23,6 @@ const SignupBusinessDetails = ({ onComplete }) => {
     corporation: "", // Default empty
     address: "",
   });
-
-  // Default GST for demo
-  const DEFAULT_GST = "27ABCDE1234F1Z5";
 
   // Chevron for the pseudo-select / select
   const ChevronDown = () => (
@@ -45,46 +43,86 @@ const SignupBusinessDetails = ({ onComplete }) => {
     </svg>
   );
 
-  // Dummy fetch function
-  const fetchGstDetails = () => {
+  const handleFetchGstDetails = async () => {
+    if (!gstin) {
+      setGstError("Please enter your GST number");
+      return;
+    }
+
+    // Basic format check (15 chars)
+    if (gstin.length !== 15) {
+      setGstError("GST number must be exactly 15 characters");
+      return;
+    }
+
     setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      // Prioritize valid format logic
-      if (gstin.length >= 10) {
-        setFormData({
-          businessName: "Mohak Enterprises",
-          legalName: "Mohak Enterprises Private Limited",
-          corporation: "Private Limited",
-          address: "2nd Floor, Plot No. 14, Andheri East, Mumbai, - 400069",
-        });
-        setIsFetched(true);
-        setGstError("");
-      } else {
-        setGstError("Please enter a valid GST number");
-        setIsFetched(false);
-      }
+    setGstError("");
+
+    try {
+      const data = await verifyGST(userId, token, gstin);
+
+      const { gstInfo } = data;
+      setFormData({
+        businessName: gstInfo.businessName || "",
+        legalName: gstInfo.legalName || "",
+        corporation: gstInfo.constitutionOfBusiness || "",
+        address: gstInfo.address?.full || "",
+      });
+      setIsFetched(true);
+
+    } catch (err) {
+      console.error("GST Verification Error:", err);
+      setGstError(err.message || "Failed to verify GST details");
+      setIsFetched(false);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
+  };
+
+  const saveAndContinue = async () => {
+    // 1. Validate fields
+    if (!formData.businessName || !formData.legalName || !formData.corporation || !formData.address) {
+      setGstError("Please fill in all details to proceed.");
+      return;
+    }
+
+    setGstError("");
+    setIsLoading(true);
+
+    try {
+      const businessPayload = {
+        tradeName: formData.businessName,
+        legalName: formData.legalName,
+        businessConstitution: formData.corporation,
+        fullAddress: formData.address
+      };
+
+      // Call API to store/update profile regardless of GST flow
+      await updateBusinessProfile(userId, token, businessPayload);
+
+      // Proceed on success
+      if (onComplete) onComplete();
+
+    } catch (err) {
+      console.error("Business Profile Update Error:", err);
+      setGstError(err.message || "Failed to update business details");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleNext = () => {
     if (hasGst === true) {
       if (!isFetched) {
         // Step 1: Fetch details
-        if (!gstin) {
-          setGstError("Please enter your GST number");
-        } else {
-          fetchGstDetails();
-        }
+        handleFetchGstDetails();
       } else {
-        // Step 2: Proceed
-        if (onComplete) onComplete();
+        // Step 2: Proceed - Call save API now
+        saveAndContinue();
       }
     } else if (hasGst === false) {
-      // Step 2: Proceed (Manual Entry)
-      // Optionally validate fields here
-      if (onComplete) onComplete();
+      // Step 2: Proceed (Manual Entry) -> Save via API
+      saveAndContinue();
     }
   };
 
@@ -169,7 +207,7 @@ const SignupBusinessDetails = ({ onComplete }) => {
                     corporation: "",
                     address: "",
                   });
-                  setGstin(DEFAULT_GST); // Pre-fill default
+                  setGstin(""); // Reset GSTIN
                   setGstError("");
                 }}
                 label="Yes"
@@ -442,9 +480,9 @@ const SignupBusinessDetails = ({ onComplete }) => {
               disabled={hasGst === null || isLoading}
             >
               {isLoading
-                ? "Fetching..."
+                ? "Processing..."
                 : hasGst === true && !isFetched
-                  ? "Next"
+                  ? "Fetch Details"
                   : "Next"}
             </AuthButton>
           </div>
