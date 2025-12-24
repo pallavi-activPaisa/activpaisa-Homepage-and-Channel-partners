@@ -3,6 +3,8 @@ import AuthHeading from "@/components/ui/Auth/AuthHeading";
 import AuthText from "@/components/ui/Auth/AuthText";
 import AuthButton from "@/components/ui/Auth/AuthButton";
 import { verifyOTP, sendOTP } from "../../lib/api.js";
+import { hover } from "framer-motion";
+import { Pointer } from "lucide-react";
 
 const OtpInputItem = forwardRef(
   ({ value, onChange, onKeyDown, onFocus, error, index }, ref) => {
@@ -79,6 +81,7 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
   const [apiError, setApiError] = useState("");
   const [loading, setLoading] = useState(false);
   const inputRefs = useRef([]);
+  const [backHover, setBackHover] = useState(false);
 
   // --- TIMER ---
   useEffect(() => {
@@ -163,158 +166,198 @@ const SignupOTP = ({ phone, onBack, onConfirm, error }) => {
   const isOtpComplete = otp.every((digit) => digit !== "");
 
   return (
-    <div
-      style={{
-        width: "400px",
-        padding: "0 calc(160 * 1px)",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <div className="w-full flex flex-col relative h-full justify-center items-center ">
+      <button
+        className="w-[81px] h-[36px] p-[8px] absolute top-[16px] left-[16px] flex justify-center items-center   gap-[4px]"
+        style={{
+          backgroundColor: backHover
+            ? "var(--ui-color-surface-neutral-neutral-light-30, #f3f4f6)"
+            : "white",
+          color:
+            "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+
+          fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
+          fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+          fontStyle: "normal",
+          fontWeight: "500",
+          lineHeight:
+            "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
+          letterSpacing:
+            "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+          borderRadius: "calc(var(--corner-radius-2xsmall, 8px) * 1px)",
+          cursor: "Pointer",
+        }}
+        onClick={onBack}
+        onMouseEnter={() => setBackHover(true)}
+        onMouseLeave={() => setBackHover(false)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="7"
+          height="12"
+          viewBox="0 0 7 12"
+          fill="none"
+        >
+          <path
+            d="M-0.000154018 5.78362C-0.000788212 5.89329 0.0202327 6.00201 0.0617032 6.10354C0.103174 6.20507 0.164278 6.29742 0.241512 6.37529L5.24151 11.3753C5.39843 11.5322 5.61126 11.6204 5.83318 11.6204C6.0551 11.6204 6.26793 11.5322 6.42485 11.3753C6.58177 11.2184 6.66992 11.0055 6.66992 10.7836C6.66992 10.5617 6.58177 10.3489 6.42485 10.192L2.00818 5.78362L6.41651 1.37529C6.55303 1.21587 6.62437 1.0108 6.61627 0.801074C6.60817 0.591344 6.52123 0.392394 6.37281 0.243982C6.2244 0.0955706 6.02545 0.00862789 5.81572 0.000526428C5.60599 -0.00757408 5.40093 0.0637627 5.24151 0.200285L0.241512 5.20028C0.0875587 5.3555 0.000766277 5.565 -0.000154018 5.78362Z"
+            fill="#374151"
+          />
+        </svg>
+        Back
+      </button>
       <div
         style={{
-          width: "calc(432 * 1px)",
+          width: "400px",
+          padding: "0 calc(160 * 1px)",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "calc(24 * 1px)",
+          justifyContent: "center",
         }}
       >
-        {/* HEADING & SUBTEXT */}
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "calc(8 * 1px)",
-            alignSelf: "stretch",
-            textAlign: "center",
-          }}
-        >
-          <AuthHeading style={{ textAlign: "center" }}>
-            Verify your number
-          </AuthHeading>
-
-          <AuthText style={{ textAlign: "center" }}>
-            Enter the one-time password (OTP) sent to <br />
-            +91-{phone}.{" "}
-            <span
-              onClick={onBack}
-              style={{
-                color:
-                  "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                cursor: "pointer",
-                fontWeight: 400,
-              }}
-            >
-              Change Phone number
-            </span>
-          </AuthText>
-        </div>
-
-        {/* OTP INPUTS */}
-        <div
-          style={{
-            width: "400px",
+            width: "calc(432 * 1px)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "calc(8 * 1px)",
+            gap: "calc(24 * 1px)",
           }}
         >
+          {/* HEADING & SUBTEXT */}
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               gap: "calc(8 * 1px)",
-              justifyContent: "center",
+              alignSelf: "stretch",
+              textAlign: "center",
             }}
           >
-            {otp.map((data, index) => (
-              <OtpInputItem
-                key={index}
-                index={index}
-                value={data}
-                error={!!apiError}
-                onChange={(e) => handleChange(e.target, index)}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-                onFocus={(e) => e.target.select()}
-                ref={(el) => (inputRefs.current[index] = el)}
-              />
-            ))}
+            <AuthHeading style={{ textAlign: "center" }}>
+              Verify your number
+            </AuthHeading>
+
+            <AuthText style={{ textAlign: "center" }}>
+              Enter the one-time password (OTP) sent to <br />
+              +91-{phone}.{" "}
+              <span
+                onClick={onBack}
+                style={{
+                  color:
+                    "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                  cursor: "pointer",
+                  fontWeight: 400,
+                }}
+              >
+                Change Phone number
+              </span>
+            </AuthText>
           </div>
 
-          {/* ERROR MESSAGE */}
-          {apiError && (
-            <p
+          {/* OTP INPUTS */}
+          <div
+            style={{
+              width: "400px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "calc(8 * 1px)",
+            }}
+          >
+            <div
               style={{
-                margin: 0,
-                color: "var(--ui-color-border-error-medium-20, #dc2626)",
-                fontFamily:
-                  "var(--typogrraphy-paragraph-inter-font-family, Inter)",
-                fontSize:
-                  "calc(var(--typogrraphy-paragraph-para-4-size, 12) * 1px)",
-                fontWeight: 400,
-                lineHeight:
-                  "calc(var(--typogrraphy-paragraph-para-4-line-height, 16) * 1px)",
+                display: "flex",
+                gap: "calc(8 * 1px)",
+                justifyContent: "center",
               }}
             >
-              {apiError}
-            </p>
-          )}
-        </div>
+              {otp.map((data, index) => (
+                <OtpInputItem
+                  key={index}
+                  index={index}
+                  value={data}
+                  error={!!apiError}
+                  onChange={(e) => handleChange(e.target, index)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
+                  onFocus={(e) => e.target.select()}
+                  ref={(el) => (inputRefs.current[index] = el)}
+                />
+              ))}
+            </div>
 
-        {/* CONFIRM BUTTON */}
-        <AuthButton
-          type="button"
-          disabled={!isOtpComplete || loading}
-          onClick={handleVerifyOtp}
-        >
-          {loading ? "Verifying..." : "Confirm"}
-        </AuthButton>
+            {/* ERROR MESSAGE */}
+            {apiError && (
+              <p
+                style={{
+                  margin: 0,
+                  color: "var(--ui-color-border-error-medium-20, #dc2626)",
+                  fontFamily:
+                    "var(--typogrraphy-paragraph-inter-font-family, Inter)",
+                  fontSize:
+                    "calc(var(--typogrraphy-paragraph-para-4-size, 12) * 1px)",
+                  fontWeight: 400,
+                  lineHeight:
+                    "calc(var(--typogrraphy-paragraph-para-4-line-height, 16) * 1px)",
+                }}
+              >
+                {apiError}
+              </p>
+            )}
+          </div>
 
-        {/* TIMER / RESEND */}
-        <div
-          style={{
-            display: "flex",
-            height: "20px",
-            justifyContent: "flex-end",
-            color:
-              "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
-            fontFamily: "Inter",
-            fontSize: "14px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "16px",
-            alignItems: "center",
-            gap: "var(--Spacing-sp-8, 8px)",
-            flex: "1 0 0",
-          }}
-        >
-          {timeLeft > 0 ? (
-            <>
-              Resend Code in{" "}
+          {/* CONFIRM BUTTON */}
+          <AuthButton
+            type="button"
+            disabled={!isOtpComplete || loading}
+            onClick={handleVerifyOtp}
+          >
+            {loading ? "Verifying..." : "Confirm"}
+          </AuthButton>
+
+          {/* TIMER / RESEND */}
+          <div
+            style={{
+              display: "flex",
+              height: "20px",
+              justifyContent: "flex-end",
+              color:
+                "var(--UI-Color-On-Surface-neutral-light-10-on-neutral-light-10-N40, #374151)",
+              fontFamily: "Inter",
+              fontSize: "14px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "16px",
+              alignItems: "center",
+              gap: "var(--Spacing-sp-8, 8px)",
+              flex: "1 0 0",
+            }}
+          >
+            {timeLeft > 0 ? (
+              <>
+                Resend Code in{" "}
+                <span
+                  style={{
+                    color:
+                      "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
+                    fontWeight: 400,
+                  }}
+                >
+                  {timeLeft} sec
+                </span>
+              </>
+            ) : (
               <span
+                onClick={handleResendOtp}
                 style={{
                   color:
                     "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
                   fontWeight: 400,
+                  cursor: "pointer",
                 }}
               >
-                {timeLeft} sec
+                Resend Code
               </span>
-            </>
-          ) : (
-            <span
-              onClick={handleResendOtp}
-              style={{
-                color:
-                  "var(--ui-color-on-surface-primary-light-10-on-primary-light-10-p40, #4c2399)",
-                fontWeight: 400,
-                cursor: "pointer",
-              }}
-            >
-              Resend Code
-            </span>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -20,13 +20,14 @@ import AuthNote from "@/components/ui/Auth/AuthNote";
 
 const SignupForm = () => {
   const [authData, setAuthData] = useState({ userId: "", token: "" });
-  const [step, setStep] = useState("PHONE");
+  const [step, setStep] = useState("BUSINESS_DETAILS");
   const [signupType, setSignupType] = useState("individual");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [otpError, setOtpError] = useState("");
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -37,6 +38,8 @@ const SignupForm = () => {
   };
 
   const handleGetOtp = async () => {
+    setLoading(true);
+
     if (phone.length !== 10) {
       setError("Enter valid mobile number");
       return;
@@ -53,6 +56,8 @@ const SignupForm = () => {
       setStep("OTP");
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -78,10 +83,11 @@ const SignupForm = () => {
       <SignupPAN
         userId={authData.userId}
         token={authData.token}
+        onBack={() => setStep("OTP")}
         onComplete={(data, type) => {
           setSignupType(type);
           setEmail(data);
-          if (type === "entity") {
+          if (signupType === "entity") {
             setStep("BUSINESS_DETAILS");
           } else {
             setStep("PASSWORD");
@@ -96,6 +102,7 @@ const SignupForm = () => {
       <SignupBusinessDetails
         userId={authData.userId}
         token={authData.token}
+        onBack={() => setStep("PAN")}
         onComplete={() => {
           setStep("PASSWORD");
         }}
@@ -109,6 +116,13 @@ const SignupForm = () => {
         email={email}
         userId={authData.userId}
         token={authData.token}
+        onBack={() => {
+          if (signupType === "entity") {
+            setStep("BUSINESS_DETAILS");
+          } else {
+            setStep("PAN");
+          }
+        }}
         onComplete={() => {
           setStep("SUCCESS");
         }}
@@ -188,7 +202,7 @@ const SignupForm = () => {
             disabled={!isButtonEnabled}
             onClick={handleGetOtp}
           >
-            Get OTP
+            {loading ? "Loading..." : "Get otp"}
           </AuthButton>
 
           <div style={{ width: "100%" }}>
