@@ -505,10 +505,12 @@
   --ui-color-on-surface-success-strong-10-on-success-strong-10-n30: #e5e7eb;
   --ui-color-on-surface-success-strong-10-on-success-strong-10-n10: #ffffff;
   --ui-color-on-surface-info-light-10-on-info-light-10-inf50: #004474;
+  --ui-color-on-surface-warning-medium-20-on-warning-medium-20: #d97706;
   --ui-color-on-surface-specials-on-gradient-g1-n10: #ffffff;
   --ui-color-on-surface-specials-on-gradient-g1-n20: #f3f4f6;
   --ui-color-on-surface-specials-on-gradient-g1-p20: #d0c6f6;
   --ui-color-on-surface-specials-avatar-n10: #e5e7eb;
+  --ui-color-on-surface-on-error-light-10: #dc2626;
   --ui-color-state-hover-hvr-neutral-light-10-n10: #f3f4f6;
   --ui-color-state-hover-hvr-neutral-light-10-n20: rgba(17, 24, 39, 0.04);
   --ui-color-state-hover-hvr-neutral-light-10-n30: rgba(17, 24, 39, 0.08);
@@ -539,6 +541,10 @@
   --ui-color-border-default-bd-primary-strong-10: #4c2399;
   --ui-color-border-default-bd-primary-light-10: #f2effc;
   --ui-color-border-semantic-bd-error-strong-10: #ef4444;
+  --ui-color-border-semantic-bd-error-light-10: #dc2626;
+  --ui-color-border-semantic-bd-warning-medium-20: #d97706;
+  --ui-color-border-semantic-bd-success-light-10: #15803d;
+  --ui-color-border-semantic-bd-info-light-10: #005794;
   --ui-color-border-hover-bd-neutral-medium-10: #e5e7eb;
   --ui-color-border-hover-bd-neutral-medium-20: #d1d5db;
   --ui-color-border-hover-bd-neutral-medium-30: #9ca3af;
