@@ -79,7 +79,7 @@ const SignupReviewCard = ({ message, name, location, avatarSrc }) => {
             height={41}
             style={{
               width: "31.62px",
-              height: "40.25px",
+              height: "auto", // Maintain aspect ratio
               marginTop: "10px",
               objectFit: "contain",
             }}

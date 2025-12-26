@@ -11,7 +11,7 @@ const nextConfig = {
   reactCompiler: true,
 
   // Required for Netlify static deploy
-  output: "export",
+  // output: "export",
 
   images: {
     unoptimized: true, // 🔴 VERY IMPORTANT

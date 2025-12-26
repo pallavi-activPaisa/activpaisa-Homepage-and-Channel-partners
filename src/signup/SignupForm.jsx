@@ -20,7 +20,7 @@ import AuthNote from "@/components/ui/Auth/AuthNote";
 
 const SignupForm = () => {
   const [authData, setAuthData] = useState({ userId: "", token: "" });
-  const [step, setStep] = useState("BUSINESS_DETAILS");
+  const [step, setStep] = useState("PHONE");
   const [signupType, setSignupType] = useState("individual");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -299,7 +299,7 @@ const SignupForm = () => {
                 letterSpacing:
                   "calc(var(--typogrraphy-label-letter-spacing) * 1px)",
               }}
-              href="/"
+              href="/partner/login"
             >
               {" "}
               Log in
