@@ -139,7 +139,7 @@ const AuthButton = ({ children, style, disabled, isLoading, ...props }) => {
       >
         {isLoading ? (
           <>
-            Loading...
+            Redirecting...
             {/* You can insert your SVG spinner here to match the image */}
             <svg
               width="16"

@@ -7,6 +7,9 @@ import AuthButton from '../../components/ui/Auth/AuthButton';
 import AuthText from '../../components/ui/Auth/AuthText';
 import AuthInputError from '../../components/ui/Auth/AuthInputError';
 import Image from 'next/image';
+import AdminNavbar from '../Components/AdminNavbar';
+import SignupFooter from '@/signup/SignupFooter';
+import Link from 'next/link';
 
 const EyeIcon = ({ visible, onClick }) => (
     <div
@@ -32,8 +35,8 @@ const EyeIcon = ({ visible, onClick }) => (
 
 const SuperAdminLogin = () => {
     const router = useRouter();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('admin@activpaisa.com');
+    const [password, setPassword] = useState('Admin@123');
     const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState({});
     const [isLoading, setIsLoading] = useState(false);
@@ -62,126 +65,117 @@ const SuperAdminLogin = () => {
     };
 
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100vh',
-            width: '100%',
-            backgroundColor: '#ffffff'
-        }}>
-            <div style={{
-                width: '100%',
-                maxWidth: '400px',
-                padding: '24px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '32px',
-                borderRadius: "calc(var(--corner-radius-medium, 16) * 1px)",
-                border: "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
-                backgroundColor: "var(--ui-color-background-bg-neutral-bg-neutral-light-10, #FFF)",
-            }}>
-                {/* Logo */}
-                <div style={{ position: 'relative', width: '120px', height: '40px', margin: '0 auto' }}>
-                    <Image
-                        src="/Brand/logo.svg"
-                        alt="ActivPaisa Logo"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
-                </div>
 
-                {/* Header */}
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-                    <AuthHeading>Super Admin Login</AuthHeading>
-                    <AuthText style={{ textAlign: "center" }}>
-                        Enter credentials to access admin panel
-                    </AuthText>
-                </div>
+        <div className="flex flex-col min-h-screen bg-white">
+            <AdminNavbar isLoggedIn={false} />
 
-                {/* Form */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                    {/* Email */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                        <AuthLabel>Email Address</AuthLabel>
-                        <AuthInput
-                            type="email"
-                            placeholder="admin@activpaisa.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            style={{ height: "48px" }}
-                            error={!!errors.email}
-                        />
-                        {errors.email && (
-                            <span style={{
-                                color: "#DC2626",
-                                fontFamily: "Inter",
-                                fontSize: "14px",
-                                lineHeight: "20px"
-                            }}>
-                                {errors.email}
-                            </span>
-                        )}
+            <div className="flex-1 flex flex-col items-center justify-center p-4 pt-[80px]"> {/* Added padding top roughly for navbar height + extra */}
+                <div style={{
+                    width: '400px',
+                    padding: '32px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '24px',
+                    borderRadius: "16px",
+                    border: "1px solid #E5E7EB",
+                    backgroundColor: "#FFFFFF",
+                    boxShadow: "0 1px 2px 0 var(--Effects-shadow-4, rgba(17, 24, 39, 0.04))"
+                }}>
+
+                    {/* Header */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+                        <AuthHeading>Welcome Back!</AuthHeading>
+                        <AuthText style={{ textAlign: "center" }}>
+                            Log in to securely access your account
+                        </AuthText>
                     </div>
 
-                    {/* Password */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                        <AuthLabel>Password</AuthLabel>
-                        <div style={{ position: "relative" }}>
+                    {/* Form */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                        {/* Email */}
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                            <AuthLabel>Email Address</AuthLabel>
                             <AuthInput
-                                type={showPassword ? "text" : "password"}
-                                placeholder="********"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                style={{ height: "48px", paddingRight: "40px" }}
-                                error={!!errors.password}
+                                type="email"
+                                placeholder="admin@activpaisa.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                style={{ height: "48px" }}
+                                error={!!errors.email}
                             />
-                            <div style={{ position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)" }}>
-                                <EyeIcon visible={showPassword} onClick={() => setShowPassword(!showPassword)} />
-                            </div>
+                            {errors.email && (
+                                <span style={{
+                                    color: "#DC2626",
+                                    fontFamily: "Inter",
+                                    fontSize: "14px",
+                                    lineHeight: "20px"
+                                }}>
+                                    {errors.email}
+                                </span>
+                            )}
                         </div>
-                        {/* Error and Forgot Password Row */}
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                            <div style={{ flex: 1 }}>
-                                {errors.password && (
+
+                        {/* Password */}
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                            <AuthLabel>Password</AuthLabel>
+                            <div style={{ position: "relative" }}>
+                                <AuthInput
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="********"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    style={{ height: "48px", paddingRight: "40px" }}
+                                    error={!!errors.password}
+                                />
+                                <div style={{ position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)" }}>
+                                    <EyeIcon visible={showPassword} onClick={() => setShowPassword(!showPassword)} />
+                                </div>
+                            </div>
+                            {/* Error and Forgot Password Row */}
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                                <div style={{ flex: 1 }}>
+                                    {errors.password && (
+                                        <span style={{
+                                            color: "#DC2626",
+                                            fontFamily: "Inter",
+                                            fontSize: "14px",
+                                            lineHeight: "20px"
+                                        }}>
+                                            {errors.password}
+                                        </span>
+                                    )}
+                                </div>
+                                {/* Keep forgot password just in case, or remove if not needed? User said "basic same login". Usually superadmin might not have self-service forgot pass. I'll keep it for visual consistency but maybe disable it or link nowhere. */}
+                                <Link href="/superadmin/reset-password">
                                     <span style={{
-                                        color: "#DC2626",
+                                        color: "#6B7280",
                                         fontFamily: "Inter",
                                         fontSize: "14px",
+                                        cursor: "pointer",
+                                        whiteSpace: "nowrap",
+                                        marginLeft: "12px",
                                         lineHeight: "20px"
                                     }}>
-                                        {errors.password}
+                                        Forgot password?
                                     </span>
-                                )}
+                                </Link>
                             </div>
-                            {/* Keep forgot password just in case, or remove if not needed? User said "basic same login". Usually superadmin might not have self-service forgot pass. I'll keep it for visual consistency but maybe disable it or link nowhere. */}
-                            <span style={{
-                                color: "#6B7280",
-                                fontFamily: "Inter",
-                                fontSize: "14px",
-                                cursor: "pointer",
-                                whiteSpace: "nowrap",
-                                marginLeft: "12px",
-                                lineHeight: "20px"
-                            }}>
-                                Forgot password?
-                            </span>
                         </div>
-                    </div>
 
-                    {/* Button */}
-                    <AuthButton
-                        disabled={!email || !password || isLoading}
-                        style={{ width: "100%" }}
-                        onClick={handleLogin}
-                        isLoading={isLoading}
-                    >
-                        Log In
-                    </AuthButton>
+                        {/* Button */}
+                        <AuthButton
+                            disabled={!email || !password || isLoading}
+                            style={{ width: "100%" }}
+                            onClick={handleLogin}
+                            isLoading={isLoading}
+                        >
+                            Log In
+                        </AuthButton>
+                    </div>
                 </div>
             </div>
+
+            <SignupFooter />
         </div>
     );
 };
