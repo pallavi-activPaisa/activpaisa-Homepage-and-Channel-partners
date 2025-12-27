@@ -507,6 +507,12 @@
           "$type": "color"
         }
       },
+      "warning-medium-20": {
+        "on-warning-medium-20": {
+          "$value": "{Color.Warning.700}",
+          "$type": "color"
+        }
+      },
       "Specials": {
         "on-gradient-G1-N10": {
           "$value": "{Color.Neutrals.00}",
@@ -524,6 +530,10 @@
           "$value": "{Color.Neutrals.300}",
           "$type": "color"
         }
+      },
+      "on-error-light-10": {
+        "$value": "{Color.Error.700}",
+        "$type": "color"
       }
     },
     "State": {
@@ -672,6 +682,22 @@
       "Semantic": {
         "bd-error-strong-10": {
           "$value": "{Color.Error.600 (Main)}",
+          "$type": "color"
+        },
+        "bd-error-light-10": {
+          "$value": "{Color.Error.700}",
+          "$type": "color"
+        },
+        "bd-warning-medium-20": {
+          "$value": "{Color.Warning.700}",
+          "$type": "color"
+        },
+        "bd-success-light-10": {
+          "$value": "{Color.Success.800}",
+          "$type": "color"
+        },
+        "bd-info-light-10": {
+          "$value": "{Color.Information.800}",
           "$type": "color"
         }
       },

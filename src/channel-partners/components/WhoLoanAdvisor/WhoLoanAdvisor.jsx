@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import MobWhoLoanAdvisor from "./MobWhoLoanAdvisor";
 
 export default function WhoLoanAdvisor() {
   return (
@@ -9,18 +10,24 @@ export default function WhoLoanAdvisor() {
       style={{
         display: "flex",
         justifyContent: "center",
-        padding: "72px 0",
+        padding: "0px", // Removed generic padding to handle mobile/desktop separately if needed, but inner divs handle it.
         background: "#FFF",
         width: "100%",
+        flexDirection: "column"
       }}
     >
+      <div className="block md:hidden w-full">
+        <MobWhoLoanAdvisor />
+      </div>
+
       <div
+        className="hidden md:flex"
         style={{
-          display: "flex",
           width: "1260px",
           justifyContent: "space-between",
           alignItems: "center",
           gap: "40px",
+          margin: "72px auto"
         }}
       >
         {/* LEFT SIDE BOX */}

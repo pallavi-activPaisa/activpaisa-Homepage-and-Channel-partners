@@ -1,0 +1,539 @@
+import React, { useState } from "react";
+import AuthButton from "@/components/ui/Auth/AuthButton";
+import AuthCheckbox from "@/components/ui/Auth/AuthCheckbox";
+import AuthInput from "@/components/ui/Auth/AuthInput";
+import AuthLabel from "@/components/ui/Auth/AuthLabel";
+import AuthHeading from "@/components/ui/Auth/AuthHeading";
+import AuthText from "@/components/ui/Auth/AuthText";
+import "../app/build/css/tokens.css";
+import { verifyGST, updateBusinessProfile } from "../../lib/api.js";
+
+const SignupBusinessDetails = ({ onComplete, userId, token, onBack }) => {
+  const [hasGst, setHasGst] = useState(null);
+  const [gstin, setGstin] = useState("");
+  const [gstError, setGstError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFetched, setIsFetched] = useState(false);
+  const [backHover, setBackHover] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Unified form data
+  const [formData, setFormData] = useState({
+    businessName: "",
+    legalName: "",
+    corporation: "", // Default empty
+    address: "",
+  });
+
+  // Chevron for the pseudo-select / select
+  const ChevronDown = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+      <path
+        d="M5 7.5L10 12.5L15 7.5"
+        stroke="#6B7280"
+        strokeWidth="1.66667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
+  const handleFetchGstDetails = async () => {
+    if (!gstin) {
+      setGstError("Please enter your GST number");
+      return;
+    }
+
+    // Basic format check (15 chars)
+    if (gstin.length !== 15) {
+      setGstError("GST number must be exactly 15 characters");
+      return;
+    }
+
+    setIsLoading(true);
+    setGstError("");
+
+    try {
+      const data = await verifyGST(userId, token, gstin);
+
+      const { gstInfo } = data;
+      setFormData({
+        businessName: gstInfo.businessName || "",
+        legalName: gstInfo.legalName || "",
+        corporation: gstInfo.constitutionOfBusiness || "",
+        address: gstInfo.address?.full || "",
+      });
+      setIsFetched(true);
+    } catch (err) {
+      console.error("GST Verification Error:", err);
+      setGstError(err.message || "Failed to verify GST details");
+      setIsFetched(false);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const saveAndContinue = async () => {
+    // 1. Validate fields
+    if (
+      !formData.businessName ||
+      !formData.legalName ||
+      !formData.corporation ||
+      !formData.address
+    ) {
+      setGstError("Please fill in all details to proceed.");
+      return;
+    }
+
+    setGstError("");
+    setIsLoading(true);
+
+    try {
+      const businessPayload = {
+        tradeName: formData.businessName,
+        legalName: formData.legalName,
+        businessConstitution: formData.corporation,
+        fullAddress: formData.address,
+      };
+
+      // Call API to store/update profile regardless of GST flow
+      await updateBusinessProfile(userId, token, businessPayload);
+
+      // Proceed on success
+      if (onComplete) onComplete();
+    } catch (err) {
+      console.error("Business Profile Update Error:", err);
+      setGstError(err.message || "Failed to update business details");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleNext = () => {
+    if (hasGst === true) {
+      if (!isFetched) {
+        // Step 1: Fetch details
+        handleFetchGstDetails();
+      } else {
+        // Step 2: Proceed - Call save API now
+        saveAndContinue();
+      }
+    } else if (hasGst === false) {
+      // Step 2: Proceed (Manual Entry) -> Save via API
+      saveAndContinue();
+    }
+  };
+
+  // Determine if inputs should be read-only based on flow
+  // ReadOnly ONLY if GST is Yes (hasGst === true).
+  // If hasGst === false, they are writable.
+  const isReadOnly = hasGst === true;
+
+  // Show form if:
+  // 1. GST is Yes AND Fetched
+  // 2. GST is No (Immediate show)
+  const showForm = (hasGst === true && isFetched) || hasGst === false;
+
+  return (
+    <div className="w-full flex flex-col relative h-full justify-center items-center ">
+      <button
+        className="w-[81px] h-[36px] p-[8px] absolute top-[16px] left-[16px] flex justify-center items-center   gap-[4px]"
+        style={{
+          backgroundColor: backHover
+            ? "var(--ui-color-surface-neutral-neutral-light-30, #f3f4f6)"
+            : "white",
+          color:
+            "var(--ui-color-on-surface-neutral-light-10-on-neutral-light-10-n40, #374151)",
+
+          fontFamily: "var(--typogrraphy-label-inter-font-family, inter)",
+          fontSize: "calc(var(--typogrraphy-label-l-2-size, 14px) * 1px)",
+          fontStyle: "normal",
+          fontWeight: "500",
+          lineHeight:
+            "calc(var(--typogrraphy-label-l-2-line-height, 16px) * 1px)",
+          letterSpacing:
+            "calc(var(--typogrraphy-label-letter-spacing, 0) * 1px)",
+          borderRadius: "calc(var(--corner-radius-2xsmall, 8px) * 1px)",
+          cursor: "Pointer",
+        }}
+        onClick={onBack}
+        onMouseEnter={() => setBackHover(true)}
+        onMouseLeave={() => setBackHover(false)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="7"
+          height="12"
+          viewBox="0 0 7 12"
+          fill="none"
+        >
+          <path
+            d="M-0.000154018 5.78362C-0.000788212 5.89329 0.0202327 6.00201 0.0617032 6.10354C0.103174 6.20507 0.164278 6.29742 0.241512 6.37529L5.24151 11.3753C5.39843 11.5322 5.61126 11.6204 5.83318 11.6204C6.0551 11.6204 6.26793 11.5322 6.42485 11.3753C6.58177 11.2184 6.66992 11.0055 6.66992 10.7836C6.66992 10.5617 6.58177 10.3489 6.42485 10.192L2.00818 5.78362L6.41651 1.37529C6.55303 1.21587 6.62437 1.0108 6.61627 0.801074C6.60817 0.591344 6.52123 0.392394 6.37281 0.243982C6.2244 0.0955706 6.02545 0.00862789 5.81572 0.000526428C5.60599 -0.00757408 5.40093 0.0637627 5.24151 0.200285L0.241512 5.20028C0.0875587 5.3555 0.000766277 5.565 -0.000154018 5.78362Z"
+            fill="#374151"
+          />
+        </svg>
+        Back
+      </button>
+      <div
+        style={{
+          width: "100%",
+          padding: "0 calc(160 * 1px)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "calc(88 * 1px)",
+        }}
+      >
+        {/* INPUT FORM CONTAINER */}
+        <div
+          style={{
+            width: "calc(400 * 1px)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "calc(24 * 1px)",
+          }}
+        >
+          {/* HEADER SECTION */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "calc(8 * 1px)",
+            }}
+          >
+            <AuthHeading>Business Details</AuthHeading>
+            <AuthText>
+              Provide basic information about your <br /> business to proceed
+            </AuthText>
+          </div>
+
+          {/* FORM CONTENT */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "calc(24 * 1px)",
+            }}
+          >
+            {/* Question */}
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <label
+                style={{
+                  color: "#374151",
+                  fontFamily: "Inter",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                }}
+              >
+                Does your business have a GST registration?
+              </label>
+
+              {/* Options Row */}
+              <div style={{ display: "flex", gap: "8px" }}>
+                <AuthCheckbox
+                  checked={hasGst === true}
+                  onChange={() => {
+                    setHasGst(true);
+                    setIsFetched(false);
+                    setFormData({
+                      businessName: "",
+                      legalName: "",
+                      corporation: "",
+                      address: "",
+                    });
+                    setGstin(""); // Reset GSTIN
+                    setGstError("");
+                  }}
+                  label="Yes"
+                />
+                <AuthCheckbox
+                  checked={hasGst === false}
+                  onChange={() => {
+                    setHasGst(false);
+                    setIsFetched(false);
+                    setFormData({
+                      businessName: "",
+                      legalName: "",
+                      corporation: "",
+                      address: "",
+                    });
+                    setGstin("");
+                    setGstError("");
+                  }}
+                  label="No"
+                />
+              </div>
+            </div>
+
+            {/* GST Input (Show if Yes AND Not Fetched) */}
+            {hasGst === true && !isFetched && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "calc(8 * 1px)",
+                }}
+              >
+                <AuthLabel>GSTIN Number</AuthLabel>
+                <AuthInput
+                  value={gstin}
+                  onChange={(e) => {
+                    setGstin(e.target.value.toUpperCase());
+                    if (gstError) setGstError("");
+                  }}
+                  placeholder="Enter your 15-digit GST number"
+                  error={!!gstError}
+                />
+                {gstError && (
+                  <p
+                    style={{
+                      color: "var(--ui-color-border-error-medium-20, #DC2626)",
+                      fontFamily:
+                        "var(--typogrraphy-label-inter-font-family, Inter)",
+                      fontSize: "14px",
+                      fontWeight: "400",
+                      marginTop: "calc(8 * 1px)",
+                    }}
+                  >
+                    {gstError}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Business Details Form (Fetched OR Manual done ) */}
+            {showForm && (
+              <>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "calc(8 * 1px)",
+                  }}
+                >
+                  <AuthLabel>Business Name</AuthLabel>
+                  <AuthInput
+                    value={formData.businessName}
+                    onChange={(e) =>
+                      setFormData({ ...formData, businessName: e.target.value })
+                    }
+                    readOnly={isReadOnly}
+                    style={
+                      isReadOnly
+                        ? { background: "#F3F4F6", color: "#374151" }
+                        : {}
+                    }
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "calc(8 * 1px)",
+                  }}
+                >
+                  <AuthLabel>Legal Name</AuthLabel>
+                  <AuthInput
+                    value={formData.legalName}
+                    onChange={(e) =>
+                      setFormData({ ...formData, legalName: e.target.value })
+                    }
+                    readOnly={isReadOnly}
+                    style={
+                      isReadOnly
+                        ? { background: "#F3F4F6", color: "#374151" }
+                        : {}
+                    }
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "calc(8 * 1px)",
+                  }}
+                >
+                  <AuthLabel>Business Corporation</AuthLabel>
+                  {isReadOnly ? (
+                    /* Read-only View */
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        height: "40px",
+                        width: "100%",
+                        background: "#F3F4F6",
+                        borderRadius: "8px",
+                        border:
+                          "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
+                        padding: "8px 12px",
+                        color: "#6B7280",
+                        fontFamily:
+                          "var(--typogrraphy-label-inter-font-family, Inter)",
+                        fontSize: "14px",
+                      }}
+                    >
+                      {formData.corporation}
+                      <ChevronDown />
+                    </div>
+                  ) : (
+                    /* Manual Edit - Custom Dropdown */
+                    <div style={{ position: "relative" }}>
+                      <div
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          height: "40px",
+                          width: "100%",
+                          background: "#fff",
+                          border:
+                            "1px solid var(--ui-color-border-default-bd-neutral-medium-10, #E5E7EB)",
+                          borderRadius: "8px",
+                          padding: "0 12px",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: "14px",
+                            color: formData.corporation ? "#374151" : "#9CA3AF",
+                          }}
+                        >
+                          {formData.corporation ||
+                            "Enter your Business Corporation"}
+                        </span>
+                        <div
+                          style={{
+                            transform: isDropdownOpen
+                              ? "rotate(180deg)"
+                              : "rotate(0deg)",
+                            transition: "transform 0.2s",
+                          }}
+                        >
+                          <ChevronDown />
+                        </div>
+                      </div>
+
+                      {/* Dropdown Menu */}
+                      {isDropdownOpen && (
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: "100%",
+                            left: 0,
+                            width: "100%",
+                            background: "#fff",
+                            border: "1px solid #E5E7EB",
+                            borderRadius: "8px",
+                            marginTop: "4px",
+                            boxShadow: "0px 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                            zIndex: 10,
+                            maxHeight: "200px",
+                            overflowY: "auto",
+                          }}
+                        >
+                          {[
+                            "Private Limited",
+                            "Sole Proprietorship",
+                            "Partnership Firm",
+                            "Limited Liability Partnership (LLP)",
+                            "Public Limited Company",
+                            "One Person Company (OPC)",
+                            "HUF (Hindu Undivided Family)",
+                            "Trust / Society",
+                          ].map((type) => (
+                            <div
+                              key={type}
+                              onClick={() => {
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  corporation: type,
+                                }));
+                                setIsDropdownOpen(false);
+                              }}
+                              style={{
+                                padding: "10px 12px",
+                                fontSize: "14px",
+                                color: "#374151",
+                                cursor: "pointer",
+                                background:
+                                  formData.corporation === type
+                                    ? "#F3F4F6"
+                                    : "transparent",
+                              }}
+                              onMouseEnter={(e) =>
+                                (e.target.style.background = "#F9FAFB")
+                              }
+                              onMouseLeave={(e) =>
+                                (e.target.style.background =
+                                  formData.corporation === type
+                                    ? "#F3F4F6"
+                                    : "transparent")
+                              }
+                            >
+                              {type}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "calc(8 * 1px)",
+                  }}
+                >
+                  <AuthLabel>Business Address</AuthLabel>
+                  <AuthInput
+                    value={formData.address}
+                    onChange={(e) =>
+                      setFormData({ ...formData, address: e.target.value })
+                    }
+                    readOnly={isReadOnly}
+                    style={
+                      isReadOnly
+                        ? { background: "#F3F4F6", color: "#374151" }
+                        : {}
+                    }
+                  />
+                </div>
+              </>
+            )}
+
+            {/* Action Button */}
+            <div>
+              <AuthButton
+                type="button"
+                onClick={handleNext}
+                disabled={hasGst === null || isLoading}
+              >
+                {isLoading
+                  ? "Processing..."
+                  : hasGst === true && !isFetched
+                    ? "Fetch Details"
+                    : "Next"}
+              </AuthButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SignupBusinessDetails;
